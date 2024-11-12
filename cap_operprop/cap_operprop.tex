@@ -1,0 +1,1014 @@
+%Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/4.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+\chapter{Operações numéricas}
+\index{Operações!numéricas}
+ Quando estamos resolvendo uma expressão numérica ou uma expressão algébrica temos vários cálculos para serem feitos sucessivamente, e para tal precisamos obedecer uma ordem de prioridades, que é a seguinte:
+
+%\begin{multicols}{2}
+Resolva em:
+\begin{itemize}
+\item 1º lugar: raízes e potências;
+\item 2º lugar: multiplicação e divisão;
+\item 3º lugar: adição e subtração.
+\end{itemize}
+% Priorize cálculos em:
+% \begin{itemize}
+% \item 1º lugar: parênteses $($ $)$;
+% \item 2º lugar: colchetes $[$ $]$;
+% \item 3º lugar: chaves $\{$ $\}$.
+% \end{itemize}
+%\end{multicols}
+
+Nos cálculos, devemos priorizar a resolução fazendo uso de parênteses $($ $)$ ou colchetes $[ \, \, ]$.
+
+ % \section{Operações em \texorpdfstring{$\N$}{N}}
+ % No conjunto dos números naturais, que vamos considerar aqui que contém o $0$ (zero) temos bem definida a operação de soma de dois elementos deste conjunto, pois dados $x$, $y \in \N$ temos que existe $z \in \N$ tal que $x+y=z$, e que $y+x=z$. Por exemplo, $2+3=5=3+2$. \emph{Sugestão ao leitor: pense em outros exemplos numéricos.}
+
+ % Neste conjunto temos um elemento neutro com relação a operação de soma que é o $0$ (zero), pois dado $x \in \N$, temos que $x+0=x=0+x$.
+
+ % Mas um fato bem importante com relação a operação de soma em $\N$ é que neste conjunto os elementos não possuem inverso com relação a soma, pois dado $x \in \N$ não existe $y \in \N$ tal que $x+y=0$. Por exemplo, dado $3 \in \N$ não existe $y \in \N$ tal que $3 + y=0$. E ainda a ``operação de subtração'' também não está definida neste conjunto pois, $(4)-(6)=-2$ e $-2 \notin \N$.
+
+ % No conjunto dos números naturais, temos bem definida também a operação de multiplicação de dois elementos deste conjunto, pois dados $x$, $y \in \N$ temos que existe $z \in \N$ tal que $x \cdot y=z$, e que $y \cdot x=z$. Por exemplo, $2 \cdot 3=6=3 \cdot2$. \emph{Sugestão ao leitor: pense em outros exemplos numéricos.}
+
+ % Neste conjunto temos um elemento neutro com relação a operação de multiplicação que é o $1$ (um), também chamado de unidade, pois dado $x \in \N$, temos que $x \cdot 1= x= 1 \cdot x$.
+
+ % Mas um fato bem importante com relação a operação de multiplicação em $\N$ é que neste conjunto os elementos não possuem inverso com relação a multiplicação, pois dado $x \in \N$ não existe $y \in \N$ tal que $x \cdot y= 1$. Por exemplo, dado $3 \in \N$ não existe $y \in \N$ tal que $3 \cdot y= 1$. Além disso a ``operação de divisão'' também não está definida neste conjunto pois, $(1)\div (2)= 0,5$ e $0,5 \notin \N$.
+
+ %  \vskip0.3cm
+
+ % Portanto em $\N$ as operações de adição $(+)$ e multiplicação $(\cdot)$ possuem as seguintes propriedades:\index{Propriedades!da adição}\index{Propriedades!da multiplicação}
+
+ % Soma $(+)$:
+ % \begin{enumerate}[1)]
+ % \item Fechamento: dados $x, y \in \N$ temos que $x+y \in \N$;
+ % \item Associativo: dados $x, y, z \in \N$ temos que $(x+y)+z= x+(y+z)$;
+ % \item Elemento neutro: existe um elemento $0 \in \N$ tal que $x+0=0+x=x$, para qualquer $x \in \N$;
+ % \item Comutatividade: dados $x, y \in \N$ temos que $x+y= y+x$.
+ % \end{enumerate}
+
+ %  Multiplicação $(\cdot)$:
+ % \begin{enumerate}[1)]
+ % \item Fechamento: dados $x, y \in \N$ temos que $x \cdot y \in \N$;
+ % \item Associativo: dados $x, y, z \in \N$ temos que $(x \cdot y) \cdot z= x \cdot (y \cdot z)$;
+ % \item Elemento neutro: existe um elemento $1 \in \N$ tal que $x \cdot 1= 1 \cdot x= x$, para qualquer $x \in \N$;
+ % \item Comutatividade: dados $x, y \in \N$ temos que $x \cdot y= y \cdot x$.
+ % \end{enumerate}
+
+ % Leis distributivas: $\forall x, y, z \in \N$
+ % \begin{enumerate}[1)]
+ % \item $x \cdot (y + z)= x \cdot y + x \cdot z$;
+ % \item $(x + y) \cdot z= x \cdot z + y \cdot z$.
+ % \end{enumerate}
+
+ \section{Operações com números inteiros}% \texorpdfstring{$\Z$}{Z}}
+
+ Ao operar com números negativos precisamos dominar os jogos de sinais envolvidos nestas operações. Vejamos alguns exemplos de operações para entender como lidar com os números negativos.
+
+ \begin{obs}
+ \textbf{Soma de números inteiros:}
+ \begin{itemize}
+  \item Na adição de números inteiros com o mesmo sinal, some os números e conserve o sinal;
+  \item Na adição de números inteiros com sinais diferentes, subtraia os números e conserve o sinal do maior.
+ \end{itemize}
+ \end{obs}
+
+  \begin{enumerate}[1)]
+   \item $123 + 7= 130$
+   \item $123 + (- 7) = 123 - 7 = 116$
+   \item $-123 + 7 = -116$
+   \item $-123 + (- 7) = -123 - 7 = -130$
+ \end{enumerate}
+
+  % Neste conjunto temos um elemento neutro com relação a operação de soma que é o $0$ (zero), pois dado $x \in \Z$, temos que $x+0=x=0+x$.
+
+ % Além disso, como no conjunto dos números inteiros temos todos os números negativos, então todo elemento de $\Z$ possui um inverso aditivo, ou seja, $\forall x \in \Z$ existe um elemento $-x \in \Z$ tal que $x + (-x)=0$. Consequentemente, decorre que neste conjunto a ``operação de subtração'' esta bem definida, já que dados $x, y \in \Z$ existe $z \in \Z$ tal que $x - y= x+ (-y)= z$.
+
+\begin{obs}
+ \textbf{Multiplicação e divisão de números inteiros:}
+  \begin{itemize}
+   \item Na multiplicação e divisão de números inteiros com o mesmo sinal o resultado é sempre positivo.
+   \item Na multiplicação e divisão de números inteiros com o sinais diferentes o resultado é sempre negativo.
+  \end{itemize}
+\end{obs}
+
+  \begin{multicols}{2}
+  \begin{enumerate}[1)]
+   \item $8 \cdot 20= 160$
+   \item $8 \cdot (-20)= -160$
+   \item $(-8) \cdot 20= -160$
+   \item $(-8) \cdot (-20)= 160$
+   \item $45 \div 5= 9$
+   \item $45 \div (-5)= -9$
+   \item $(-45) \div 5= -9$
+   \item $(-45) \div (-5)= 9$
+  \end{enumerate}
+  \end{multicols}
+
+ % Neste conjunto temos um elemento neutro com relação a operação de multiplicação que é o $1$ (um), também chamado de unidade, pois dado $x \in \Z$, temos que $x \cdot 1= x= 1 \cdot x$.
+
+ % Mas um fato bem importante com relação a operação de multiplicação em $\Z$ é que neste conjunto os elementos não possuem inverso com relação a multiplicação, pois dado $x \in \Z$ não existe $y \in \Z$ tal que $x \cdot y= 1$. Por exemplo, dado $3 \in \Z$ não existe $y \in \Z$ tal que $3 \cdot y= 1$. Além disso a ``operação de divisão'' também não está definida neste conjunto pois, $(1)\div (2)= 0,5$ e $0,5 \notin \Z$.
+
+ %   \vskip0.3cm
+
+ % Portanto em $\Z$ as operações de soma $(+)$ e multiplicação $(\cdot)$ possuem as seguintes propriedades:
+
+ % Soma $(+)$:
+ % \begin{enumerate}[1)]
+ % \item Fechamento: dados $x, y \in \Z$ temos que $x+y \in \Z$;
+ % \item Associativo: dados $x, y, z \in \Z$ temos que $(x+y)+z= x+(y+z)$;
+ % \item Elemento neutro: existe um elemento $0 \in \Z$ tal que $x+0=0+x=x$, para qualquer $x \in \Z$;
+ % \item Elemento inverso: dado $x \in \Z$ qualquer, existe um elemento $-x \in \Z$ tal que $x+(-x)=0$;
+ % \item Comutatividade: dados $x, y \in \Z$ temos que $x+y= y+x$.
+ % \end{enumerate}
+
+ %  Multiplicação $(\cdot)$:
+ % \begin{enumerate}[1)]
+ % \item Fechamento: dados $x, y \in \Z$ temos que $x \cdot y \in \Z$;
+ % \item Associativo: dados $x, y, z \in \Z$ temos que $(x \cdot y) \cdot z= x \cdot (y \cdot z)$;
+ % \item Elemento neutro: existe um elemento $1 \in \Z$ tal que $x \cdot 1= 1 \cdot x= x$, para qualquer $x \in \Z$;
+ % \item Comutatividade: dados $x, y \in \Z$ temos que $x \cdot y= y \cdot x$.
+ % \end{enumerate}
+
+ %  Leis distributivas: $\forall x, y, z \in \Z$
+ % \begin{enumerate}[1)]
+ % \item $x \cdot (y + z)= x \cdot y + x \cdot z$;
+ % \item $(x + y) \cdot z= x \cdot z + y \cdot z$.
+ % \end{enumerate}
+
+  %Como a operação de soma em $\Z$ satisfaz as condições de 1 a 4 acima decorre que $(\Z, +)$ é um grupo aditivo, e por satisfazer a propriedade 5 dizemos que este grupo é abeliano. Como a operação de multiplicação em $\Z$ satisfaz é fechada (1) e associativa (2) e além disso satisfaz as leis distributivas decorre que $\Z$ é um anel. Por valer a comutatividade da multiplicação este anel é comutativo.
+
+
+ \section{Operações com números racionais} %em \texorpdfstring{$\Q$}{Q}}
+
+ As operações no conjunto dos números racionais envolvem em particular as operações com frações que possuem algumas particularidades por isso façamos uma rápida retomada destas operações.
+
+\begin{obs}
+  \textbf{Soma:} Dados $x, y, a, b$ inteiros com $a, b \neq 0$ temos:
+ \begin{equation*}
+  \frac{x}{a} + \frac{y}{a}= \frac{x+y}{a} \hspace{1cm} \text{e} \hspace{1cm}
+  \frac{x}{a} + \frac{y}{b}= \frac{xb + ya}{ab}
+\end{equation*}
+\end{obs}
+
+\begin{obs}
+  \textbf{Subtração:} Dados $x, y, a, b$ inteiros com $a, b \neq 0$ temos:
+ \[\frac{x}{a} - \frac{y}{a}= \frac{x-y}{a} \hspace{1cm} \text{e} \hspace{1cm}
+ \frac{x}{a} - \frac{y}{b}= \frac{xb - ya}{ab} \]
+\end{obs}
+
+ \begin{exem}
+  \textbf{Soma e subtração de frações com mesmo denominador}
+
+   Quando os denominadores das frações são iguais, mantemos o denominador e operamos os numeradores.
+\begin{align*}
+\frac{3}{5} + \frac{1}{5} &= \frac{3+1}{5}= \frac{4}{5}\\[10pt]
+\frac{3}{5} - \frac{1}{5} &= \frac{3-1}{5}= \frac{2}{5}
+\end{align*}
+ \end{exem}
+
+ \begin{exem}
+ \textbf{Soma e subtração de frações com denominadores diferentes}
+
+   Quando os denominadores das frações são diferentes podemos simplesmente multiplicar os denominadores ou calcular o mínimo múltiplo comum (MMC) entre eles. A vantagem da segunda opção é que o MMC é menor ou igual ao produto (ou seja, suas contas serão feitas com valores menores), como podemos ver no exemplo:
+\begin{align*}
+\frac{2}{4} + \frac{3}{10} &= \frac{10 \cdot 2 + 4 \cdot 3}{4 \cdot 10}= \frac{20 + 12}{40}= \frac{32}{40}= \frac{4}{5}\\[10pt]
+\frac{2}{4} - \frac{3}{10} &= \frac{10 \cdot 2 - 4 \cdot 3}{4 \cdot 10}= \frac{20 - 12}{40}= \frac{8}{40}= \frac{1}{5}
+\end{align*}
+
+   Observamos que o $MMC(4, 10)= 20$. Assim,
+\begin{align*}
+\frac{2}{4} + \frac{3}{10} &= \frac{5 \cdot 2 + 2 \cdot 3}{20}= \frac{10+6}{20}= \frac{16}{20}=\frac{4}{5}\\[10pt]
+\frac{2}{4} - \frac{3}{10} &= \frac{5 \cdot 2 - 2 \cdot 3}{20}= \frac{10 - 6}{20}= \frac{4}{20}=\frac{1}{5}
+\end{align*}
+ \end{exem}
+
+\begin{obs}
+  \textbf{Multiplicação:} Dados $a, b, c, d$ inteiros com $b, d \neq 0$ temos:
+\begin{equation*}
+\frac{a}{b} \cdot \frac{c}{d}= \frac{a \cdot c}{b \cdot d} 
+\end{equation*}
+\end{obs}
+
+ \begin{exem}
+  \textbf{Multiplicação de fração:} na multiplicação devemos multiplicar numerador por numerador e denominador por denominador.
+\begin{align*}
+\frac{2}{3} \cdot \frac{6}{4} &= \frac{2 \cdot 6}{3 \cdot 4}= \frac{12}{12}= 1 \end{align*} 
+\begin{align*}
+2 \cdot \frac{5}{3} = \frac{2}{1} \cdot \frac{5}{3}  &= \frac{2 \cdot 5}{1 \cdot 3}= \frac{10}{3}
+\end{align*}
+ \end{exem}
+
+\begin{obs}
+  \textbf{Divisão:} Dados $a, b, c, d$ inteiros com $b, c, d \neq 0$ temos:
+\begin{equation*}
+\displaystyle \frac{\frac{a}{b}}{\frac{c}{d}} =  \frac{a}{b} \div \frac{c}{d}= \frac{a}{b} \cdot \frac{d}{c} 
+\end{equation*}
+\end{obs}
+
+ \vskip0.3cm
+ \begin{exem}
+  \textbf{Divisão de fração:} na divisão conservamos a primeira fração e multiplicamos pelo inverso da segunda.
+\begin{equation*}
+\frac{2}{3} \div \frac{1}{6}= \frac{2}{3} \cdot \frac{6}{1}= \frac{2 \cdot 6}{3 \cdot 1}= \frac{12}{3}= 4 
+\end{equation*}
+\begin{equation*}
+\frac{4}{\left(\frac{2}{3}\right)}= \frac{\left(\frac{4}{1}\right)}{\left(\frac{2}{3}\right)} = \frac{4}{1} \cdot \frac{3}{2}= \frac{12}{2}=6
+\end{equation*}
+ \end{exem}
+
+ % Como visto anteriormente existe uma cópia do conjunto dos números inteiros dentro do conjunto dos números racionais, portanto todas as operações de soma e multiplicação dos números inteiros funcionam da mesma forma no conjunto dos racionais, portanto o jogo de sinais para soma e multiplicação nos racionais são iguais aos jogos de sinais nos inteiros, por isso não iremos detalhar aqui. Mas vale chamar atenção para alguns detalhes do conjunto $\Q$.
+
+ %   Neste conjunto temos um elemento neutro com relação a operação de soma que é o $0$ (zero), pois dado $x \in \Q$, temos que $x+0= x= 0+x$.
+
+ % Além disso, como no conjunto dos números racionais temos todos os números negativos, então todo elemento de $\Q$ possui um inverso aditivo, ou seja, $\forall x \in \Q$ existe um elemento $-x \in \Q$ tal que $x + (-x)=0$. Consequentemente, decorre que neste conjunto a ``operação de subtração'' esta bem definida, já que dados $x, y \in \Q$ existe $z \in \Q$ tal que $x - y= x+ (-y)= z$.
+
+ % Neste conjunto temos um elemento neutro com relação a operação de multiplicação que é o $1$ (um), também chamado de unidade, pois dado $x \in \Q$, temos que $x \cdot 1= x= 1 \cdot x$.
+
+ % Além disso, com relação a operação de multiplicação em $\Q$, vale obervar que neste conjunto os elementos diferentes de $0$ (zero) possuem inverso com relação a multiplicação, pois dado $x \neq 0 \in \Q$ existe $x^{-1}= \frac{1}{x} \in \Q$ tal que $x \cdot x^{-1}= 1$. Por exemplo, dado $3 \in \Q$ existe $3^{-1}= \frac{1}{3} \in \Q$ tal que $3 \cdot \frac{1}{3}= 1$. Portanto a ``operação de divisão'' está definida neste conjunto.
+
+ %   \vskip0.3cm
+
+ % Portanto em $\Q$ as operações de soma $(+)$ e multiplicação $(\cdot)$ possuem as seguintes propriedades:
+
+ % Soma $(+)$:
+ % \begin{enumerate}[1)]
+ % \item Fechamento: dados $x, y \in \Q$ temos que $x+y \in \Q$;
+ % \item Associativo: dados $x, y, z \in \Q$ temos que $(x+y)+z= x+(y+z)$;
+ % \item Elemento neutro: existe um elemento $0 \in \Q$ tal que $x+0=0+x=x$, para qualquer $x \in \Q$;
+ % \item Elemento inverso: dado $x \in \Q$ qualquer, existe um elemento $-x \in \Q$ tal que $x+(-x)=0$;
+ % \item Comutatividade: dados $x, y \in \Q$ temos que $x+y= y+x$.
+ % \end{enumerate}
+
+ %  Multiplicação $(\cdot)$:
+ % \begin{enumerate}[1)]
+ % \item Fechamento: dados $x, y \in \Q$ temos que $x \cdot y \in \Q$;
+ % \item Associativo: dados $x, y, z \in \Q$ temos que $(x \cdot y) \cdot z= x \cdot (y \cdot z)$;
+ % \item Elemento neutro: existe um elemento $1 \in \Q$ tal que $x \cdot 1= 1 \cdot x= x$, para qualquer $x \in \Q$;
+ % \item Elemento inverso: dado $x \in \Q$ qualquer, existe um elemento $x^{-1} \in \Q$ tal que $x \cdot x^{-1}= 1$;
+ % \item Comutatividade: dados $x, y \in \Q$ temos que $x \cdot y= y \cdot x$.
+ % \end{enumerate}
+
+ %  Leis distributivas: $\forall x, y, z \in \Q$
+ % \begin{enumerate}[1)]
+ % \item $x \cdot (y + z)= x \cdot y + x \cdot z$;
+ % \item $(x + y) \cdot z= x \cdot z + y \cdot z$.
+ % \end{enumerate}
+
+ %  Como a operação de soma em $\Q$ satisfaz as condições de 1 a 4 acima decorre que $(\Q, +)$ é um grupo aditivo, e por satisfazer a propriedade 5 dizemos que este grupo é abeliano. Analogamente, como a operação de multiplicação em $\Q$ satisfaz as propriedades de 1 a 4 decorre que $(\Q, \cdot)$ é um grupo multiplicativo, e por satisfazer a propriedade 5 é um grupo abeliano. Além disso, como a operação de multiplicação em $\Q$ é fechada (1) e associativa (2) e além disso satisfaz as leis distributivas decorre que $\Q$ é um anel.
+
+  % Além disso, $\Q$ com as operações de soma e multiplicação, como definidas é também um corpo. Vale aqui observar que todo conjunto com duas operações, soma e multiplicação, bem definidas, satisfazendo as propriedade de 1 a 5 respectivamente, e as leis de distributividade são denominados \emph{corpos}.
+
+\subsection{Propriedades}
+Dados quaisquer $x, y, z \in \R$, destacamos que em $\R$ as operações de soma (adição) $(+)$ e multiplicação $(\cdot)$ possuem as seguintes propriedades:
+
+\begin{obs}
+ Adição $(+)$:
+ \begin{enumerate}[1)]
+ \item Fechamento: $x+y \in \R$;
+ \item Associativo: $(x+y)+z= x+(y+z)$;
+ \item Elemento neutro: existe um elemento $0 \in \R$ tal que $x+0=0+x=x$;
+ \item Elemento inverso: existe um elemento $-x \in \R$ tal que $x+(-x)=0$;
+ \item Comutatividade: $x+y= y+x$.
+ \end{enumerate}
+\end{obs}
+
+\begin{obs}
+  Multiplicação $(\cdot)$:
+ \begin{enumerate}[1)]
+ \item Fechamento: $x \cdot y \in \R$;
+ \item Associativo: $(x \cdot y) \cdot z= x \cdot (y \cdot z)$;
+ \item Elemento neutro: existe um elemento $1 \in \R$ tal que $x \cdot 1= 1 \cdot x= x$;
+ \item Elemento inverso: existe um elemento $x^{-1} \in \R$ tal que $x \cdot x^{-1}= 1$;
+ \item Comutatividade: $x \cdot y= y \cdot x$.
+ \end{enumerate}
+\end{obs}
+
+\begin{obs}
+  Leis distributivas: 
+ \begin{enumerate}[1)]
+ \item $x \cdot (y + z)= x \cdot y + x \cdot z$;
+ \item $(x + y) \cdot z= x \cdot z + y \cdot z$.
+ \end{enumerate}
+\end{obs}
+
+   As operações de soma e produto no conjunto dos números reais satisfazem também a:
+   \begin{itemize}
+   \item \textit{Lei do cancelamento:} Para todos $x, y, z \in \R$  temos que
+\begin{equation*}
+x+z=y+z \ \ \ \Rightarrow \ \ \ x=y  . 
+\end{equation*}
+   \item \textit{Anulamento do produto:} Para todos $x, y \in \R$  temos que
+\begin{equation*}
+x \cdot y= 0 \Leftrightarrow x=0 \ \ \ \text{ ou } \ \ \ y=0 \ .
+\end{equation*}
+   \end{itemize}
+
+
+%  \section{Operações em \texorpdfstring{$\I$}{I} e \texorpdfstring{$\R$}{R}}
+
+%  Para finalizar, lembramos que há uma cópia dos números racionais dentro do conjunto dos números reais, portanto todas as propriedades das operações em $\Q$ continuam válidas para estes números dentro de $\R$. Assim, para compreendermos como funcionam as operações em $\R= \Q \cup \I$ precisamos aprender a operar em $\I$. As operações entre números irracionais que são raízes de alguma ordem de outros números serão discutidas no próximo capítulo, as operações entre números irracionais como por exemplo $\pi + e$, costumamos deixar indicadas, por este motivo não precisamos detalhar este caso.
+
+%  Mas destacamos que em $\R$ as operações de soma (adição) $(+)$ e multiplicação $(\cdot)$ possuem as seguintes propriedades:
+
+%  Soma (adição) $(+)$:
+%  \begin{enumerate}[1)]
+%  \item Fechamento: dados $x, y \in \R$ temos que $x+y \in \R$;
+%  \item Associativo: dados $x, y, z \in \R$ temos que $(x+y)+z= x+(y+z)$;
+%  \item Elemento neutro: existe um elemento $0 \in \R$ tal que $x+0=0+x=x$, para qualquer $x \in \R$;
+%  \item Elemento inverso: dado $x \in \R$ qualquer, existe um elemento $-x \in \Q$ tal que $x+(-x)=0$;
+%  \item Comutatividade: dados $x, y \in \R$ temos que $x+y= y+x$.
+%  \end{enumerate}
+
+%   Multiplicação $(\cdot)$:
+%  \begin{enumerate}[1)]
+%  \item Fechamento: dados $x, y \in \R$ temos que $x \cdot y \in \R$;
+%  \item Associativo: dados $x, y, z \in \R$ temos que $(x \cdot y) \cdot z= x \cdot (y \cdot z)$;
+%  \item Elemento neutro: existe um elemento $1 \in \R$ tal que $x \cdot 1= 1 \cdot x= x$, para qualquer $x \in \R$;
+%  \item Elemento inverso: dado $x \in \R$ qualquer, existe um elemento $x^{-1} \in \R$ tal que $x \cdot x^{-1}= 1$;
+%  \item Comutatividade: dados $x, y \in \R$ temos que $x \cdot y= y \cdot x$.
+%  \end{enumerate}
+
+%   Leis distributivas: $\forall x, y, z \in \R$
+%  \begin{enumerate}[1)]
+%  \item $x \cdot (y + z)= x \cdot y + x \cdot z$;
+%  \item $(x + y) \cdot z= x \cdot z + y \cdot z$.
+%  \end{enumerate}
+
+%    Quando um conjunto tem duas operações satisfazendo as propriedades acima ele costuma ser chamado de \emph{corpo}. Portanto, $\R$ é um \emph{corpo}. Este e outros corpos são utilizados em disciplinas como Álgebra Linear.
+
+%    Só por curiosidade, um outro exemplo de corpo é o conjunto $\Z_2= \{0, 1\}$, no qual definimos $1+1=0$, pois neste conjunto as operações de adição e multiplicação satisfazem todas as propriedades mencionadas anteriormente.
+
+%    As operações de soma e produto no conjunto dos números reais satisfazem também a:
+%    \begin{itemize}
+%    \item \textit{Lei do cancelamento:} Para todos $x, y, z \in \R$  temos que
+% \begin{equation*}
+% x+z=y+z \ \ \ \Rightarrow \ \ \ x=y  . 
+% \end{equation*}
+%    \item \textit{Anulamento do produto:} Para todos $x, y \in \R$  temos que
+% \begin{equation*}
+% x \cdot y= 0 \Leftrightarrow x=0 \ \ \ \text{ ou } \ \ \ y=0 \ .
+% \end{equation*}
+%    \end{itemize}
+
+\section{Potenciação}
+
+% \subsection{Potência com expoente natural}
+
+\begin{obs}
+  
+  Dados dois números $a \in \R$ e $b$ inteiro positivo, definimos:
+\begin{equation*}
+a^b= \underbrace{a \cdot a \cdot \cdots \cdot a}_{b \text{ vezes}} .
+\end{equation*}
+  Dizemos que $a$ é a base da potência e $b$ o expoente. Lê-se: $a$ elevado a $b$.
+\end{obs}
+
+
+ \begin{exem}
+ Observe que, neste caso, o expoente é um número natural e, portanto, positivo. Por exemplo:
+
+ \begin{enumerate}[a)]
+  \item $2^3= 2 \cdot 2 \cdot 2= 8$;
+  \item $-2^3= -(2 \cdot 2 \cdot 2)= -8$
+  \item $(-2)^3= (-2) \cdot (-2) \cdot (-2)= -8$;
+  \item $2^4=2 \cdot 2 \cdot 2 \cdot  2= 16$;
+  \item $-2^4= -(2 \cdot 2 \cdot 2 \cdot 2)= -16$;
+  \item $(-2)^4= (-2) \cdot (-2) \cdot (-2) \cdot (-2)= 16$;
+  \item $\left(\dfrac{3}{5}\right)^2= \left(\dfrac{3}{5}\right) \cdot \left(\dfrac{3}{5}\right)= \dfrac{3 \cdot 3}{5 \cdot 5}= \dfrac{9}{25}$;
+  \item $\left(\dfrac{-3}{4}\right)^3= \left(\dfrac{-3}{4}\right) \cdot \left(\dfrac{-3}{4}\right) \cdot \left(\dfrac{-3}{4}\right)= \dfrac{(-3) \cdot (-3) \cdot (-3)}{4 \cdot 4 \cdot 4}= \dfrac{-27}{64}$;
+  \item $(0,02)^4= (0,02) \cdot (0,02) \cdot (0,02) \cdot (0,02)= (0,0004) \cdot (0,0004)= 0,00000016$;
+  \item $(0,02)^4= \left(\dfrac{2}{100}\right)^4= \left(\dfrac{2}{10^2}\right)^4= \left(\dfrac{2^4}{10^8}\right)= \left(\dfrac{16}{100000000}\right)= 0,00000016$;
+  \item $\dfrac{7}{10^3}= \dfrac{7}{10 \cdot 10 \cdot 10}= \dfrac{7}{1000}= 0,007$;
+  \item $\dfrac{7^3}{10}=  \dfrac{7 \cdot 7 \cdot 7}{10}= \dfrac{343}{10}=34,3$;
+  \item $\left(\dfrac{7}{10}\right)^3= \dfrac{7^3}{10^3}= \dfrac{343}{1000}= 0,343$.
+  \end{enumerate}
+
+ \end{exem}
+
+ Por enquanto temos definido somente potência com expoente sendo um número natural maior que zero. Definiremos potências com outros expoentes fazendo-as recair neste caso.
+
+\begin{obs}
+Dados dois números $a \in \R$ e $b \in \Z$ definimos:
+\begin{equation*}
+a^{0}= 1 \text{ para } a \neq 0 \ ;
+\end{equation*}
+\begin{equation*}
+a^{-b}= \dfrac{1}{a^b}= \underbrace{\dfrac{1}{a} \cdot \dfrac{1}{a} \cdot \cdots \cdot \dfrac{1}{a}}_{b \text{ vezes}}, \text{ para } b>0 \text{ e } a \neq 0 \ .
+\end{equation*}
+\end{obs}
+
+ \begin{exem}
+ Vejamos agora alguns exemplos em que o expoente é um número inteiro negativo. Os casos em que o expoente é um número inteiro positivo foram exemplificados anteriormente.
+
+ \begin{enumerate}[a)]
+  \item $2^{-1}= \dfrac{1}{2^{1}}= \dfrac{1}{2}$;
+  \item $2^{-3}= \dfrac{1}{2^3}= \dfrac{1}{8}$;
+  \item $\dfrac{1}{3^{-2}}= 3^2= 3 \cdot 3= 9$;
+  \item $(-13)^{-2}= \left( \dfrac{1}{-13} \right)^{2}= \dfrac{1}{169}$;
+  \item $-8^{-4}= -\left( \dfrac{1}{8} \right)^{4}= -\left( \dfrac{1}{8} \cdot \dfrac{1}{8} \cdot \dfrac{1}{8} \cdot \dfrac{1}{8} \right)= -\left( \dfrac{1}{4096} \right)= \dfrac{-1}{4096}$;
+  \item $\left( \dfrac{8}{22} \right)^{-2}= \left( \dfrac{22}{8} \right)^{2}= \dfrac{22}{8} \cdot \dfrac{22}{8}= \dfrac{484}{64}= \dfrac{121}{16}$;
+  \item $\left( \dfrac{-5}{11} \right)^{-3}= \left( \dfrac{11}{-5} \right)^{3}= \left( \dfrac{11}{-5} \right) \cdot \left( \dfrac{11}{-5} \right) \cdot \left( \dfrac{11}{-5} \right)= \dfrac{-1331}{125}$;
+  \item $\dfrac{2^{-2}}{10}= \dfrac{2^{-2}}{1} \cdot \dfrac{1}{10}= \dfrac{1}{2^{2}} \cdot \dfrac{1}{10}= \dfrac{1}{4} \cdot \dfrac{1}{10}= \dfrac{1}{40}= 0,025$;
+  \item $\dfrac{2}{10^{-2}}= \dfrac{2}{1} \cdot \dfrac{1}{10^{-2}}= \dfrac{2}{1} \cdot \dfrac{10^{2}}{1}= 2 \cdot 100= 200$;
+  \item $(0,35)^{-2}= \dfrac{1}{0,35^{2}}= \dfrac{1}{0,1225}= \dfrac{1}{\frac{1225}{10000}}= \dfrac{10000}{1225}= \dfrac{400}{49}$
+ \end{enumerate}
+
+ \end{exem}
+
+ Note que em todos os exemplos acima o que fizemos foi ``inverter'' a fração, e com isso deixamos os expoentes positivos, e então basta aplicar a definição de potência para o caso do expoente ser um número natural.
+
+  Dados $a, b \in \R$, $m, n$ inteiros positivos, decorrem diretamente da definição de potência as seguintes propriedades:
+ \begin{enumerate}[P1)]
+ \item $a^m \cdot a^n= a^{m + n}$;
+\begin{equation*}
+a^m \cdot a^n = \underbrace{a \cdot a \cdots a}_{m \text{- termos}}\cdot \underbrace{a \cdot a \cdots a}_{n \text{- termos}}= \underbrace{a \cdot a \cdots a}_{(m+n) \text{- termos}}= a^{m + n} 
+\end{equation*}
+
+ \item $(a^m)^n= a^{m \cdot n}$;
+\begin{equation*}
+(a^m)^n= \underbrace{a^m \cdot a^m \cdots a^m}_{n \text{- termos}}= \underbrace{\underbrace{a \cdot a \cdots a}_{m \text{- termos}} \cdot \underbrace{a \cdot a \cdots a}_{m \text{- termos}} \cdots \underbrace{a \cdot a \cdots a}_{m \text{- termos}}}_{n \text{- termos}}= \underbrace{a \cdot a \cdots a}_{(m \cdot n) \text{- termos}}= a^{m \cdot n}
+\end{equation*}
+
+ \item $(a \cdot b)^n= a^n \cdot b^n$;
+\begin{equation*}
+(a \cdot b)^n= \underbrace{(a \cdot b) \cdot (a\cdot b) \cdots (a \cdot b)}_{n \text{- termos}}= \underbrace{(a \cdot a \cdots a)}_{n \text{- termos}} \cdot \underbrace{(b \cdot b \cdots b)}_{n \text{- termos}}= a^n \cdot b^n
+\end{equation*}
+
+ \item $\left(\dfrac{a}{b}\right)^n= \dfrac{a^n}{b^n}$, para $b \neq 0$;
+ \[\left(\dfrac{a}{b}\right)^n=
+ \underbrace{\left(\dfrac{a}{b}\right) \cdot \left(\dfrac{a}{b}\right) \cdots \left(\dfrac{a}{b}\right)}_{n \text{- termos}}= \dfrac{\overbrace{a \cdot a \cdots a}^{n \text{- termos}}}{\underbrace{b \cdot b \cdots b}_{n \text{- termos}}}= \dfrac{a^n}{b^n}\]
+
+ \item $a^m \div a^n= a^{m - n}$, para $a \neq 0$;
+\begin{equation*}
+a^m \div a^n= \dfrac{a^m}{a^n}= \dfrac{\overbrace{a \cdot a \cdots a}^{m \text{- termos}}}{\underbrace{a \cdot a \cdots a}_{n \text{- termos}}} = a^{m - n}
+\end{equation*}
+
+ % Para justificar esta última passagem precisamos analisar 3 casos separadamente, façamos isso:
+
+ % Caso 1: Se $m=n$ então $a^m= a^n$ aí por um lado teremos que $\dfrac{a^m}{a^n}= \dfrac{a^m}{a^m}= 1$ e por outro lado $\dfrac{a^m}{a^n}= \dfrac{a^m}{a^m}= a^{m-m}= a^{0}$ donde obtemos que $a^{0}= 1$.
+
+ % Caso 2: Se $m > n$ então $m - n> 0$ e também temos que,
+ % \[\dfrac{a^m}{a^n}= \dfrac{\overbrace{a \cdot a \cdots a}^{m \text{- termos}}}{\underbrace{a \cdot a \cdots a}_{n \text{- termos}}}=
+ % \dfrac{\overbrace{a \cdot a \cdots a}^{n \text{- termos}} \cdot \overbrace{a \cdot a \cdots a}^{(m-n) \text{- termos}}}{\underbrace{a \cdot a \cdots a}_{n \text{- termos}}}=
+ % \frac{\overbrace{a \cdot a \cdots a}^{n \text{- termos}}}{\underbrace{a \cdot a \cdots a}_{n \text{- termos}}} \cdot \overbrace{a \cdot a \cdots a}^{(m-n) \text{- termos}} = a^{m-n} \ .\]
+
+ % Caso 3: Se $m < n$ então $m - n< 0$ e também temos que,
+ % \begin{eqnarray*}
+ %  \dfrac{a^m}{a^n} &=&
+ % \dfrac{\overbrace{a \cdot a \cdots a}^{m \text{- termos}}}{\underbrace{a \cdot a \cdots a}_{n \text{- termos}}}=
+ % \dfrac{\overbrace{a \cdot a \cdots a}^{m \text{- termos}}}{\underbrace{a \cdot a \cdots a}_{m \text{- termos}} \cdot \underbrace{a \cdot a \cdots a}_{(n-m) \text{- termos}}} \\
+ % & = &\dfrac{\overbrace{a \cdot a \cdots a}^{m \text{- termos}}}{\underbrace{a \cdot a \cdots a}_{m \text{- termos}}} \cdot \dfrac{1}{\underbrace{a \cdot a \cdots a}_{(n-m) \text{- termos}}}=
+ % 1 \cdot \dfrac{1}{\underbrace{a \cdot a \cdots a}_{(n-m) \text{- termos}}}= \dfrac{1}{a^{n-m}}= a^{-(n-m)}= a^{m-n} \ .
+ % \end{eqnarray*}
+
+
+ \item $a^{-n}= \dfrac{1}{a^n}$, para $(a \neq 0)$;
+\begin{equation*}
+a^{-n}= a^{0-n}= \dfrac{a^0}{a^n}= \dfrac{1}{a^n} \ .
+\end{equation*}
+
+ \item $\left(\dfrac{a}{b} \right)^{-n}= \left(\dfrac{b}{a} \right)^{n}$, para $a \neq 0$ e $b \neq 0$;
+\begin{equation*}
+\left(\dfrac{a}{b} \right)^{-n}= \dfrac{a^{-n}}{b^{-n}}= a^{-n} \cdot \dfrac{1}{b^{-n}}= \dfrac{1}{a^n} \cdot b^{n}= \dfrac{b^n}{a^n}= \left(\dfrac{b}{a}\right)^n \ .
+\end{equation*}
+
+ \end{enumerate}
+
+
+\begin{obs}
+ Aqui é importante observar que:
+ \begin{itemize}
+     \item Não existe $0^0$;
+     \item $a^1= a$;
+     \item $a^0= 1$;
+     \item $1^a= 1$.
+ \end{itemize}
+\end{obs}
+
+
+ \begin{exem} Vejamos agora alguns exemplos de aplicação direta das propriedades de potência dadas acima.
+  \begin{enumerate}[P1)]
+   \item $7^2 \cdot 7^3= (7 \cdot 7) \cdot (7 \cdot 7 \cdot 7)= 7^{2+3}= 7^5 $;
+   \item $(7^4)^2= (7^4) \cdot (7^4)= (7 \cdot 7 \cdot 7 \cdot 7) \cdot (7 \cdot 7 \cdot 7 \cdot 7)= 7^{2 \cdot 4}= 7^8$;
+   \item $(7 \cdot 10)^5= (7 \cdot 10) \cdot (7 \cdot 10) \cdot (7 \cdot 10) \cdot (7 \cdot 10) \cdot (7 \cdot 10)= (7 \cdot 7 \cdot 7 \cdot 7 \cdot 7) \cdot (10 \cdot 10 \cdot 10 \cdot 10 \cdot 10)= 7^5 \cdot 10^5$;
+   \item $\left(\dfrac{13}{9}\right)^4= \left(\dfrac{13}{9}\right) \cdot \left(\dfrac{13}{9}\right) \cdot \left(\dfrac{13}{9}\right) \cdot \left(\dfrac{13}{9}\right)= \dfrac{13 \cdot 13 \cdot 13 \cdot 13}{9 \cdot 9 \cdot 9 \cdot 9}= \dfrac{13^4}{9^4}$;
+   \item Caso 1: $\dfrac{100^3}{100^3}= 100^{3-3}= 100^0= 1$;
+
+   Caso 2: $\dfrac{48^{70}}{48^{69}}= 48^{70-69}= 48^{1}= 48$;
+
+   Caso 3: $\dfrac{10^4}{10^7}= 10^{4-7}= 10^{-3} =\dfrac{1}{10^{3}}$;
+
+   \item $10^{-3}= \dfrac{1}{10^3}$;
+   \item $\left(\dfrac{12}{20}\right)^{-7}=\left(\dfrac{20}{12}\right)^{7}$.
+
+  \end{enumerate}
+
+ \end{exem}
+
+
+ \section{Raízes}
+
+
+\begin{obs}
+  Dados um número real $a \geq 0$ e um número natural $n$, existe um número real positivo ou nulo $b$ tal que $b^n= a$. O número real $b$ é chamado de raiz n-ésima de $a$, ou raiz de ordem $n$ de $a$ e indicaremos por $\sqrt[n]{a}$.
+
+  Da definição decorre que $(\sqrt[n]{a})^n=a$.
+\end{obs}
+
+\begin{obs}
+ Note que de acordo com a definição dada $\sqrt{36}= 6$ e não $\sqrt{36}= \pm 6$.
+ \end{obs}
+
+ Muita atenção ao calcular a raiz quadrada de um quadrado perfeito:
+\begin{equation*}
+\sqrt{a^2}= \abs{a} \ . 
+\end{equation*}
+
+ %Se $a, b$ positivos, $m$, $n$, e $p$ inteiros, então 
+ Valem as seguintes propriedades:
+ \begin{enumerate}[R1)]
+ %\item $\sqrt[n]{a^m}= \sqrt[n \cdot p]{a^{m\cdot p}}$;
+ \item $\sqrt[n]{a \cdot b}= \sqrt[n]{a} \cdot \sqrt[n]{b}$;
+ \item $\sqrt[n]{\dfrac{a}{b}}= \dfrac{\sqrt[n]{a}}{\sqrt[n]{b}}$, para $b \neq 0$;
+ \item $(\sqrt[n]{a})^m= \sqrt[n]{a^m}$;
+ \item $\sqrt[p]{\sqrt[n]{a}}= \sqrt[p \cdot n]{a}$.
+ \end{enumerate}
+
+ \begin{exem} Vejamos agora alguns exemplos de aplicação direta das propriedades de raízes dadas acima.
+\begin{enumerate}[R1)]
+ %  \item $\sqrt[4]{7^3}= \sqrt[4 \cdot 2]{7^{3\cdot 2}}$;
+ \item $\sqrt[3]{8 \cdot 5}= \sqrt[3]{8} \cdot \sqrt[3]{5}$;
+ \item $\sqrt[2]{\dfrac{9}{25}}= \dfrac{\sqrt[2]{9}}{\sqrt[2]{25}}$;
+ \item $\left(\sqrt[3]{7}\right)^6= \sqrt[3]{7^6}$;
+ \item $\sqrt[2]{\sqrt[3]{729}}= \sqrt[2 \cdot 3]{729}= \sqrt[6]{3^6}$.
+  \end{enumerate}
+\end{exem}
+
+
+ \section{Potência com expoente racional}
+
+ A radiciação pode ser entendida como uma potência com expoente racional, a partir da seguinte definição.
+ 
+\begin{obs}
+  Dados dois números $a$ positivo e $\frac{m}{n}$, com $n\neq 0$, definimos:
+\begin{equation*}
+a^{\frac{m}{n}}= \sqrt[n]{a^m}, \text{ para } \frac{m}{n} >0 ;
+\end{equation*}
+\begin{equation*}
+a^{-\frac{m}{n}}= \frac{1}{a^{\frac{m}{n}}}= \frac{1}{\sqrt[n]{a^m}},  \text{ para } \frac{m}{n} >0.
+\end{equation*}
+\end{obs}
+
+ Entendida a radiciação como potência são válidas aqui todas as propriedades de potência com expoente inteiro listadas anteriormente.
+
+ \begin{exem}
+  Vejamos agora alguns exemplos de potência com expoente sendo um número racional:
+  \begin{enumerate}[a)]
+   \item $4^{\frac{1}{2}}= \sqrt{4}= 2$;
+   \item $(-8)^{\frac{1}{3}}= \sqrt[3]{(-8)^1}= \sqrt[3]{(-2)^{3}}= -2$;
+   \item $(-27)^{\frac{2}{6}}= \sqrt[6]{(-27)^2}= \sqrt[6]{((-3)^3)^2}= \sqrt[6]{(-3)^6} = \abs{-3} = 3$;
+   \item $9^{-\frac{1}{2}}= \dfrac{1}{9^{\frac{1}{2}}}= \dfrac{1}{\sqrt{9}}= \dfrac{1}{3}$;
+   \item $\left(\dfrac{4}{9}\right)^{-\dfrac{1}{2}}= \left(\dfrac{9}{4}\right)^{\dfrac{1}{2}}= \sqrt{\left(\dfrac{9}{4}\right)}=\dfrac{\sqrt{9}}{\sqrt{4}}= \dfrac{3}{2}$;
+   \item $\dfrac{2}{3^{-2}}= 2 \cdot \dfrac{1}{3^{-2}}= 2 \cdot 3^{2}= 2 \cdot 9= 18$.
+  \end{enumerate}
+ \end{exem}
+
+
+
+ % \section{Potência com expoente irracional}
+
+ % Dados um número real $a > 0$ e um número irracional $\alpha$, podemos construir por meio de aproximações sucessivas de potências de $a$ com expoente racional, um único número real positivo $a^{\alpha}$ que é potência de base $a$ e expoente irracional $\alpha$.
+
+ % Esse método é decorre do fato que um número irracional pode ser aproximado por falta ou por excesso por sequências de números racionais, e potências com expoentes racionais estão bem definidas, então podemos utilizar estes dois fatos e definir potências com expoente irracionais que satifazem todas as propriedades de potências já descritas. Vejamos um exemplo:
+
+ % \begin{exem}
+ % Consideremos o número irracional $\sqrt{2}= 1,414213562\ldots$. Observe que podemos aproximar $\sqrt{2}$ por falta ou por excesso pelos seguintes números racionais:
+
+ % \begin{multicols}{2}
+ % por falta:
+ % \begin{eqnarray*}
+ % 1 &=& 1\\
+ % 1,4 &=& \dfrac{14}{10} \\
+ % 1,41 &=& \dfrac{141}{100} \\
+ % 1,414 &=& \dfrac{1414}{1000} \\
+ % 1,4142 &=& \dfrac{14142}{1000}
+ % \end{eqnarray*}
+
+ % por excesso:
+ % \begin{eqnarray*}
+ % 2 &=& 2\\
+ % 1,5 &=& \dfrac{15}{10} \\
+ % 1,42 &=& \dfrac{142}{100} \\
+ % 1,415 &=& \dfrac{1415}{1000} \\
+ % 1,4143 &=& \dfrac{14143}{1000}
+ % \end{eqnarray*}
+ % \end{multicols}
+
+ % Assim podemos definir o valor de $13^{\sqrt{2}}$ por aproximação por falta ou por excesso de potências de base $13$, da seguinte forma:
+
+ % por falta:
+ % \begin{eqnarray*}
+ % 13^1 =& 13^1 &= 13\\
+ % 13^{1,4} =& 13^{\frac{14}{10}} =& 36,267756667 \\
+ % 13^{1,41} =& 13^{\frac{141}{100}} =& 37,210039132 \\
+ % 13^{1,414} =& 13^{\frac{1414}{1000}} =& 37,59377174 \\
+ % 13^{1,4142} =& 13^{\frac{14142}{1000}} =& 37,613061911
+ % \end{eqnarray*}
+
+ % por excesso:
+ % \begin{eqnarray*}
+ % 13^{2} =& 13^{2} =& 169 \\
+ % 13^{1,5} =& 13^{\frac{15}{10}} =& 46,872166581 \\
+ % 13^{1,42} =& 13^{\frac{142}{100}} =& 38,176803296\\
+ % 13^{1,415} =& 13^{\frac{1415}{1000}} =& 37,69032163 \\
+ % 13^{1,4143} =& 13^{\frac{14143}{10000}} =& 37,622710708
+ % \end{eqnarray*}
+
+ % Portanto $13^{\sqrt{2}} \approx 37,6$.
+ % \end{exem}
+
+ \section{Potência com expoente real}
+
+ % Considerando que já foram definidas anteriormente as potências de base $a \in \R^{*}_{+}$ e expoente $b$ ($b$ racional ou  irracional) então já está definida a potência $a^b$ com $a \in \R^{*}_{+}$ e $b \in \R$.
+
+%  \begin{obs}
+%  Toda potência de base real e positiva e expoente real é um número real positivo.
+% \begin{equation*}
+% a> 0 \Rightarrow a^b > 0 \ .
+% \end{equation*}
+%  \end{obs}
+
+  Se $a, b \in \R$ positivos, $m, n \in \R$, então valem as mesmas propriedades já apresentadas propriedades:
+ \begin{enumerate}[P1)]
+ \item $a^m \cdot a^n= a^{m + n}$;
+ \item $a^m \div a^n= a^{m - n}$, para $a \neq 0$;
+ \item $(a^m)^n= a^{m \cdot n}$;
+ \item $(a \cdot b)^n= a^n \cdot b^n$;
+ \item $\left(\frac{a}{b}\right)^n= \frac{a^n}{b^n}$, para $b \neq 0$;
+ \item $a^{-n}= \frac{1}{a^n}$, para $(a \neq 0)$;
+ \item $\left(\frac{a}{b} \right)^{-n}= \left(\frac{b}{a} \right)^{n}$, para $a \neq 0$ e $b \neq 0$;
+ \end{enumerate}
+
+Temos algumas observações sobre potências envolvendo números irracionais:
+ \begin{obs}
+\begin{itemize}
+\item Se $a=0$ e $\alpha$ é irracional e positivo, definimos $0^{\alpha}=0$.
+\item Se $a=1$ então $1^{\alpha}= 1, \forall \alpha$ irracional.
+\item Se $a < 0$ e $\alpha$ é irracional e positivo então o símbolo $a^{\alpha}$ não tem significado.
+\item Se $\alpha$ é irracional e negativo $(\alpha < 0)$ então $0^{\alpha}$ não tem significado.
+%\item Para as potências de expoente irracional são válidas as propriedades de potências com expoente racional.
+\end{itemize}
+\end{obs}
+
+\section{Racionalização de denominadores}
+
+O processo de racionalização de denominadores é utilizado quando se tem uma fração com denominador irracional e se deseja transformá-la em outra cujo denominador seja um número racional (ou inteiro).
+
+\begin{exem}
+    Dada a fração $\dfrac{5}{\sqrt{3}}$, seu denominador é um número irracional. Multiplicando pela fração $\dfrac{\sqrt{3}}{\sqrt{3}}$ obtemos:
+    \begin{equation*}
+        \dfrac{5}{\sqrt{3}} = \dfrac{5}{\sqrt{3}} \cdot \dfrac{\sqrt{3}}{\sqrt{3}} = \dfrac{5\sqrt{3}}{(\sqrt{3})^2} = \dfrac{5\sqrt{3}}{3}.
+    \end{equation*}
+\end{exem}
+
+\begin{exem}
+    Dada a fração $\dfrac{3}{\sqrt[3]{5}}$, sua racionalização é obtida multiplicando-a por $\dfrac{\sqrt[3]{5^2}}{\sqrt[3]{5^2}}$:
+    \begin{equation*}
+        \dfrac{3}{\sqrt[3]{5}} = \dfrac{3}{\sqrt[3]{5}}\cdot \dfrac{\sqrt[3]{5^2}}{\sqrt[3]{5^2}} = \dfrac{3\sqrt[3]{25}}{5}.
+    \end{equation*}
+\end{exem}
+
+\begin{exem}
+    Para racionalizar a fração $\dfrac{1}{2+\sqrt{3}}$ devemos multiplicar por $\dfrac{2-\sqrt{3}}{2-\sqrt{3}}$. Assim,
+    \begin{equation*}
+        \dfrac{1}{2+\sqrt{3}} = \dfrac{1}{2+\sqrt{3}}\cdot \dfrac{2-\sqrt{3}}{2-\sqrt{3}} = \dfrac{2-\sqrt{3}}{2^2-(\sqrt{3})^2} = \dfrac{2-\sqrt{3}}{4-3} = 2-\sqrt{3}. 
+    \end{equation*}
+\end{exem}
+
+ \newpage
+\begin{secExercicios}
+
+\begin{exer}
+    Simplifique as frações abaixo até obter uma fração irredutivel.
+    \begin{multicols}{3}
+    \begin{enumerate}[a)]
+        \item $\dfrac{20}{30}$
+        \item $\dfrac{12}{20}$
+        \item $\dfrac{15}{25}$
+        \item $\dfrac{28}{21}$
+        \item $\dfrac{72}{40}$
+        \item $\dfrac{132}{484}$
+    \end{enumerate}
+    \end{multicols}
+\end{exer}
+
+\begin{exer}
+    Resolva as seguintes operações, simplificando o resultado até obter uma fração irredutível, quando for possível.
+    \begin{multicols}{2}
+    \begin{enumerate}[a)]
+        \item $\dfrac{3}{4}+1$
+        \item $2-\dfrac{2}{3}$
+        \item $\dfrac{2}{3}+\dfrac{5}{4}$
+        \item $\dfrac{11}{12}- \dfrac{5}{6}$
+        \item $\dfrac{1}{3}+\dfrac{2}{5}+\dfrac{3}{13}$
+        \item $\dfrac{3}{5}\cdot \dfrac{2}{7}$
+        \item $\dfrac{1}{5}-\dfrac{2}{5}\cdot \dfrac{9}{2}$
+        \item $\dfrac{\frac{1}{11}}{\frac{4}{5}}+9$
+        \item $\dfrac{\frac{2}{5}}{3}$
+        \item $\dfrac{\frac{1}{4}+\frac{1}{2}}{\frac{3}{2}+3}$
+        \item $\dfrac{\frac{4}{3}\cdot \frac{1}{8}}{\frac{3}{7}+\frac{16}{9}\cdot \frac{7}{2}}$
+    \end{enumerate}
+    \end{multicols}
+\end{exer}
+
+\begin{exer}
+    Calcule a expressão
+    \begin{equation*}
+        \dfrac{1+\dfrac{1}{1-\dfrac{1}{5}}}{-1+\dfrac{3}{1+\dfrac{1}{5}}}
+    \end{equation*}
+\end{exer}
+
+\begin{exer}
+Calcule as seguintes potências:
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $2^4$ 
+\item $1500^0$
+\item $(-7)^2$
+\item $(-4)^3$
+\item $-15^2$
+\item $-3^5$
+\item $\left(\dfrac{2}{5}\right)^3$
+\item $(7^2 + 5^3)^2$
+\item $16^{-1}$
+\item $\left(\dfrac{-9}{10}\right)^{-2}$
+\item $(\pi)^0$
+\item $\left(\dfrac{3}{7}\right)^{-3}$
+\item $(2,105)^1$
+\item $\left( - \dfrac{4}{5} \right)^{-4}$
+\end{enumerate}
+\end{multicols}
+\end{exer}
+\begin{resp}
+  \begin{multicols}{3}
+\begin{enumerate}[a)]
+\item $16$ 
+\item $1$
+\item $49$
+\item $64$
+\item $ -225$
+\item $-243$
+\item $\left(\dfrac{8}{125}\right)$
+\item $30276$
+\item $\left(\dfrac{1}{16}\right)$
+\item $\left(\dfrac{100}{81}\right)$
+\item $1$
+\item $\left(\dfrac{343}{27}\right)$
+\item $2,105$
+\item $\left( - \dfrac{625}{256}\right)$
+\end{enumerate}
+\end{multicols}
+\end{resp}
+
+
+\begin{exer}
+ Use as propriedades de potência para simplificar as seguintes expressões:
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\left( \dfrac{3^5 \cdot 5^3}{3^7 \cdot 5^2} \right)^{-1}$
+\item $\left( \dfrac{2^{29} + 2^{31}}{10} \right)^{\frac{1}{4}}$
+\item $\dfrac{6^3 - (-8)^{-2}}{4^{-2} + 2^{-1}}$
+\item $\dfrac{6 \cdot 8^{-4} \cdot 8^{6} \cdot (2^3)^{5}}{3 \cdot 8^{-3} \cdot 8^{7}}$
+\item $\left(4^{-\frac{2}{3}} \cdot 25^{\frac{1}{-6}}\right)^{-3}$
+\item $16^{\frac{1}{3}} \cdot \sqrt[3]{4}$
+\end{enumerate}
+\end{multicols}
+\end{exer}
+\begin{resp}
+\begin{multicols}{3}
+\begin{enumerate}[a)]
+\item $\dfrac{3^2}{5}$
+\item $2^{7}$
+\item $\dfrac{2^9 3^3 - 1}{2^{2} + 2^{5}}$
+\item $2 \cdot 8^3$
+\item $4^2 \cdot 5$
+\item $4$
+\end{enumerate}
+\end{multicols}
+\end{resp}
+
+\begin{exer}
+Com base nas propriedades de potência classifique as afirmações em V (verdadeiro) ou F (falso):
+%\begin{multicols}{1}
+\begin{enumerate}[a)]
+\item $13^7 \cdot 13^9= 13^{8}$
+\item $15^8 \div 15^{10}= 15^{-2}$
+\item $(3^7)^6= 3^{42}$
+\item $(500 \cdot 3)^5= 500^5 \cdot 3^5$
+\item $(7^2 + 6^3)^2= 7^4 + 6^6$
+\item $(12^2 \cdot 6^3)^2= 12^4 \cdot 6^5$
+\item $\left(\dfrac{5}{3} \right)^4= \dfrac{5^4}{3^4}$
+\item $(-3)^{-5}= \dfrac{1}{(-3)^5}$
+\item $\left(\dfrac{2}{5}\right)^{-3}= \left(\dfrac{2}{5}\right)^{3}$
+\item $\dfrac{3}{4^{\frac{-1}{2}}}= 6$
+\item $\left(\dfrac{7^2 \cdot 5}{10}\right)^{2}= \dfrac{7^4 \cdot 25}{100}$
+\item $(\pi)^0= 1$
+\item $(2^{\frac{1}{4}})^8= 4$
+\item $(3^{\frac{3}{5}})^5= 3^{\frac{28}{5}}$
+\end{enumerate}
+%\end{multicols}
+\end{exer}
+\begin{resp}
+ \begin{multicols}{5}
+\begin{enumerate}[a)]
+\item F 
+\item V 
+\item V 
+\item V 
+\item F 
+\item F 
+\item V 
+\item V 
+\item F 
+\item V 
+\item V 
+\item V 
+\item V 
+\item F 
+\end{enumerate}
+\end{multicols}
+\end{resp}
+
+
+
+
+% \begin{exer}
+% Quais das seguintes expressões são números reais?
+% \begin{multicols}{4}
+% \begin{enumerate}[a)]
+% \item $\sqrt{27}$
+% \item $\sqrt{-144}$
+% \item $\sqrt[4]{-16}$
+% \item $\sqrt{(-5)^2}$
+% \item $\sqrt[3]{24}$
+% \item $\sqrt[3]{-27}$
+% \item $\sqrt[7]{-1}$
+% \item $\sqrt[5]{2^{15}}$
+% \item $\sqrt[6]{\dfrac{-3^6}{-3^6 \cdot 9^3}}$
+% \item $\sqrt{\sqrt[3]{-64}}$
+% \item $\sqrt[4]{-4^2}$
+% \end{enumerate}
+% \end{multicols}
+% \end{exer}
+% \begin{resp}
+% \begin{multicols}{4}
+% \begin{enumerate}[a)]
+% \item $\sqrt{27} \in \R$
+% \item $\sqrt{-144} \notin \R$
+% \item $\sqrt[4]{-16} \notin \R$
+% \item $\sqrt{(-5)^2} \in \R$
+% \item $\sqrt[3]{24} \in \R$
+% \item $\sqrt[3]{-27} \in \R$
+% \item $\sqrt[7]{-1} \in \R$
+% \item $\sqrt[5]{2^{15}} \in \R $
+% \item $\sqrt[6]{\dfrac{-3^6}{-3^6 \cdot 9^3}} \in \R$
+% \item $\sqrt{\sqrt[3]{-64}} \notin \R$
+% \item $\sqrt[4]{-4^2} \notin \R$
+% \end{enumerate}
+% \end{multicols}
+% \end{resp}
+
+\begin{exer}
+Por meio de fatoração e simplificações determine o valor das seguintes raízes:
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\sqrt{125}$
+\item $\sqrt{\dfrac{144}{169}}$
+\item $\sqrt[4]{1296}$
+\item $\sqrt[3]{54}$
+\item $\sqrt[3]{-8}$
+\item $\sqrt[5]{-1}$
+\item $\sqrt[6]{729}$
+\item $(\sqrt[6]{16})^3$
+\item $\sqrt[5]{\dfrac{4^4}{8}}$
+\item $-\sqrt{25 \cdot 3^3}$
+\item $\sqrt[4]{(-4)^2}$
+\item $\sqrt{400}$
+\end{enumerate}
+\end{multicols}
+\end{exer}
+\begin{resp}
+\begin{multicols}{4}
+\begin{enumerate}[a)]
+\item $5\sqrt{5}$
+\item $\dfrac{12}{13}$
+\item $6$
+\item $3\sqrt[3]{2}$
+\item $-2$
+\item $-1$
+\item $3$
+\item $4$
+\item $2$
+\item $-15 \sqrt{3}$
+\item $2$
+\item $20$
+\end{enumerate}
+\end{multicols}
+\end{resp}
+
+\begin{exer}
+Simplifique as seguintes raízes:
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\sqrt{2^3 5^4}$
+\item $\sqrt[3]{5^4} \cdot \sqrt[3]{5^2}$
+\item $\sqrt[5]{\sqrt[4]{7}}$
+\item $\sqrt[6]{2^5} \cdot \sqrt[12]{2^2}$
+\item $\sqrt[3]{\sqrt{3^6}}$
+\item $(\sqrt[5]{8})^{15}$
+\item $\sqrt[3]{\dfrac{3^4}{24}}$
+\item $\sqrt[5]{\dfrac{1}{243}}$
+\item $\sqrt[2]{\dfrac{\sqrt{16}}{25}}$
+\item $(\sqrt{\sqrt[3]{2^6 \cdot 4^3}})^3$
+\item $\sqrt[3]{2^2 \cdot 7^2 \cdot 3^3 \cdot 14}$
+\item $\sqrt[21]{5^3}$
+\item $\sqrt[21]{2^{14}}$
+\end{enumerate}
+\end{multicols}
+\end{exer}
+\begin{resp}
+\begin{multicols}{4}
+\begin{enumerate}[a)]
+\item $50\sqrt{2}$
+\item $25$
+\item $\sqrt[20]{7}$
+\item $2$
+\item $3$
+\item $8^3$
+\item $\dfrac{3}{2}$
+\item $\dfrac{1}{3}$
+\item $\dfrac{2}{5}$
+\item $4^3$
+\item $2 \cdot 7 \cdot 3$
+\item $\sqrt[7]{5}$
+\item $\sqrt[3]{2^{2}}$
+\end{enumerate}
+\end{multicols}
+\end{resp}
+
+\begin{exer}
+Racionalize os denominadores das seguintes frações:
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\dfrac{5}{\sqrt{3}}$
+\item $\dfrac{1}{\sqrt[3]{12^2}}$
+\item $\dfrac{3}{\sqrt[3]{5^2 \cdot 3}}$
+\item $\dfrac{2 + \sqrt{3}}{3 - \sqrt{8}}$
+\item $\dfrac{2\sqrt{3}}{\sqrt{8} - \sqrt{5}}$
+\item $\dfrac{2 \sqrt[4]{3^2}}{\sqrt[4]{3^2} + \sqrt{7}}$
+\item $\dfrac{\sqrt{5} + 2}{\sqrt{5} - 2} + \dfrac{\sqrt{5} - 2}{\sqrt{5} + 2}$
+\end{enumerate}
+\end{multicols}
+\end{exer}
+\begin{resp}
+ \begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\dfrac{5 \sqrt{3}}{3}$
+\item $\dfrac{\sqrt[3]{12}}{12}$
+\item $\dfrac{\sqrt[3]{5 \cdot 3^2}}{5}$
+\item $(2 + \sqrt{3}) (3 + \sqrt{8})$
+\item $\dfrac{2\sqrt{3} (\sqrt{8} + \sqrt{5})}{3}$
+\item $\dfrac{- \sqrt[4]{3^2} (\sqrt[4]{3^2} - \sqrt{7})}{2}$
+\item $18$
+\end{enumerate}
+\end{multicols}
+\end{resp}
+
+\begin{exer}
+Simplifique as seguintes expressões:
+\begin{enumerate}[a)]
+\item $\dfrac{2^{\frac{1}{3}} \cdot 3^{\frac{1}{4}} \cdot (-4)^{-2}}{3^3 \cdot 9^{\frac{1}{3}} \cdot 8^{\frac{-1}{6}}}$
+\item $\sqrt{4 \sqrt[3]{-8} + 3\sqrt{9}}$
+\item $\dfrac{\sqrt[3]{\sqrt[3]{8} - \sqrt{100}}}{\sqrt[4]{16}}$
+\item $\sqrt[5]{14^3} \cdot (3 \sqrt[5]{4} + 2 \sqrt[10]{7^4})$
+\item $\dfrac{25^{\frac{-3}{4}} + \sqrt[5]{3^5 \cdot 21^{-5}}}{\frac{8}{3} + \frac{4}{3}}$
+\end{enumerate}
+\end{exer}
+\begin{resp}
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $\dfrac{2^{\frac{5}{6}}}{2^4 \cdot 3^3 \cdot 3^{\frac{5}{12}}}$
+\item $1$
+\item $-1$
+\item $6\sqrt[5]{7^3} + 14 \sqrt[5]{2^3})$
+\item $\left(5^{\frac{-3}{2}} + \dfrac{1}{7} \right) \cdot \dfrac{1}{4}$
+\end{enumerate}
+\end{multicols}
+%\par\noindent\rule{\columnwidth}{0.4pt}
+\end{resp}
+
+%\subsection*{Respostas:}
+
+%\shipoutAnswer
+
+\end{secExercicios}

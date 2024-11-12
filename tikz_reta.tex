@@ -1,0 +1,442 @@
+
+\usetikzlibrary{arrows.meta,math}
+\usepackage{ifthen}
+\usepackage{xargs}
+
+\usetikzlibrary {fpu}
+\pgfkeys{/pgf/number format/.cd,frac ,frac whole=false,}
+\pgfkeys{/pgf/number format/.cd,frac,frac whole=false,/pgf/number format/frac shift=1}
+
+\newcommandx{\realline}[6][3=10000,4=0,5=10000,6=0]
+{
+    \begin{tikzpicture}[
+    line/.style = {draw, ultra thick, shorten <=-2pt},
+    real/.style = {black, {{}-{Triangle[length=4pt, line width=1pt]}}},]
+                     ]
+    \draw[real] (#1-0.5,0) -> (#2+0.5,0) ;%{Triangle[length=4pt, line width=1pt]};    % <---
+    \foreach \i in {#1,...,#2} % numbers on line
+    \draw[black] (\i,0.1) -- ++ (0,-0.2)    % <---
+        node[below,text=black] {$\i$}; % tick and their labels
+    
+    \tikzmath{
+        if #3 != 10000 then {
+            {\filldraw [color=black, fill=red, thick] (#3,0) circle (2pt);};
+            %if int(#3) != #3 then {
+            {\draw (#3,0.1) node[above]{#4};};
+            %};
+        };
+        if #5 != 10000 then {
+            {\filldraw [color=black, fill=red, thick] (#5,0) circle (2pt);};
+            %if int(#3) != #3 then {
+            {\draw (#5,0.1) node[above]{#6};};
+            %};
+        };
+    };
+  \end{tikzpicture}
+}
+
+\newcommand{\exibir}[1]{
+    \tikzmath{
+        \w=int(#1);
+        if \w==#1 then {print{\w};} else {print{\pgfmathprintnumber{#1}};};
+    }
+}
+   
+\newcommand{\intersection}[8]{
+\def\x{{#1}}
+\def\y{{#4}}
+\begin{tikzpicture}[
+    line/.style = {draw, ultra thick, shorten <=-2.5pt},
+    21/.style = {line, shorten >=-2.5pt,
+               {Circle[length=5pt, line width=1pt]}-{Circle[length=5pt,line width=1pt, fill=white]}},
+    12/.style = {line, shorten >=-2.5pt,
+               {Circle[length=5pt, line width=1pt, fill=white]}-{Circle[length=5pt, line width=1pt]}},
+    11/.style = {line, shorten >=-2.5pt,
+               {Circle[length=5pt, line width=1pt, fill=white]}-{Circle[length=5pt, line width=1pt, fill=white]}},
+    22/.style = {line, shorten >=-2.5pt,
+               {Circle[length=5pt, line width=1pt]}-{Circle[length=5pt, line width=1pt]}},
+    10/.style = {line, shorten >=-2.5pt,
+           {Circle[length=5pt, line width=1pt, fill=white]}-{}},
+    20/.style = {line, shorten >=-2.5pt,
+           {Circle[length=5pt, line width=1pt]}-{}},
+    01/.style = {line, shorten >=-2.5pt,
+           {}-{Circle[length=5pt, line width=1pt, fill=white]}},
+    02/.style = {line, shorten >=-2.5pt,
+           {}-{Circle[length=5pt, line width=1pt]}},
+    1/.style = {line, shorten >=-2.5pt,
+           {}-{Circle[length=5pt, line width=1pt, fill=white]}},
+    2/.style = {line, shorten >=-2.5pt,
+           {}-{Circle[length=5pt, line width=1pt]}},
+    real/.style = {gray, {{}-{Triangle[length=4pt, line width=1pt]}}},
+    ]
+    
+    \tikzmath{
+        let \s=5;
+        let \sep=0.8;
+        let \m=0.8;
+        let \xtype=#2;
+        let \ytype=#5;
+        let \atype=#7;
+        real \xr;
+        real \yr;
+        %\xr1 = #1;
+        %\xr2 = #2;
+        \xr1 = \x[0];
+        \xr2 = \x[1];
+        \yr1 = \y[0];
+        \yr2 = \y[1];
+        % Min max values
+        real \k;
+        \k1 = min(\xr1,\xr2,\yr1,\yr2);
+        \k2 = max(\xr1,\xr2,\yr1,\yr2);
+        real \f;
+        % Auxiliar variables
+        \f = \s/(\k2-\k1);
+        real \g;
+        \g = \s/(\k2-\k1)*\k1;
+        % Correction
+        if (\xtype==01 || \xtype==02) && \xr1>\k1  then {\xr1=\k1;};
+        if (\xtype==10 || \xtype==20) && \xr2<\k2  then {\xr2=\k2;};
+        if (\ytype==01 || \ytype==02) && \yr1>\k1  then {\yr1=\k1;};
+        if (\ytype==10 || \ytype==20) && \yr2<\k2  then {\yr2=\k2;};
+        %Function to draw the real lines
+        function drawline (\z1,\z2,\type,\cor) {
+            if \cor==1 then {let \c=blue;} else {let \c=black;};
+            %{\draw node{$\l$}};
+            {\draw[real] (-\m,0) -- (\s+\m+0.15,0);};
+            if \type!=0 then {
+                if (\type==01 || \type==02) then {
+                    {\draw[\type,\c] (-\m+0.07,0)-- (\f*\z2-\g,0) node[below right]{$\exibir{\z2}$};};
+                } else {
+                    if (\type==10 || \type==20) then {
+                        {\draw[\type,\c] (\f*\z1-\g,0) node[below left]{$\exibir{\z1}$}-- (\m+\s-0.07,0);};
+                    } else {
+                        {\draw[\type,\c] (\f*\z1-\g,0) node[below left]{$\exibir{\z1}$}-- (\f*\z2-\g,0) node[below right]{$\exibir{\z2}$};};
+                    };
+                };
+            };
+        };
+        %Draw first real line
+        drawline(\xr1,\xr2,\xtype,0);
+    };
+    \draw (-\m,0) node [left]{#3};
+
+    %Draw second real line
+    \tikzset{shift={(0,-\sep)}};
+    \tikzmath{drawline(\yr1,\yr2,\ytype,0);}
+    \draw (-\m,0) node [left]{#6};
+
+    % Draw intersection
+    \tikzset{shift={(0,-\sep)}};
+    \tikzmath{
+        real \ar;
+        \ar1 = max(\xr1,\yr1);
+        \ar2 = min(\xr2,\yr2);
+        if \ar1<\ar2 then {
+            if \atype!=01 && \atype!=02 then {
+                {\draw[dashed] (\f*\ar1-\g,2*\m) -- (\f*\ar1-\g,0);};
+            };
+            if \atype!=10 && \atype!=20 then {
+                {\draw[dashed] (\f*\ar2-\g,2*\m) -- (\f*\ar2-\g,0);};
+            };
+            drawline(\ar1,\ar2,\atype,1);
+        } else {
+            drawline(0,0,0,0);
+        };
+    };
+    \draw (-\m,0) node [left]{#8};
+\end{tikzpicture}
+}
+
+\newcommandx{\signtable}[9][1=2, 8=0, 9=0]{
+\def\p{{#2}}
+\def\x{{#3}}
+\def\y{{#4}}
+\begin{tikzpicture}[
+    line/.style = {draw, ultra thick, shorten <=-2.5pt},
+    real/.style = {gray, thick, {{}-{Triangle[length=4pt, line width=1pt]}}},
+    ]
+    \tikzmath{
+        \nodes = #1;
+        let \sep=0.8;
+        let \m=2;
+        let \s=\nodes*\m+\m;
+        {\draw[real] (0,0) node[black, above left]{#5} -- (\s+0.15,0);};
+        {\draw[real] (0,-\sep) node[black, above left]{#6} -- (\s+0.15,-\sep);};
+        {\draw[real] (0,-2*\sep) -- (\s+0.15,-2*\sep);};
+        {\draw (0,-1.75*\sep) node[black, left]{#7};};
+        for \i in {0,...,\nodes-1}{
+            \k =\p[\i];
+            {\draw (\i*\m+\m,0) node[below right]{\exibir{\k}};}; 
+            {\draw (\i*\m+\m,-2*\sep) node[below right]{\exibir{\k}};}; 
+        };
+        function drawsign (\v,\w1,\w2){
+            if \v >= 0 then {
+                {\draw[blue, very thick] (\w1,\w2+0.15) -- (\w1,\w2+0.45);};
+                {\draw[blue, very thick] (\w1-0.15,\w2+0.3) -- (\w1+0.15,\w2+0.3);};
+            } else {
+                {\draw[red, very thick] (\w1-0.15,\w2+0.3) -- (\w1+0.15,\w2+0.3);};
+            };
+        };
+        for \i in {0,...,\nodes} {
+            \k1=\x[\i];
+            \k2=\y[\i];
+            drawsign(\k1,(\i+0.5)*\m,0);
+            drawsign(\k2,(\i+0.5)*\m,-\sep);
+            drawsign(\k1*\k2,(\i+0.5)*\m,-2*\sep);
+        };
+        for \i in {0,...,\nodes-1}{
+            {\draw[dashed,gray,thick] (\i*\m+\m,0.7*\sep) -- (\i*\m+\m,-2.7*\sep);};
+        };
+        if #8!=0 then {
+            {\filldraw [color=gray, fill=white, thick] (#8*\m,-2*\sep) circle (2pt);};
+        };
+        if #9!=0 then {
+            {\filldraw [color=gray, fill=white, thick] (#9*\m,-2*\sep) circle (2pt);};
+        };
+    }
+\end{tikzpicture}
+}
+
+\newcommand{\interval}[3]{
+    \def\x{{#3}}
+    \tikzmath{
+        if #2!=0 then {
+            real \xr;
+            if (#2==01 || #2==02) then {    
+                \xr=\x;
+                {\draw[#2,\cc] (0.05,-\sep*#1) -- (\xr*\factor-\d, -\sep*#1) node[black, below right]{$\exibir{\xr}$};};
+                %{\draw[#2] (0,-#1*\sep)-- (\x,-#1*\sep) node[below right]{$\exibir{\x}$};};
+            } else {
+                 if (#2==10 || #2==20) then {
+                    \xr=\x;
+                    {\draw[#2,\cc] (\xr*\factor-\d,-\sep*#1) node[black, below right]{$\exibir{\xr}$}  -- (\p-0.05, -\sep*#1);};
+                %     {\draw[#4] (\f*\z1-\g,-#1*\sep) node[below left]{$\exibir{\z1}$}-- (\m+\s-0.07,-#1*\sep);};
+                 } else {
+                    \xr1 = \x[0];
+                    \xr2 = \x[1];
+                    %{\draw[dashed] (\xr1*\factor-\d,-\sep*#1) -- ++ (0,#1*\sep);};
+                    %{\draw[dashed] (\xr2*\factor-\d,-\sep*#2) -- ++ (0,#1*\sep);};
+                    {\draw[#2,\cc] (\xr1*\factor-\d,-\sep*#1) node[black, below right]{$\exibir{\xr1}$} -- (\xr2*\factor-\d, -\sep*#1) node[black, below right]{$\exibir{\xr2}$};};
+                %     {\draw[#4] (\f*\z1-\g,-#1*\sep) node[below left]{$\exibir{\z1}$}-- (\f*\z2-\g,-#1*\sep) node[below right]{$\exibir{\z2}$};};
+                 };
+            };
+        };
+    }
+}
+
+\newcommand{\linelabel}[2]{
+    \draw (0,-#1*\sep) node [left]{#2};
+}
+
+\newcommand{\dashes}[3]{
+    {\draw[dashed] (#1*\factor-\d,-\sep*#2) -- (#1*\factor-\d,-#3*\sep);};
+}
+
+\newcommand{\intervalcolor}[1]{
+    \def\cc{#1}
+}
+
+\newenvironment{intervaloper}[3][1]{
+    \def\r{#2}
+    \def\s{#3}
+    \def\sep{0.8}
+    \def\p{7}
+    \def\cc{black}
+    \begin{center}
+    \begin{tikzpicture}[
+    line/.style = {draw, ultra thick, shorten <=-2.5pt},
+    21/.style = {line, shorten >=-2.5pt,
+               {Circle[length=5pt, line width=1pt]}-{Circle[length=5pt,line width=1pt, fill=white]}},
+    12/.style = {line, shorten >=-2.5pt,
+               {Circle[length=5pt, line width=1pt, fill=white]}-{Circle[length=5pt, line width=1pt]}},
+    11/.style = {line, shorten >=-2.5pt,
+               {Circle[length=5pt, line width=1pt, fill=white]}-{Circle[length=5pt, line width=1pt, fill=white]}},
+    22/.style = {line, shorten >=-2.5pt,
+               {Circle[length=5pt, line width=1pt]}-{Circle[length=5pt, line width=1pt]}},
+    10/.style = {line, shorten >=-2.5pt,
+           {Circle[length=5pt, line width=1pt, fill=white]}-{}},
+    20/.style = {line, shorten >=-2.5pt,
+           {Circle[length=5pt, line width=1pt]}-{}},
+    01/.style = {line, shorten >=-2.5pt,
+           {}-{Circle[length=5pt, line width=1pt, fill=white]}},
+    02/.style = {line, shorten >=-2.5pt,
+           {}-{Circle[length=5pt, line width=1pt]}},
+    1/.style = {line, shorten >=-2.5pt,
+           {}-{Circle[length=5pt, line width=1pt, fill=white]}},
+    2/.style = {line, shorten >=-2.5pt,
+           {}-{Circle[length=5pt, line width=1pt]}},
+    real/.style = {gray, {{}-{Triangle[length=4pt, line width=1pt]}}},
+    ]        
+        \tikzmath{
+            \factor = \p/(\s-\r);
+            \d = \r*\factor;
+        }
+        \foreach \i in {1,...,#1}{
+            %\draw[real] (\r,-\i*\sep) -- (\s+0.15,-\i*\sep);
+            \draw[real] (0,-\i*\sep) -- (\p+0.15,-\i*\sep);
+        };
+        %\foreach \i in {\r,...,\s} % numbers on line
+        %    \draw[black] (\i*\factor-\d,0.1-\sep) -- ++ (0,-0.2)    % <---
+        %node[below,text=black] {$\i$}; % tick and their labels
+} {
+\end{tikzpicture}
+\end{center}
+}
+
+\newcommand{\intervalo}[4][5]{
+\begin{tikzpicture}[
+    line/.style = {draw, ultra thick, shorten <=-2.5pt},
+    21/.style = {line, shorten >=-3pt,
+               {Circle[length=6pt, line width=1pt]}-{Circle[length=6pt,line width=1pt, fill=white]}},
+    12/.style = {line, shorten >=-3pt,
+               {Circle[length=6pt, line width=1pt, fill=white]}-{Circle[length=6pt, line width=1pt]}},
+    11/.style = {line, shorten >=-3pt,
+               {Circle[length=6pt, line width=1pt, fill=white]}-{Circle[length=6pt, line width=1pt, fill=white]}},
+    22/.style = {line, shorten >=-3pt,
+               {Circle[length=6pt, line width=1pt]}-{Circle[length=6pt, line width=1pt]}},
+    10/.style = {line, shorten >=-3pt,
+           {Circle[length=6pt, line width=1pt, fill=white]}-{}},
+    20/.style = {line, shorten >=-3pt,
+           {Circle[length=6pt, line width=1pt]}-{}},
+    01/.style = {line, shorten >=-3pt,
+           {}-{Circle[length=6pt, line width=1pt, fill=white]}},
+    02/.style = {line, shorten >=-3pt,
+           {}-{Circle[length=6pt, line width=1pt]}},
+    1/.style = {line, shorten >=-3pt,
+           {}-{Circle[length=6pt, line width=1pt, fill=white]}},
+    2/.style = {line, shorten >=-3pt,
+           {}-{Circle[length=6pt, line width=1pt]}},
+    real/.style = {gray, {{}-{Triangle[length=4pt, line width=1pt]}}},
+    ]
+    \draw[real] (0,0) -- (#1+0.15,0);
+    \ifthenelse{#2=01 \or #2=02}{
+        \draw[red, #2] (0,0) -- (0.8*#1,0) node[black, below]{#3};
+    } {
+        \ifthenelse{#2=10 \or #2=20}{
+            \draw[red, #2] (#1/5,0) node[black, below]{#3}-- (#1-0.1,0);
+        } {
+            \ifthenelse{#2=0}{
+                \draw[red, #2] (#1/5,0) node[black, below]{#3}-- (#1-0.1,0);
+            }{
+                \draw[red, #2] (#1/5,0) node[black, below]{#3}-- (0.8*#1,0) node[black, below]{#4};
+            }
+        };
+    };
+    %\draw[real] (-#1,0) -- (#1+0.15,0); 
+    % \draw[#2] (#3,0) node[below left]{#3}-- (#4,0) node[below right]{#4};
+\end{tikzpicture}
+}
+
+\newcommand{\numbernode}[3]{
+    \draw (#3*\m, -#2*\sep) node[below right]{$#1$};
+}
+
+\newcommand{\signs}[2]{
+    \def\x{{#2}}
+    \tikzmath{
+        % function drawsign (\v,\w1,\w2){
+        %     if \v >= 0 then {
+        %         {\draw[blue, very thick] (\w1,\w2+0.15) -- (\w1,\w2+0.45);};
+        %         {\draw[blue, very thick] (\w1-0.15,\w2+0.3) -- (\w1+0.15,\w2+0.3);};
+        %     } else {
+        %         {\draw[red, very thick] (\w1-0.15,\w2+0.3) -- (\w1+0.15,\w2+0.3);};
+        %     };
+        % };
+        for \i in {0,...,\nodes} {
+            \k=\x[\i];
+            \w1=(\i+0.5)*\m;
+            \w2=-#1*\sep;
+            if \k >= 0 then {
+                {\draw[blue, very thick] (\w1,\w2+0.15) -- (\w1,\w2+0.45);};
+                {\draw[blue, very thick] (\w1-0.15,\w2+0.3) -- (\w1+0.15,\w2+0.3);};
+            } else {
+                {\draw[red, very thick] (\w1-0.15,\w2+0.3) -- (\w1+0.15,\w2+0.3);};
+            };
+            %drawsign(\k,(\i+0.5)*\m,-#1*\sep);
+        };
+    }
+}
+
+\newcommand{\intervalsign}[3]{
+    \def\x{{#3}}
+    \tikzmath{
+        if #2!=0 then {
+            real \xr;
+            if (#2==01 || #2==02) then {    
+                \xr=\x;
+                {\draw[#2,\cc] (0.05,-\sep*#1) -- (\xr*\m, -\sep*#1);};
+                %{\draw[#2] (0,-#1*\sep)-- (\x,-#1*\sep) node[below right]{$\exibir{\x}$};};
+            } else {
+                 if (#2==10 || #2==20) then {
+                    \xr=\x;
+                    {\draw[#2,\cc] (\xr*\m,-\sep*#1)  -- (\s-0.05, -\sep*#1);};
+                %     {\draw[#4] (\f*\z1-\g,-#1*\sep) node[below left]{$\exibir{\z1}$}-- (\m+\s-0.07,-#1*\sep);};
+                 } else {
+                    \xr1 = \x[0];
+                    \xr2 = \x[1];
+                    %{\draw[dashed] (\xr1*\factor-\d,-\sep*#1) -- ++ (0,#1*\sep);};
+                    %{\draw[dashed] (\xr2*\factor-\d,-\sep*#2) -- ++ (0,#1*\sep);};
+                    {\draw[#2,\cc] (\xr1*\m,-\sep*#1)  -- (\xr2*\m, -\sep*#1);};
+                %     {\draw[#4] (\f*\z1-\g,-#1*\sep) node[below left]{$\exibir{\z1}$}-- (\f*\z2-\g,-#1*\sep) node[below right]{$\exibir{\z2}$};};
+                 };
+            };
+        };
+    }
+}
+
+\newenvironment{signtbl}[2]{
+    \def\r{#1}
+    \def\nodes{#2}
+    \def\sep{0.8}
+    \def\m{2}
+    \def\cc{black}
+    \begin{center}
+    \begin{tikzpicture}[
+    line/.style = {draw, ultra thick, shorten <=-2.5pt},
+    21/.style = {line, shorten >=-2.5pt,
+               {Circle[length=5pt, line width=1pt]}-{Circle[length=5pt,line width=1pt, fill=white]}},
+    12/.style = {line, shorten >=-2.5pt,
+               {Circle[length=5pt, line width=1pt, fill=white]}-{Circle[length=5pt, line width=1pt]}},
+    11/.style = {line, shorten >=-2.5pt,
+               {Circle[length=5pt, line width=1pt, fill=white]}-{Circle[length=5pt, line width=1pt, fill=white]}},
+    22/.style = {line, shorten >=-2.5pt,
+               {Circle[length=5pt, line width=1pt]}-{Circle[length=5pt, line width=1pt]}},
+    10/.style = {line, shorten >=-2.5pt,
+           {Circle[length=5pt, line width=1pt, fill=white]}-{}},
+    20/.style = {line, shorten >=-2.5pt,
+           {Circle[length=5pt, line width=1pt]}-{}},
+    01/.style = {line, shorten >=-2.5pt,
+           {}-{Circle[length=5pt, line width=1pt, fill=white]}},
+    02/.style = {line, shorten >=-2.5pt,
+           {}-{Circle[length=5pt, line width=1pt]}},
+    1/.style = {line, shorten >=-2.5pt,
+           {}-{Circle[length=5pt, line width=1pt, fill=white]}},
+    2/.style = {line, shorten >=-2.5pt,
+           {}-{Circle[length=5pt, line width=1pt]}},
+    real/.style = {gray, {{}-{Triangle[length=4pt, line width=1pt]}}},
+    ]        
+        % \tikzmath{
+        %     \factor = \p/(\s-\r);
+        %     \d = \r*\factor;
+        % }
+        \tikzmath{
+            let \s=\nodes*\m+\m;
+            for \i in {1,...,\r}{
+                {\draw[real] (0,-\i*\sep) -- (\s+0.15,-\i*\sep);};
+            };
+            for \i in {0,...,\nodes-1}{
+                {\draw[dashed,gray] (\i*\m+\m,-0.5*\sep) -- (\i*\m+\m,-\r*\sep-0.5*\sep);};
+            };
+        };
+        \foreach \i in {1,...,\r}{
+            %\draw[real] (\r,-\i*\sep) -- (\s+0.15,-\i*\sep);
+            \draw[real] (0,-\i*\sep) -- (\s+0.15,-\i*\sep);
+        };
+        %\foreach \i in {\r,...,\s} % numbers on line
+        %    \draw[black] (\i*\factor-\d,0.1-\sep) -- ++ (0,-0.2)    % <---
+        %node[below,text=black] {$\i$}; % tick and their labels
+} {
+\end{tikzpicture}
+\end{center}
+}

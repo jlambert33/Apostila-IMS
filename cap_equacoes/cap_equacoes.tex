@@ -1,0 +1,1020 @@
+%Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/4.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+\chapter{Equações}
+%\label{cap:0}
+
+Uma equação é uma sentença matemática aberta, ou seja, sentença matemática que possui ao menos uma incógnita, e que estabelece uma igualdade entre duas expressões matemáticas.
+
+ \begin{exem}
+ A seguintes expressões matemáticas são exemplos de equações:
+
+\begin{enumerate}[(1)]
+ \item $x+1=3$;
+ \item $\sin(x)=0$;
+ \item $x^2+3x+1=0$;
+ \item $\ln(x)= 5$.
+\end{enumerate}
+\end{exem}
+
+ E para ajudar a entender o conceito de equação, seguem algumas expressões matemáticas que não são equações, com a justificativa do porquê elas não são equações:
+\begin{exem}
+\begin{enumerate}[(1)]
+ \item Uma desigualdade, ou seja, uma sentença matemática que relaciona duas expressões matemáticas através do sinal de diferente ($\neq$), não é uma equação, exemplo: $x+1 \neq 3$.
+
+ \item $3 + 2 = 5$, por não ser uma sentença aberta.
+
+ Sentenças matemáticas que relacionam duas expressões matemáticas através dos sinais de menor ($<$), maior ($>$), menor ou igual ($\leqq$), maior ou igual ($\geqq$), não são equações. Elas são chamadas de inequações. Seguem alguns exemplos:
+
+ \item $\sin(x) < 0$, neste caso o sinal de menor $<$, nos diz que $\sin(x)$ é menor do que $0$.
+ \item $2x+3 \leqq 7x-2$.
+ \item $x^2+3x+1 \geqq 0$.
+\end{enumerate}
+\end{exem}
+
+% Vamos nos dedicar nesta seção para entender as equações de 1º grau e as de 2º grau. Mas antes vejamos um exemplo de como as equações aparecem em nosso dia-a-dia.
+
+% \begin{exem}
+%  Situação problema: Geraldo frequenta uma lan house, pois não tem internet em sua casa, e paga uma taxa fixa de $R\$ 1,00$ a primeira hora, mais $R\$ 2,00$ a cada hora excedente. Se após o uso Geraldo pagou $R\$ 7,00$, por quanto tempo ele usou a internet?
+
+%  \underline{Resolução:}
+
+%  Podemos concluir que Geraldo usou o computador por $4$ horas, já que pagou $R\$ 1,00$ pela primeira hora, e consequentemente $(7,00 - 1,00 = 6,00)$ $R\$ 6,00$ pelas demais horas, como cada hora a mais custa $R\$ 2,00$ e $(6,00 \div 2,00 = 3)$ temos então que Geraldo usou $(1 + 3 = 4)$ horas.
+
+%  Podemos generalizar esta situação usando a letra $x$ para representar o tempo de internet utilizado, que é o valor que não conhecemos, chegando à seguinte equação: $2x + 1 = 7$.
+% \end{exem}
+
+A equação resultante desta situação problema é o que chamamos de equação do 1º grau.
+
+\section{Equações do 1º grau}
+
+\begin{obs}
+   As equações de 1º grau tem a seguinte forma geral:
+\begin{equation*}
+ax + b = 0
+\end{equation*}
+onde $a, b \in \mathbb{R}$ são números dados (conhecidos), com $a \neq 0 $.
+\end{obs}
+
+Como resolver uma equação destas, ou equivalentemente, como encontrar o valor de $x$:
+\begin{equation*}
+ax + b = 0 \Rightarrow ax= -b \Rightarrow x = \frac{-b}{a} .
+\end{equation*}
+
+
+\begin{exem}
+ Resolva as seguintes equações do 1º grau:
+ \begin{enumerate}[a)]
+  \item $ax = 0$
+
+  Neste caso $a \neq 0$, como produto de dois números só é zero quando um deles for igual a zero concluímos que $x = 0$.
+  
+  \item $2x + 4 = 0$
+  \begin{equation*}
+  2x + 4 = 0 \Rightarrow 2x = -4 \Rightarrow x = \frac{-4}{2} \Rightarrow x = -2
+  \end{equation*}
+  
+  % \item $3x - 5 = 4$
+  % \begin{equation*}
+  % 3x - 5 = 4 \Rightarrow 3x = 4 +5 \Rightarrow 3x = 9 \Rightarrow x = \frac{9}{3} \Rightarrow x = 3
+  % \end{equation*}
+  
+  \item $3(x + 2)= 12$
+  \begin{equation*}
+  3(x + 2)= 12 \Rightarrow 3x + 6 = 12 \Rightarrow 3x = 12 - 6 \Rightarrow 3x = 6 \Rightarrow x = \frac{6}{3} \Rightarrow x = 2
+  \end{equation*}
+  
+  \item $\dfrac{-(3x+4)}{5}= x-2$
+  \begin{eqnarray*}
+  \dfrac{-(3x+4)}{5} &=& x-2 \\
+   -3x-4 &=& 5(x-2) \\ 
+   -3x-4 &=& 5x -10 \\
+   -3x - 5x &=& -10 + 4 \\ 
+   -8x &=& -6 \\ 
+   x &=& \dfrac{-6}{-8} \\
+   x &=& \dfrac{3}{4}
+  \end{eqnarray*}
+  
+  \item $\dfrac{x}{4} + 5= \dfrac{23}{4}$
+  \begin{equation*}
+  \dfrac{x}{4} + 5= \dfrac{23}{4} \Rightarrow \dfrac{x + 20}{4}= \dfrac{23}{4} \Rightarrow x+20= 23 \Rightarrow x= 23-20 \Rightarrow x= 3
+  \end{equation*}
+ 
+  \end{enumerate}
+\end{exem}
+
+\section{Equações do 2º grau}
+
+\begin{obs}
+   As equações de 2º grau tem a seguinte forma geral:
+\begin{equation*}
+ax^2 + bx + c = 0
+\end{equation*}
+  onde $a, b, c \in \mathbb{R}$ são números dados (conhecidos), com $a \neq 0 $.
+\end{obs}
+
+
+Para resolver este tipo de equação usamos a fórmula da equação do 2º grau também conhecida como a \textbf{fórmula de Bhaskara}, dada por:
+\begin{equation*}
+  x= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
+\end{equation*}
+
+Lembremos que $z^2= (-z)^2$ e que extrair a raiz quadrada de um número $y$ é procurar o número $z$ tal que $z= -\sqrt{y}$ e $z= \sqrt{y}$ donde obtemos que $z= \pm \sqrt{y}$. Por isso precisamos colocar o sinal $(\pm)$ antes da raiz quadrada na equação acima.
+
+A fórmula de Bhaskara é também reescrita da seguinte forma:
+\begin{equation*}
+x= \frac{-b \pm \sqrt{\Delta}}{2a} \ \ \ \text{ para } \ \ \ \Delta= b^2 - 4ac
+\end{equation*}
+onde $\Delta$ é chamado de discriminante.
+
+A partir da análise do sinal do discriminante determinamos se as equações do 2º grau possuem $0$, $1$ ou $2$ soluções diferentes no conjunto dos números reais, da seguinte forma:
+\begin{itemize}
+\item Se $\Delta < 0$ a equação não possui raízes reais, pois em $\R$ não existe raíz quadrada de número negativo.
+\item Se $\Delta = 0$ a equação possui apenas a solução $x= \frac{-b}{2a}$ (também dizemos que a equação tem duas soluções iguais).
+\item Se $\Delta > 0$ a equação possui duas raízes reais distintas, $x_1= \frac{-b - \sqrt{\Delta}}{2a}$ e $x_2= \frac{-b + \sqrt{\Delta}}{2a}$.
+\end{itemize}
+
+
+% Antes de usar esta fórmula especificamente para resolver as equações do 2º grau vejamos alguns casos particulares de equações do 2º grau que podemos resolver sem esta fórmula.
+
+%  \subsection{Caso \texorpdfstring{$b=0$}{b=0}}
+
+%  Neste caso a equação é da forma:
+% \begin{equation*}
+% ax^2 + 0x + c= 0 \Rightarrow ax^2 + c= 0
+% \end{equation*}
+%  note que neste caso podemos facilmente isolar o $x^2$, e então fica fácil de resolver a equação, veja o passo a passo da resolução:
+% \begin{equation*}
+% ax^2 + c= 0 \Rightarrow ax^2= -c \Rightarrow x^2= \frac{-c}{a} \Rightarrow x= \pm \sqrt{\frac{-c}{a}}
+% \end{equation*}
+
+%  Vejamos alguns exemplos de equações deste tipo resolvidas.
+ 
+%  \begin{exem} 
+%  Resolva a equação $2x^2 - 32=0$
+% \begin{equation*}
+% 2x^2 - 32=0 \Rightarrow 2x^2= 32 \Rightarrow x^2= \frac{32}{2} \Rightarrow x= \pm \sqrt{16} \Rightarrow x= \pm 4 \ .
+% \end{equation*}
+%  Logo $x= -4$ e $x= 4$ são soluções desta equação. Então o conjunto solução desta equação é $S= \{-4, 4\}$.
+%  \end{exem}
+ 
+% %  \begin{exem}
+% %  Resolva a equação $2x^2 - 36=0$
+
+% % \begin{equation*}
+% % 2x^2 - 36=0 \Rightarrow 2x^2= 36 \Rightarrow x^2= \frac{36}{2} 
+% % \end{equation*}
+% %  a partir daqui podemos dar continuidade a resolução desta equação de duas formas diferentes, segue abaixo as duas formas para que você possa comparar e escolher um caminho para seguir,
+% %  \begin{eqnarray*}
+% %  \Rightarrow
+% %  \begin{cases}
+% %  x^2= \dfrac{36}{2} \Rightarrow x^2= 18 \Rightarrow x= \pm \sqrt{18}= \pm \sqrt{2 \cdot 3^2}= \pm 3\sqrt{2} \\
+% %  x^2= \dfrac{36}{2} \Rightarrow x= \pm \sqrt{\dfrac{36}{2}} \Rightarrow x= \pm \dfrac{\sqrt{36}}{\sqrt{2}} \Rightarrow x= \pm \dfrac{6}{\sqrt{2}} \cdot \dfrac{\sqrt{2}}{\sqrt{2}} \Rightarrow x= \pm  \dfrac{6\sqrt{2}}{2}= \pm 3\sqrt{2} \ .
+% %  \end{cases}
+% %  \end{eqnarray*}
+% %  Portanto o conjunto solução desta equação é $S= \left\{-3\sqrt{2}, 3\sqrt{2}\right\}$.
+% %  \end{exem}
+
+% %  \begin{exem}
+% %   Resolva a equação $x^2 - 81=0$
+% % \begin{equation*}
+% % x^2 - 81=0 \Rightarrow x^2= 81 \Rightarrow x^2= \frac{81}{1} \Rightarrow x= \pm \sqrt{81} \Rightarrow x= \pm 9 \ .
+% % \end{equation*}
+% %  Logo $x= -9$ e $x= 9$ são soluções desta equação. Então o conjunto solução desta equação é $S= \{-9, 9\}$.
+% % \end{exem}
+
+%  \begin{exem}
+%   Resolva a equação $x^2 + 256=0$
+% \begin{equation*}
+% x^2 +256=0 \Rightarrow x^2= -256 \Rightarrow x^2= \frac{-256}{1} \Rightarrow x= \pm \sqrt{-256} \ .
+% \end{equation*}
+%  Como no conjunto dos números reais não existe raíz quadrada de número negativo, decorre que não existe $\sqrt{-256}$ no conjunto dos números reais, logo esta equação não tem solução no conjunto dos números reais.
+%  \end{exem}
+
+% %  \begin{exem}
+% %   Resolva a equação $-2x^2 + 8=0$
+% % \begin{equation*}
+% % -2x^2 + 8=0 \Rightarrow -2x^2= -8 \Rightarrow x^2= \frac{-8}{-2} \Rightarrow x= \pm \sqrt{4} \Rightarrow x= \pm 2 \ .
+% % \end{equation*}
+% %  Logo $x= -2$ e $x= 2$ são soluções desta equação. Então o conjunto solução desta equação é $S= \{-2, 2\}$.
+% % \end{exem}
+
+% %  \begin{exem}
+% %   Resolva a equação $\dfrac{32}{6}x^2 - \dfrac{100}{12}=0$
+% %    \begin{eqnarray*}
+% %    \dfrac{32}{6}x^2 - \dfrac{100}{12} &=& 0 \\
+% %    \dfrac{32}{6}x^2 &=& \dfrac{100}{12} \\
+% %    x^2 &=& \dfrac{100}{12} \cdot \dfrac{6}{32} \\
+% %    x^2 &=& \dfrac{100}{2} \cdot \dfrac{1}{32} = \dfrac{100}{64} \\
+% %    x &=& \pm \sqrt{\dfrac{100}{64}} = \pm \dfrac{10}{8} = \pm \dfrac{5}{4} \ .
+% %    \end{eqnarray*}
+
+% %  Então o conjunto solução desta equação é $S= \left\{-\dfrac{5}{4}, \dfrac{5}{4} \right\}$.
+% %  \end{exem}
+
+%  \subsection{Caso \texorpdfstring{$c=0$}{c=0}}
+
+%  Neste caso a equação é da forma:
+% \begin{equation*}
+% ax^2 + bx + 0= 0 \Rightarrow ax^2 + bx= 0
+% \end{equation*}
+%  note que neste caso podemos facilmente isolar o $x$, e então fica fácil de resolver a equação, veja o passo a passo da resolução:
+%  \[ax^2 + bx= 0 \Rightarrow x \cdot (ax + b)= 0 \Rightarrow
+%  \begin{cases}
+%  x_1= 0 \\
+%  ax+b=0 \Rightarrow ax= -b \Rightarrow x_2= \dfrac{-b}{a} \ .
+%  \end{cases}
+%   \]
+
+%  Portanto as soluções desta equação são $x= 0$ e $x= \dfrac{-b}{a}$.
+
+%  Vejamos alguns exemplos numéricos de equações deste tipo resolvidas.
+ 
+%  \begin{exem}
+%   Resolva a equação $x^2 + 40x=0$
+%  \[x^2 + 40x=0 \Rightarrow x \cdot (x+ 40)= 0 \Rightarrow
+%  \begin{cases}
+%  x_1=0 \\
+%  x+40=0 \Rightarrow x_2= -40 \ .
+%  \end{cases}
+%  \]
+%  Portanto as soluções desta equação são $x_1= 0$ e $x_2= -40$. O conjunto solução desta equação é $S= \left\{ -40, 0 \right\}$.
+% \end{exem}
+
+%  \begin{exem}
+%   Resolva a equação $x^2 + \sqrt[3]{5}x=0$
+%  \[x^2 + \sqrt[3]{5}x=0 \Rightarrow x \cdot (x+ \sqrt[3]{5})= 0 \Rightarrow
+%  \begin{cases}
+%  x_1=0 \\
+%  x+\sqrt[3]{5}=0 \Rightarrow x_2= -\sqrt[3]{5} \ .
+%  \end{cases}
+%  \]
+%  Portanto as soluções desta equação são $x_1= 0$ e $x_2= -\sqrt[3]{5}$. O conjunto solução desta equação é $S= \left\{ -\sqrt[3]{5}, 0 \right\}$.
+%  \end{exem}
+
+% %  \begin{exem}
+% %   Resolva a equação $7x^2 - \sqrt{98}x=0$
+% % \begin{eqnarray}
+% %   & & 7x^2 - \sqrt{98}x=0\\
+% %   & \Rightarrow & x \cdot (7x - \sqrt{98})= 0\\
+% %   & \Rightarrow &
+% %     \begin{cases}
+% %     x_1=0 \\
+% %     7x - \sqrt{98}=0
+% %       \Rightarrow 7x = \sqrt{7^2 \cdot 2}
+% %       \Rightarrow x= \frac{7\sqrt{2}}{7}
+% %       \Rightarrow x_2= \sqrt{2} \ .
+% %     \end{cases}
+% % \end{eqnarray}
+
+% %  Portanto as soluções desta equação são $x_1= 0$ e $x_2= \sqrt{2}$. O conjunto solução desta equação é $S= \left\{ \sqrt{2}, 0 \right\}$.
+% %  \end{exem}
+
+% %  \begin{exem}
+% %   Resolva a equação $\dfrac{3}{2}x^2 + \dfrac{3}{2}x=0$
+
+% % \begin{equation*}
+% % \dfrac{3}{2}x^2 + \dfrac{3}{2}x=0 \Rightarrow x \cdot (\dfrac{3}{2}x+ \dfrac{3}{2})= 0 
+% % \end{equation*}
+
+% %  \[\Rightarrow
+% %  \begin{cases}
+% %  x_1=0 \\
+% %  \dfrac{3}{2}x + \dfrac{3}{2}=0 \Rightarrow \dfrac{3}{2}x= -\dfrac{3}{2} \Rightarrow x= -\dfrac{3}{2} \div \dfrac{3}{2} \Rightarrow x= -\dfrac{3}{2} \cdot \dfrac{2}{3} \Rightarrow x_2= -1 \ .
+% %  \end{cases} \]
+
+% %  Portanto as soluções desta equação são $x_1= 0$ e $x_2= -1$. O conjunto solução desta equação é $S= \left\{ -1, 0 \right\}$.
+% % \end{exem}
+
+% %  \begin{exem}
+% %   Resolva a equação $\sqrt{2}x^2 - \sqrt{50}x=0$
+% % \begin{equation*}
+% % \sqrt{2}x^2 - \sqrt{50}x=0 \Rightarrow x \cdot (\sqrt{2}x - \sqrt{50})= 0 
+% % \end{equation*}
+% %  \[\Rightarrow
+% %  \begin{cases}
+% %  x_1=0 \\
+% %  \sqrt{2}x - \sqrt{50}=0 \Rightarrow x= \frac{\sqrt{50}}{\sqrt{2}} \Rightarrow x= \sqrt{\dfrac{50}{2}} \Rightarrow x= \sqrt{25} \Rightarrow x_2= 5 \ .
+% %  \end{cases}
+% %  \]
+% %  Portanto as soluções desta equação são $x_1= 0$ e $x_2= 5$. O conjunto solução desta equação é $S= \left\{ 0, 5 \right\}$.
+% %  \end{exem}
+
+%  \subsection{Caso \texorpdfstring{$b=c=0$ e $a \neq 0$}{b=c=0 e a não nulo}}
+
+%  Neste caso as equações do 2º grau são do tipo
+% \begin{equation*}
+% ax^2 = 0 \ . 
+% \end{equation*}
+
+%   Notemos que o produto de dois números só é zero quando um deles for igual a zero, donde concluímos que $x^2 = 0 \Rightarrow x =0$. Portanto o conjunto solução deste tipo de equação, independente do valor de $a$ é $S= \left\{ 0 \right\}$.
+
+%   \begin{exem} Considerando a equação $23x^2=0$ temos,
+% \begin{equation*}
+% 23x^2= 0 \Rightarrow x^2=0 \Rightarrow x= 0 \ , 
+% \end{equation*}
+%   logo neste caso o conjunto solução é $S= \left\{ 0 \right\}$.
+%   \end{exem}
+
+%  \subsection{Equação completa \texorpdfstring{$ax^2+ bx + c = 0$}{ax² + bx + c = 0}}
+
+%  Neste caso temos $a \neq 0$, $b \neq 0$ e $c \neq 0$, então para resolver a equação de forma geral dada por:
+% \begin{equation*}
+% ax^2+ bx + c = 0 
+% \end{equation*}
+%  precisamos utilizar a fórmula
+% \begin{equation*}
+% x = \dfrac{-b \pm \sqrt{b^2 - 4 \cdot a \cdot c}}{2 \cdot a} \ ,
+% \end{equation*}
+%  conhecida como fórmula da equação do 2º grau ou fórmula de Báskara.
+
+ Vejamos alguns exemplos de como resolver este tipo de equação.
+ \begin{exem} 
+  Resolva a equação $x^2 + 4x + 4= 0$.
+
+ Como esta equação tem os valores de $a, b, c$ diferentes de zero, precisamos obrigatoriamente utilizar a fórmula da equação do 2º grau para resolver. Note que neste caso temos $a= 1$, que é o valor que multiplica o $x^2$, $b= 4$, que é o valor que multiplica o $x$, e $c= 4$, que é o termo independente da equação.
+ 
+  Como $\Delta=4^2 - 4 \cdot 1 \cdot 4 = 16-16=0$ a equação possui uma solução real.  Assim substituindo na fórmula obtemos:
+ \begin{eqnarray*}
+ x &=& \dfrac{-4 \pm \sqrt{0}}{2}= \dfrac{-4 \pm 0}{2} \\
+ x &=& \dfrac{-4}{2}= -2
+ \end{eqnarray*}
+
+ Portanto esta equação possui $x= -2$ como solução. Logo o conjunto solução é $S= \{-2\}$.
+ \end{exem}
+ 
+ \begin{exem}
+ Resolva a equação $x^2 - x + 1= 0$.
+
+ Note que neste caso temos $a= 1$, $b= -1$ e $c= 1$. Como $\Delta = (-1)^2-4(1)(1)=-3<0$, então a equação não possui solução real e seu conjunto solução é $S=\varnothing$.
+\end{exem}
+ 
+%  \begin{exem}
+%   Resolva a equação $x^2+2x-15= 0$.
+
+%  Note que neste caso temos:
+%   \begin{itemize}
+%   \item $a= 1$, que é o valor que multiplica o $x^2$;
+%   \item $b= 2$, que é o valor que multiplica o $x$;
+%   \item $c= -15$, que é o termo independente da equação.
+%   \end{itemize}
+%   Assim substituindo na fórmula
+
+% \begin{equation*}
+% x = \dfrac{-b \pm \sqrt{b^2 - 4 \cdot a \cdot c}}{2 \cdot a} \ ,
+% \end{equation*}
+%  obtemos:
+
+%  \begin{eqnarray*}
+%  x &=& \dfrac{-2 \pm \sqrt{2^2 - 4 \cdot 1 \cdot (-15)}}{2 \cdot 1} \\
+%  x &=& \dfrac{-2 \pm \sqrt{4 + 60}}{2}= \dfrac{-2 \pm \sqrt{64}}{2}= \dfrac{-2 \pm 8}{2} \\
+%  x_1 &=& \dfrac{-2 + 8}{2}= \dfrac{6}{2}= 3 \\
+%  x_2 &=& \dfrac{-2 - 8}{2}= \dfrac{-10}{2}= -5
+%  \end{eqnarray*}
+
+%  Portanto esta equação possui $x_1= 3$ e $x_2= -5$ como solução. Logo o conjunto solução é $S= \{-5, 3\}$.
+%  \end{exem}
+ 
+%  \begin{exem}
+%  Resolva a equação $2x^2 - 5x - 3= 0$.
+
+%  Note que neste caso temos:
+%   \begin{itemize}
+%   \item $a= 2$;
+%   \item $b= -5$;
+%   \item $c= -3$.
+%   \end{itemize}
+%   Assim substituindo na fórmula
+
+% \begin{equation*}
+% x = \dfrac{-b \pm \sqrt{b^2 - 4 \cdot a \cdot c}}{2 \cdot a} \ ,
+% \end{equation*}
+%  obtemos:
+
+%  \begin{eqnarray*}
+%  x &=& \dfrac{-(-5) \pm \sqrt{(-5)^2 - 4 \cdot 2 \cdot (-3)}}{2 \cdot 2} \\
+%  x &=& \dfrac{5 \pm \sqrt{25 + 24}}{4}= \dfrac{5 \pm \sqrt{49}}{4}= \dfrac{5 \pm 7}{4} \\
+%  x_1 &=& \dfrac{5 + 7}{4}= \dfrac{12}{4}= 3 \\
+%  x_2 &=& \dfrac{5 - 7}{4}= \dfrac{-2}{4}= \dfrac{-1}{2}
+%  \end{eqnarray*}
+
+%  Portanto esta equação possui $x_1= 3$ e $x_2= \dfrac{-1}{2}$ como solução. Logo o conjunto solução é $S= \left\{3, \dfrac{-1}{2}\right\}$.
+%  \end{exem}
+ 
+ \begin{exem}
+  Resolva a equação $-8x^2 - 2x + 3= 0$.
+
+ Note que neste caso temos $a= -8$, $b= -2$ e $c= 3$.
+  Como $\Delta=(-2)^2 - 4 \cdot (-8) \cdot (3) = 4+96=100>0$ a equação possui duas soluções reais distintas.
+  Assim, substituindo na fórmula obtemos:
+ \begin{eqnarray*}
+ x &=& \dfrac{-(-2) \pm \sqrt{100}}{2 \cdot (-8)} \\
+ x &=& \dfrac{2 \pm 10}{-16} \\
+ x_1 &=& \dfrac{2 + 10}{-16}= \dfrac{12}{-16}= \dfrac{-6}{8}= \dfrac{-3}{4} \\
+ x_2 &=& \dfrac{2 - 10}{-16}= \dfrac{-8}{-16}= \dfrac{4}{8}= \dfrac{1}{2}
+ \end{eqnarray*}
+
+ Logo o conjunto solução é $S= \left\{ \dfrac{-3}{4}, \dfrac{1}{2} \right\}$.
+\end{exem}
+ 
+ \begin{exem}
+   Resolva a equação $x^2 - x - 1= 0$.
+
+ Note que neste caso temos $a= 1$, $b= -1$ e $c= -1$.
+  Assim, substituindo na fórmula obtemos:
+ \begin{eqnarray*}
+ x &=& \dfrac{-(-1) \pm \sqrt{(-1)^2 - 4 \cdot (1) \cdot (-1)}}{2 \cdot (1)} \\
+ x &=& \dfrac{1 \pm \sqrt{1 + 4}}{2}= \dfrac{1 \pm \sqrt{5}}{2} \\
+ x_1 &=& \dfrac{1 + \sqrt{5}}{2} \\
+ x_2 &=& \dfrac{1 - \sqrt{5}}{2}
+ \end{eqnarray*}
+
+ Logo o conjunto solução é $S= \left\{ \dfrac{1 - \sqrt{5}}{2}, \dfrac{1 + \sqrt{5}}{2} \right\}$.
+
+ O número $\dfrac{1 + \sqrt{5}}{2}$ é conhecido como razão áurea ou Número de ouro.
+ \end{exem}
+ 
+%  \begin{exem}
+%   Resolva a equação $x^2 - 2 \pi x - 4= 0$.
+
+%  Note que neste caso temos:
+%   \begin{itemize}
+%   \item $a= 1$;
+%   \item $b= -2 \pi $ ;
+%   \item $c= -4$ .
+%   \end{itemize}
+%   Assim substituindo na fórmula
+
+% \begin{equation*}
+% x = \dfrac{-b \pm \sqrt{b^2 - 4 \cdot a \cdot c}}{2 \cdot a} \ ,
+% \end{equation*}
+%  obtemos:
+%  \begin{eqnarray*}
+%  x &=& \dfrac{-(-2\pi) \pm \sqrt{(-2\pi)^2 - 4 \cdot 1 \cdot (-4)}}{2 \cdot 1} \\
+%  x &=& \dfrac{ 2 \pi \pm \sqrt{ 4 \pi^2 + 16}}{2} \\
+%  x &=& \dfrac{ 2 \pi \pm \sqrt{ 4 (\pi^2 + 4)}}{2} \\
+%  x &=& \dfrac{ 2 \pi \pm 2 \cdot \sqrt{ \pi^2 + 4}}{2} \\
+%  x &=& \pi \pm \sqrt{\pi^2 + 4} \\
+%  \end{eqnarray*}
+
+%  Portanto, $S= \left\{ \pi - \sqrt{\pi^2 + 4}, \pi + \sqrt{\pi^2 + 4} \right\}$.
+%  \end{exem}
+ 
+%  \begin{exem}
+%   Resolva a equação $99x^2 - 2000x + 10000= 0$.
+
+%  Note que neste caso temos:
+%   \begin{itemize}
+%   \item $a= 99$;
+%   \item $b= -2000= -2 \times 10^3$ ;
+%   \item $c= 10000= 1 \times 10^4$ .
+%   \end{itemize}
+%   Assim substituindo na fórmula
+
+% \begin{equation*}
+% x = \dfrac{-b \pm \sqrt{b^2 - 4 \cdot a \cdot c}}{2 \cdot a} \ ,
+% \end{equation*}
+%  obtemos:
+
+%  \begin{eqnarray*}
+%  x &=& \dfrac{-(-2000) \pm \sqrt{(-2 \cdot 10^3)^2 - 4 \cdot (99) \cdot (1 \cdot 10^4)}}{2 \cdot (99)} \\
+%  x &=& \dfrac{ 2000 \pm \sqrt{(-2)^2 \cdot (10^3)^2 - 396 \cdot 10^4}}{198} \\
+%  x &=& \dfrac{ 2000 \pm \sqrt{4 \cdot 10^6 - 396 \cdot 10^4}}{198} \\
+%  x &=& \dfrac{ 2000 \pm \sqrt{4 \cdot 10^2 \cdot 10^4 - 396 \cdot 10^4}}{198} \\
+%  x &=& \dfrac{ 2000 \pm \sqrt{400 \cdot 10^4 - 396 \cdot 10^4}}{198} \\
+%  x &=& \dfrac{ 2000 \pm \sqrt{4 \cdot 10^4}}{198} \\
+%  x &=& \dfrac{ 2000 \pm \sqrt{4} \cdot \sqrt{10^4}}{198} \\
+%  x &=& \dfrac{ 2000 \pm 2 \cdot 10^2}{198} \\
+%  x &=& \dfrac{ 2000 \pm 200}{198} \\
+%  x_1 &=& \dfrac{ 2000 + 200}{198} = \dfrac{2200}{198} = \dfrac{100}{9} \\
+%  x_2 &=& \dfrac{ 2000 - 200}{198} = \dfrac{1800}{198} = \dfrac{100}{11}
+%  \end{eqnarray*}
+
+%  Logo o conjunto solução é $S= \left\{ \dfrac{100}{9}, \dfrac{100}{11} \right\}$.
+%  \end{exem}
+
+
+ Uma equação de 2º grau incompleta é tal que $b=0$ ou $c=0$. Todas as equações do 2º grau incompletas podem também ser resolvidas utilizando a fórmula da equação do 2º grau. Vamos dar agora dois exemplos de equações incompletas em que as equações estão sendo resolvidas das duas formas possíveis para que você possa comparar as diferenças entre as resoluções.
+
+ \begin{exem}
+   Equação do 2º grau incompleta do tipo $c=0$ ou $ax^2 + bx = 0$:
+\begin{equation*}
+x^2 - 3x = 0
+\end{equation*}
+
+  1ª forma:  $a = 1$, $b = -3$ e $c = 0$ assim usando a fórmula chegamos:
+\begin{equation*}
+x = \frac{- (-3) \pm \sqrt{(-3)^2 - 4 (1)(0)}}{2 (1)}
+\end{equation*}
+  \[\Rightarrow x = \frac{3 \pm \sqrt{9}}{2} \Rightarrow \begin{cases}
+     x' = \frac{3 + 3}{2} \Rightarrow x' = \frac{6}{2} \Rightarrow x' = 3 \\
+    x'' = \frac{3 - 3}{2} \Rightarrow x''= \frac{0}{2} \Rightarrow x''= 0
+    \end{cases}\]
+
+  2ª forma:
+  \[x^2 - 3x = 0 \Rightarrow x(x - 3)=0 \Rightarrow \begin{cases}
+     x''= 0 \\
+     x - 3 = 0 \Rightarrow x' = 3
+     \end{cases}\]
+ Portanto, $S= \left\{ 0, 3 \right\}$. 
+ \end{exem}
+ 
+ \begin{exem}
+  Equação do 2º grau incompleta do tipo $b=0$ ou $ax^2 + c = 0$:
+\begin{equation*}
+2x^2 - 128 = 0
+\end{equation*}
+
+  1ª forma:  $a = 2$, $b = 0$ e $c = -128$ assim usando a fórmula chegamos:
+\begin{equation*}
+x = \frac{- (0) \pm \sqrt{(0)^2 - 4 (2)(-128)}}{2 (2)}
+\end{equation*}
+  \[\Rightarrow x = \frac{0 \pm \sqrt{1024}}{4} \Rightarrow \begin{cases}
+                                                          x' = \frac{ 0 + 32}{4} \Rightarrow x' = \frac{32}{4} \Rightarrow x' = 8 \\
+                                                          x'' = \frac{0 - 32}{4} \Rightarrow x''= \frac{-32}{4} \Rightarrow x''= -8
+                                                         \end{cases}\]
+
+
+  2ª forma:
+\begin{equation*}
+2x^2 - 128 = 0 \Rightarrow 2x^2 = 128 \Rightarrow x^2 = \frac{128}{2} \Rightarrow x^2 = 64 \Rightarrow x = \pm \sqrt{64} \Rightarrow x = \pm 8 \ .
+\end{equation*}
+  
+  Portanto, $S= \left\{ -8, 8 \right\}$.
+\end{exem}
+
+\subsection{Demonstração da Fórmula das Equações de 2º graus}
+
+É possível obter a fórmula de Bháskara usando completamento de quadrados. Vejamos primeiramente em um exemplo.
+
+\begin{exem}
+    Considere a equação $x^2+6x-4=0$. Inicialmente, vamos completar quadrados de $x^2+6x$. Queremos escrever da forma
+    \begin{equation*}
+        x^2+6x = (x+a)^2-b.
+    \end{equation*}
+
+    Devemos tomar $a=3$ e obtemos que $b=9$, ou seja, 
+    \begin{equation*}
+        x^2+6x = (x+3)^2-9.
+    \end{equation*}
+
+    Assim,
+    \begin{eqnarray*}
+        x^2+6x-4=0\\
+        (x+3)^2-9-4=0\\
+        (x+3)^2=13\\
+        x+3=\pm \sqrt{13}\\
+        x = -3 \pm \sqrt{13}.
+    \end{eqnarray*}
+    Portanto, $S=\{-3-\sqrt{13},-3+\sqrt{13}\}$.
+\end{exem}
+
+Vejamos como obter a formula no caso geral. Dada uma equação da forma $ax^2+bx+c=0$, com $a,b,c\in\R$ e $a\neq 0$, podemos dividir por $a$ e obter
+\begin{equation*}
+    x^2+\left(\frac{b}{a}\right) x +\frac{c}{a}=0.
+\end{equation*}
+
+Completando quadrados de $x^2+\left(\frac{b}{a}\right) x$ obtemos que
+\begin{equation*}
+    x^2+\left(\frac{b}{a}\right) x  = \left(x+\frac{b}{2a}\right)^2 - \frac{b^2}{4a^2}.
+\end{equation*}
+
+Logo, substituindo na equação:
+\begin{gather*}
+    \left(x+\frac{b}{2a}\right)^2 - \frac{b^2}{4a^2} +\frac{c}{a} = 0\\
+    \left(x+\frac{b}{2a}\right)^2 - \frac{b^2}{4a^2} +\frac{4ac}{4a^2} = 0\\
+    \left(x+\frac{b}{2a}\right)^2 - \frac{b^2-4ac}{4a^2}= 0\\
+    \left(x+\frac{b}{2a}\right)^2 = \frac{b^2-4ac}{4a^2}\\
+    x+\frac{b}{2a} = \pm\sqrt{\frac{b^2-4ac}{4a^2}}\\
+    x+\frac{b}{2a} = \pm\frac{\sqrt{b^2-4ac}}{2a}\\
+    %x= - \frac{b}{2a} \pm \frac{\pm \sqrt{b^2-4ac}}{2a}\\
+    x= \frac{-b \pm \sqrt{b^2-4ac}}{2a}.
+\end{gather*}
+
+\subsection{Relações de Girard -- Soma e Produto}
+
+\begin{obs}
+Dado a equação de 2º grau $ax^2+bx+c=0$, com $a\neq 0$, sua raízes 
+$x_1$ e $x_2$ satisfazem
+\begin{gather*}
+    x_1+x_2=\frac{-b}{a}\\
+    x_1\cdot x_2 = \frac{c}{a}.
+\end{gather*}
+\end{obs}
+
+Este resultado funciona inclusive quando $\Delta<0$,
+
+No caso em que $a=1$, se denotamos a soma das raízes por $S=x_1+x_2$ e o produto por $P=x_1\cdot x_2$ tem-se que
+\begin{equation*}
+    x^2-Sx+P=0.
+\end{equation*}
+
+\begin{exem}
+    Determine o valor de $k$ na equação $x^{2}-kx + 36 = 0$, de modo que uma das raízes seja o quádruplo da outra.
+
+    Se $x_1$ e $x_2$ são raízes da equação, podemos supor que $x_2=4x_1$. O produto das duas raízes é dada por $x_1\cdot x_2 = 4x_1^2= 36$, ou seja, $x_1=\pm 3$.
+
+    A soma das raízes é $k=x_1+x_2=x_1+4x_1=5x_1$. Para $x_1=3$ tem-se que $k=15$ e para $x_1=-2$ tem-se $k=-15$.
+\end{exem}
+
+\subsection{Fatoração do trinômio $ax^2+bx+c$}
+
+O trinômio $ax^2+bx+c$, com $a,b,c\in\R$ e $a\neq0$, pode ser fatorado na forma
+\begin{equation*}
+    ax^2+bx+c = a(x-x_1)(x-x_2)
+\end{equation*}
+onde $x_1$ e $x_2$ são as raízes da equação $ax^2+bx+c=0$. 
+
+\begin{exem}
+    Seja $6x^2-7x+2$. As raízes da equação $6x^2-7x+2=0$ são $\frac{2}{3}$ e $\frac{1}{2}$. Assim, a expressão se fatora como
+    \begin{equation*}
+        6x^2-7x+2 = 6\left(x-\frac{2}{3}\right)\left(x-\frac{1}{2}\right).
+    \end{equation*}
+\end{exem}
+
+\begin{exem}
+    Seja $-x^2-4x-4$. A equação $-x^2-4x-4=0$ possui apenas a raiz $-2$. Neste caso, usamos $x_1=x_2=-2$. Assim, a expressão se fatora como
+    \begin{equation*}
+        -x^2-4x+-4 = -\left(x-(-2)\right)^2=-(x+2)^2.
+    \end{equation*}
+\end{exem}
+
+\begin{obs}
+Quando a expressão não possui raíz real, não é possível fatorar com coeficientes reais.
+\end{obs}
+
+% \subsection{Caso \texorpdfstring{$(x+a)\cdot (x+b)= 0$}{(x+a)(x+b) = 0}}
+%  Neste caso vamos considerar as equações do tipo
+% \begin{equation*}
+% (x+a)\cdot (x+b)= 0
+% \end{equation*}
+% para $a, b \in \R$ quaisquer.
+
+% Lembre que o se o produto de dois números é zero então algum deles deve ser zero. Logo,
+% \begin{equation*}
+% (x+a)\cdot (x+b)= 0 \Leftrightarrow x+a= 0 \ \ \ \text{ ou } \ \ \ x+b=0
+% \end{equation*}
+% assim a resolução deste tipo de equação do 2º grau se torna a resolução de duas equações do 1º grau.
+
+% \begin{exem}
+%  Resolva a equação $(x - \frac{1}{3}) \cdot (x + 4)= 0$.
+% \begin{equation*}
+% (x - \frac{1}{3}) \cdot (x + 4)= 0 \Rightarrow
+% \begin{cases}
+%  x - \frac{1}{3} =0 \Rightarrow x= \frac{1}{3} \\
+% x - 4= 0 \Rightarrow x= 4.
+% \end{cases}
+% \end{equation*}
+
+% Portanto, $S= \left\{ -4, \frac{1}{3} \right\}$.
+%  \end{exem}
+
+%  \begin{exem}
+%   Resolva a equação $(x + \sqrt{13}) \cdot (2x + 6)= 0$.
+% \[(x + \sqrt{13}) \cdot (2x + 6)= 0 \Rightarrow
+% \begin{cases}
+%  x + \sqrt{13}=0 \Rightarrow x= - \sqrt{13} \\
+%  2x + 6= 0 \Rightarrow 2x= -6 \Rightarrow x= \dfrac{-6}{2}= -3 \ .
+% \end{cases} \]
+% Portanto, $S= \left\{ -3, - \sqrt{13} \right\}$.
+%  \end{exem}
+
+%  \begin{exem}
+%   Resolva a equação $\left(5x - \dfrac{2}{3} \right)^2= 0$.
+
+% \[\left(5x - \dfrac{2}{3} \right)^2= \left(5x - \dfrac{2}{3} \right) \cdot \left(5x - \dfrac{2}{3} \right)= 0 \Rightarrow
+% \begin{cases}
+%  5x - \dfrac{2}{3}= 0  \\
+%  5x - \dfrac{2}{3}= 0
+% \end{cases} \]
+
+% \begin{equation*}
+% 5x= \dfrac{2}{3} \Rightarrow x= \dfrac{\frac{2}{3}}{\frac{5}{1}} \Rightarrow x= \dfrac{2}{3} \cdot \dfrac{1}{5} \Rightarrow x= \dfrac{2}{15}
+% \end{equation*}
+
+% Portanto, $S= \left\{ \dfrac{2}{15} \right\}$.
+%  \end{exem}
+
+\section{Mudança de variável}
+
+Em algumas situações, podemos resolver equações utilizando uma mudança de variável.
+
+\begin{exem}
+    Seja $x^4-5x^2-36=0$. Observando esta equação, podemos tomar a mudança de veriável $x^2=t$ e assim a equação transforma-se em $t^2-5t-36=0$. Resolvendo-a, obtemos $t_1=-4$ e $t_2=9$. Como $x^2=t$, basta agora resolver as equações $x^2=-4$ e $x^2=9$. No primeiro caso, não existem raízes reais. No segundo, $x^2=9$ implica qu $x=\pm 3$. Portanto, $S=\{-3,3\}$.
+\end{exem}
+
+\begin{obs}
+Equações da forma $ax^4+bx^2+c=0$, com $a\neq 0$, são chamadas de \emph{equações biquadradas}.
+\end{obs}
+
+Esta técnica pode ser utilizada em diversas outras situações que serão vistas mais adiante.
+
+
+\newpage 
+\begin{secExercicios}
+% \begin{exer}
+% Escreva na linguagem simbólica da matemática as seguintes sentenças:
+% \begin{enumerate}[a)]
+% \item O quádruplo de um número.
+% \item A terça parte de um número.
+% \item Dois quintos de um número.
+% \item A soma de uma número com vinte.
+% \item A diferença entre um certo número e sete.
+% \item A soma de um número com a sua quarta parte.
+% \item Substraindo o dobro de um número de 16.
+% \item A metade de um número aumentado com 3. 
+% \end{enumerate}
+% \end{exer}
+
+% \begin{resp}
+% \begin{multicols}{3}
+%  \begin{enumerate}[a)]
+% \item $4x$
+% \item $\frac{x}{3}$
+% \item $\frac{2}{5}x$
+% \item $x + 20$
+% \item $x - 7$
+% \item $x + \frac{1}{4}x$
+% \item $16 - 2x$
+% \item $\frac{1}{2}x + 3$
+% \end{enumerate}
+% \end{multicols}
+% \end{resp}
+
+\begin{exer}
+Verifique se:
+\begin{enumerate}[a)]
+\item $-2$ é raíz da equação $5x + 3= 2x - 4$.
+\item $1$ é um zero da equação $\dfrac{x}{4} + \dfrac{3}{4}= 1$.
+\item $\dfrac{2}{3}$ é satisfaz a equação $3x - 4= -2$.
+\end{enumerate}
+\end{exer}
+\begin{resp}
+a) Não; b) Sim; c) Sim
+\end{resp}
+
+% \begin{exer}
+% Resolva as seguintes equações do 1º grau:
+
+% \begin{multicols}{2}
+% \begin{enumerate}[a)]
+% \item $x - 30=0$
+% \item $x+4= 13$
+% \item $8= x-40$
+% \item $3x=-18$
+% \item $3x- 16= 8$
+% \item $2x - 2= 19 - 5x$
+% \item $37 + x= 5 - 3x$
+% %\item $10,8 + x= 3,6 + 1,8x$
+% \end{enumerate}
+% \end{multicols}
+% \end{exer}
+
+% \begin{resp}
+% \begin{multicols}{3}
+%  \begin{enumerate}[a)]
+%  \item $S= \{30 \}$
+% \item $S= \{ 9 \}$
+% \item $S= \{ 48 \}$
+% \item $S= \{ -6 \}$
+% \item $S= \{ 8 \}$
+% \item $S= \{ 3 \}$
+% \item $S= \{ -8 \}$
+% %\item $S= \{ 9 \}$
+% \end{enumerate}
+% \end{multicols}
+% \end{resp}
+
+% \begin{exer}
+% Resolva as seguintes equações do 1º grau:
+% \begin{enumerate}[a)]
+% \item $2x - 10 + 7x + 10= 180$
+% \item $5 - 3(x+ 3)= 23$
+% \item $\dfrac{1}{2}(6x-8)= 4(x-2)$
+% \item $3(x+1)-3(3x-5)=3(4x-5)-1$
+% \item $2(x-3)+ 8x +7= 4(5-x)+9$
+% \item $7y - 10= y + 50$
+% \item $7(2+y)= 5(y-1,2)+ 3,5$
+% \item $(3+w) - 1= (17 - 5w)- (3 + 2w)$
+% \item $3 \cdot (2x + 8) - 5x= 9$
+% \item $4x - (20 - 7x)= 2$
+% \item $4(x+2) + 6(3x+6)= 45$
+% \item $ 12 - 2(-4x + 6)= 8x + \dfrac{5}{2}\left(8x + \dfrac{2}{5} \right) $
+% \end{enumerate}
+% \end{exer}
+
+% \begin{resp}
+% \begin{multicols}{3}
+%  \begin{enumerate}[a)]
+% \item $S= \{ 20 \}$
+% \item $S= \{ -9 \}$
+% \item $S= \{ 4 \}$
+% \item $S= \{ \frac{17}{9} \}$
+% \item $S= \{ 2 \}$
+% \item $S= \{ 10 \}$
+% \item $S= \{ 8,25 \}$
+% \item $S= \{ 1,5 \}$
+% \item $S= \{ -15 \}$
+% \item $S= \{ 2 \}$
+% \item $S= \{ \frac{1}{22} \}$
+% \item $S= \{ \frac{-1}{20} \}$
+% \end{enumerate}
+% \end{multicols}
+% \end{resp}
+
+\begin{exer}
+Resolva as seguintes equações do 1º grau:
+\begin{enumerate}[a)]
+\item $\dfrac{3}{4}x + 5= \dfrac{3}{2}$
+\item $\dfrac{x}{7}= 8$
+\item $\dfrac{x}{14}= \dfrac{3}{7}$
+\item $\dfrac{2x+5}{3}= 3$
+\item $\dfrac{2x+14}{12}= 3$
+\item $\dfrac{3x+8}{5}= \dfrac{2x+4}{10}$
+\item $\dfrac{x+1}{4} + \dfrac{20}{4}= -3x + 8$
+\item $\dfrac{t}{4} + 20 = \dfrac{1}{3}t$
+\item $\dfrac{3}{4}t - \dfrac{2}{3}= t - \dfrac{7}{2} + \dfrac{1}{12}$
+\end{enumerate}
+\end{exer}
+\begin{resp}
+\begin{multicols}{3}
+ \begin{enumerate}[a)]
+ \item $S= \{ \frac{-14}{3} \}$
+\item $S= \{ 56 \}$
+\item $S= \{ 6 \}$
+\item $S= \{ 2 \}$
+\item $S= \{ 11 \}$
+\item $S= \{ -3 \}$
+\item $S= \{ \frac{11}{13} \}$
+\item $S= \{ 240 \}$
+\item $S= \{ 11 \}$
+\end{enumerate}
+\end{multicols}
+\end{resp}
+
+\begin{exer}
+Resolva as seguintes equações do 2º grau:
+
+\begin{multicols}{2}
+\begin{enumerate}[a)]
+\item $x^2 - 36=0$
+\item $x^2 - 169=0$
+\item $x^2 - 36x=0$
+\item $x^2 - 13x=0$
+\item $x^2 + 8x + 16=0$
+\item $x^2 - 14x + 49=0$
+\item $x^2 - 2x - 35=0$
+\item $x^2 + 3x - 18=0$
+\item $4x^2 - 27x - 7=0$
+\item $x^2 + x + \dfrac{6}{25}=0$
+\end{enumerate}
+\end{multicols}
+\end{exer}
+\begin{resp}
+\begin{multicols}{3}
+\begin{enumerate}[a)]
+\item $S= \{-6, 6 \}$
+\item $S= \{ -13, 13\}$
+\item $S= \{ 0, 36\} $
+\item $S= \{0, 13 \} $
+\item $S= \{ -4 \} $
+\item $S= \{ 7 \} $
+\item $S= \{ -5, 7 \} $
+\item $S= \{ -6, 3 \} $
+\item $S= \{ \frac{-1}{4}, 7\} $
+\item $S= \{ -\frac{3}{5}, -\frac{2}{5} \} $
+\end{enumerate}
+\end{multicols}
+\end{resp}
+
+% \begin{exer}
+% Resolva as seguintes equações do 1º grau:
+% \begin{multicols}{2}
+% \begin{enumerate}[a)]
+% \item $\dfrac{x}{4} + \dfrac{x}{3} = 7$
+% \item $\dfrac{x}{2} + \dfrac{2x}{3} - \dfrac{x}{4}= 22$
+% \item $\dfrac{x+4}{4} + \dfrac{x+3}{6} = 5$
+% \item $\dfrac{p-5}{6} + \dfrac{2-p}{3} + \dfrac{p-6}{5}= -3$
+% \item $\dfrac{x-2}{3} - \dfrac{x-3}{2}= \dfrac{x+5}{5}$
+% \item $\dfrac{3(y-1)}{4} - \dfrac{2(y-3)}{5} - \dfrac{1-2y}{20}= 0$
+% \end{enumerate}
+% \end{multicols}
+% \end{exer}
+
+% \begin{resp}
+% \begin{multicols}{3}
+%  \begin{enumerate}[a)]
+% \item $S= \{ 12 \}$
+% \item $S= \{ 24 \}$
+% \item $S= \{ \frac{42}{5} \}$
+% \item $S= \{ -49 \}$
+% \item $S= \{ - \frac{5}{11} \}$
+% \item $S= \{ - \frac{8}{9} \}$
+% \end{enumerate}
+% \end{multicols}
+% \end{resp}
+
+\begin{exer} Transforme os problemas em equações e resolva.
+ \begin{enumerate}[a)]
+%\item Qual é o número que, somado a $\dfrac{5}{4}$, resulta em $\dfrac{1}{2}$?
+%\item Por quanto devemos multiplicar $\dfrac{7}{4}$ para obter $\dfrac{2}{3}$?
+\item Dividindo um número por $3$ e somando o resultado a $5$, obtemos $12$. Que número é esse?
+\item Somando o quádruplo de um número com $5$, obtemos $101$. Que número é esse?
+\item Num estacionamento há carros, motos e ônibus, totalizando $81$ veículos. O número de carros é igual a $5$ vezes o número de ônibus, e o número de motos é $3$ vezes o número de ônibus. Quantos ônibus tem no estacionamento?
+\item Ari é 8 anos mais velho que a Natalina. A soma das idades deles é $96$. Qual a idade do Ari?
+\item O perímetro de um triângulo equilátero é $12 cm$. Qual a medida do lado deste triângulo? 
+\item Um retângulo possui $96 cm$ de perímetro. Quais as medidas de seus lados sabendo-se que o comprimento mede $14 cm$ a mais que a largura?
+\item A soma de dois números ímpares consecutivos é $248$. Quais são esses números?
+\end{enumerate}
+\end{exer}
+\begin{resp}
+\begin{multicols}{2}
+ \begin{enumerate}[a)]
+%\item $x + \frac{5}{4}= \frac{1}{2}$ e $x= -\frac{3}{4}$
+%\item $\frac{7}{4}x= \frac{2}{3}$ e $x=\frac{8}{21}$
+\item $\frac{x}{3} + 5= 12$ e $x= 21$
+\item $4x + 5= 105$ e $x= 101$
+\item O estacionamento tem $9$ ônibus.
+\item A idade do Ari é $52$ anos.
+\item $4 cm$
+\item Largura é $17cm$ e o comprimento $31$.
+\item $123$ e $125$.
+\end{enumerate}
+\end{multicols}
+\end{resp}
+
+\begin{exer} Transforme os problemas em equações e resolva.
+ \begin{enumerate}[a)]
+\item O quadrado de um número negativo acrescido de quatro unidades resulta em $29$. Que número é esse?
+\item Subtraíndo $4$ do quadrado de um número positivo obtemos $32$. Que número é esse?
+\item Um quadrado possui $16 cm^2$ de área. Qual a medida do lado deste quadrado?
+\end{enumerate}
+\end{exer}
+\begin{resp}
+\begin{multicols}{3}
+ \begin{enumerate}[a)]
+\item $x^2 + 4= 29$ e $x= -5$
+\item $x^2-4= 32$ e $x= 6$
+\item O quadrado possui lado de $4 cm$
+\end{enumerate}
+\end{multicols}
+\end{resp}
+
+\begin{exer}
+Usando substituição resolva a seguinte equação $x + 3\sqrt{x} - 10=0$.
+\end{exer}
+\begin{resp}
+  $S= \{4 \}$
+\end{resp}
+
+\begin{exer}
+Usando substituição resolva a seguinte equação \[(x-3)^8 - 8(x-3)^4 + 7=0 \ . \]
+\end{exer}
+\begin{resp}
+O conjunto de soluções reais é:
+ $S= \{2, 4, 3 - \sqrt[4]{7}, 3 + \sqrt[4]{7} \}$.
+\end{resp}
+
+\begin{exer}
+    Resolva as equações:
+    \begin{enumerate}[a)]
+        \item $8x^2=21-2x$
+        \item $x^6+7x^3-8=0$
+        \item $x+\frac{1}{x} = 2$
+        \item $\frac{x-2}{3x-8}=\frac{x+5}{5x-2}$
+    \end{enumerate}
+\end{exer}
+
+\begin{exer}
+Determine o único valor positivo para $p$ que faz com que a equação 
+\[x^2 - (p+2)x + 9= 0\]
+possua uma única solução real.
+\end{exer}
+\begin{resp}
+ $S= \{4\}$
+\end{resp}
+
+\begin{exer}
+    Determine o valor de $k$ na equação $3x^2-7x+(k+1)=0$ de modo que uma de suas raízes seja o sêxtuplo da outra.
+\end{exer}
+
+\begin{exer}
+    Se $x_{1}$ e $x_{2}$ são raízes de $3x^2-6x+10=0$, calcule o valor de $\dfrac{1}{x_{1}}+\dfrac{1}{x_{2}}$.
+\end{exer}
+
+\begin{exer}
+Quantas soluções reais distintas a equação
+\[(x^2 + x - 12)\cdot (x^2 + 8x + 12) \cdot (x^2 - 6x + 9)= 0\]
+possui?
+\end{exer}
+\begin{resp}
+  A equação possui $4$ soluções reais distintas.
+\end{resp}
+
+%\subsection*{Respostas:}
+%\shipoutAnswer
+
+\end{secExercicios}
+
+
+
+

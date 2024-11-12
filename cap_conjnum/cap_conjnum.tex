@@ -1,0 +1,836 @@
+%Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/4.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+\chapter{Conjuntos numéricos}
+\index{Conjunto(s)!numéricos}
+\section{Conjunto dos Números Naturais}
+
+Os registros mais antigos de números encontrados por historiadores, são de símbolos que eram utilizados para registrar a quantidade de animais, estes símbolos foram sendo aprimorados com o desenvolvimento das sociedades e o aprimoramento da escrita, chegando ao sistema de numeração hindu-arábico que são os números como conhecemos hoje.
+
+Estes símbolos que utilizamos para contar objetos são denominados números naturais ($\N$).\index{Números!naturais} O conjunto dos números naturais é composto por:
+\begin{equation*}
+\N= \{1, 2, 3, 4, \ldots \},
+\end{equation*}
+
+Alguns autores incluem o zero no conjunto dos números naturais.
+
+Alguns historiadores acreditam que o zero foi o último deles a ser criado, justificando que no início não havia necessidade de registro no caso de não se ter posses. Ainda se discute dentro da matemática se o zero pertence ou não ao conjunto dos números naturais.
+
+É importante notar que neste conjunto numérico estão bem definidas as operações de adição ($+$) e multiplicação ($\times$), mas não a subtração ($-$) e a divisão ($\div$).
+
+\section{Conjunto dos Números Inteiros}
+
+Com o surgimento do comércio, surge a necessidade dos comerciantes de registrarem a entrada e saída de bens em seus estabelecimentos, bem como seus lucros e suas despesas. Para efetuar estes registros eles criaram os números negativos,\index{Números!negativos} tendo assim como registrar posses usando números positivos\index{Números!positivos} e dívidas usando os números negativos.
+
+Este conjunto de números negativos juntamente com os números naturais, forma o conjunto dos números inteiros ($\Z$):\index{Números!inteiros}
+\begin{equation*}
+\Z= \{ \ldots , -4, -3, -2, -1, 0, 1, 2, 3, 4, \cdots \}
+\end{equation*}
+
+Observe que $\N \subset \Z$. E ainda que no conjunto dos números inteiros temos bem definidas as operações de soma ($+$), subtração ($-$) e multiplicação ($\times$).
+
+Destacamos os seguintes subconjuntos de $\Z$:
+\begin{itemize}
+    \item Não negativos: $\Z_{+}=\{0,1,2,3,\dots\}$
+    \item Positivos: $\Z_{+}^*=\{1,2,3,\dots\}$
+    \item Não positivos: $\Z_{-}=\{0,-1,-2,-3,\dots\}$
+    \item Negativos: $\Z_{-}^*=\{-1,-2,-3,\dots\}$
+\end{itemize}
+
+\section{Conjunto dos Números Racionais}
+
+Note que no conjunto dos números inteiros ainda não é possível fazer todas as divisões, por exemplo $3 \div 2$ ainda não está definida, pois ainda não existe um número que represente este resultado. Para resolver este problema surge então o conjunto dos números racionais ($\Q$),\index{Números!racionais} que é formado por todos os números que podem ser escrito em forma de fração, ou seja o conjunto dos números que podem ser obtidos como resultado de alguma divisão, representamos este conjunto por:
+\begin{equation*}
+\Q= \left\{ \frac{a}{b} \mid a, b \in \Z \text{ e } b \neq 0 \right\}.
+\end{equation*}
+
+Observe que $\N \subset \Z \subset \Q$. E ainda que no conjunto dos números racionais temos bem definidas as operações de soma ($+$), subtração ($-$), multiplicação/vezes ($\times$) e divisão/razão ($\div$). Porém as operações neste conjunto possuem algumas particularidades com as quais devemos ficar atentos, por isso iremos retomá-las na sequência de nossos estudos.
+
+% \subsection{Operações em \texorpdfstring{$\Q$}{Q}}
+
+%  As operações no conjunto dos números racionais envolvem em particular as operações com frações que possuem algumas particularidades por isso façamos uma rápida retomada destas operações.
+
+% \begin{obs}
+%   \textbf{Soma:} Dados $x, y, a, b \in \Z$ com $a, b \neq 0$ temos:
+%  \begin{equation*}
+%   \frac{x}{a} + \frac{y}{a}= \frac{x+y}{a} \, \text{ ou}, \ \
+%   \frac{x}{a} + \frac{y}{b}= \frac{xb + ya}{ab}
+% \end{equation*}
+% \end{obs}
+
+% \begin{obs}
+%   \textbf{Subtração:} Dados $x, y, a, b \in \Z$ com $a, b \neq 0$ temos:
+%  \[\frac{x}{a} - \frac{y}{a}= \frac{x-y}{a} \, \text{ ou}, \ \
+%  \frac{x}{a} - \frac{y}{b}= \frac{xb - ya}{ab} \]
+% \end{obs}
+
+%  \begin{exem}
+%   \textbf{Soma e subtração de frações com mesmo denominador:}
+
+%    Quando os denominadores das frações são iguais, mantemos o denominador e operamos os numeradores.
+% \begin{align*}
+% \frac{3}{5} + \frac{1}{5} &= \frac{3+1}{5}= \frac{4}{5} .\\
+% \frac{3}{5} - \frac{1}{5} &= \frac{3-1}{5}= \frac{2}{5} .
+% \end{align*}
+%  \end{exem}
+
+%  \begin{exem}
+%  \textbf{Soma e subtração de frações com denominadores diferentes:}
+
+%    Quando os denominadores das frações são diferentes podemos simplesmente multiplicar os denominadores ou calcular o mínimo múltiplo comum entre eles (MMC), a vantagem da segunda opção é que o MMC é menor ou igual ao produto, como podemos ver no exemplo:
+% \begin{align*}
+% \frac{2}{4} + \frac{3}{10} &= \frac{10 \cdot 2 + 4 \cdot 3}{4 \cdot 10}= \frac{20 + 12}{40}= \frac{32}{40}= \frac{4}{5}.\\
+% \frac{2}{4} - \frac{3}{10} &= \frac{10 \cdot 2 - 4 \cdot 3}{4 \cdot 10}= \frac{20 - 12}{40}= \frac{8}{40}= \frac{1}{5} .
+% \end{align*}
+
+%    Observamos que o $MMC(4, 10)= 20$, assim,
+% \begin{align*}
+% \frac{2}{4} + \frac{3}{10} &= \frac{5 \cdot 2 + 2 \cdot 3}{20}= \frac{10+6}{20}= \frac{16}{20}=\frac{4}{5} .\\
+% \frac{2}{4} - \frac{3}{10} &= \frac{5 \cdot 2 - 2 \cdot 3}{20}= \frac{10 - 6}{20}= \frac{4}{20}=\frac{1}{5} .
+% \end{align*}
+%  \end{exem}
+
+% Caso tenha dúvidas sobre MMC, veja o Apêndice \ref{ap:MMC}.
+
+% \begin{obs}
+%   \textbf{Multiplicação:} Dados $a, b, c, d \in \Z$ com $b, d \neq 0$ temos:
+% \begin{equation*}
+% \frac{a}{b} \cdot \frac{c}{d}= \frac{a \cdot c}{b \cdot d} 
+% \end{equation*}
+% \end{obs}
+
+%  \begin{exem}
+%   \textbf{Multiplicação de fração:} na multiplicação devemos multiplicar numerador por numerador e denominador por denominador.
+% \begin{align*}
+% \frac{2}{3} \cdot \frac{6}{4} &= \frac{2 \cdot 6}{3 \cdot 4}= \frac{12}{12}= 1 \\
+% 2 \cdot \frac{5}{3} &= \frac{2 \cdot 5}{3}= \frac{10}{3}
+% \end{align*}
+%  \end{exem}
+
+% \begin{obs}
+%   \textbf{Divisão:} Dados $a, b, c, d \in \Z$ com $b, c, d \neq 0$ temos:
+% \begin{equation*}
+% \frac{a}{b} \div \frac{c}{d}= \frac{a}{b} \cdot \frac{d}{c} 
+% \end{equation*}
+% \end{obs}
+
+%  \begin{exem}
+%   \textbf{Divisão de fração:} na divisão conservamos a primeira fração e multiplicamos pelo inverso da segunda.
+% \begin{equation*}
+% \frac{2}{3} \div \frac{1}{6}= \frac{2}{3} \cdot \frac{6}{1}= \frac{2 \cdot 6}{3 \cdot 1}= \frac{12}{3}= 4 
+% \end{equation*}
+% \begin{equation*}
+% \frac{4}{\left(\frac{2}{3}\right)}= \frac{4}{1} \cdot \frac{3}{2}= \frac{12}{2}=6
+% \end{equation*}
+%  \end{exem}
+
+\subsection{Dízimas periódicas e não-periódicas}
+As dízimas são números decimais com infinitas casas decimais, podendo haver alguma forma de repetição dos algarismos nas casas decimais, e neste caso a dízima é denominada periódica\index{Dízima!periódica} e é um número racional, ou não haver repetição alguma dos algarismos das casas decimais, neste caso a dízima é denominada não periódica\index{Dízima!não periódica} e é um número irracional. Estamos neste momento particularmente interessados nas dízimas periódicas.
+
+\begin{obs}
+    
+  Chamamos de \textbf{dízimas periódicas} os números decimais com infinitas casas decimais, nos quais a partir de alguma casa decimal, um algarismo ou um grupo de algarismos passa a se repetir infinitamente. O algarismo ou algarismos que se repetem infinitamente constituem o período da dízima.
+
+\end{obs}
+
+ \begin{exem} Vejamos alguns exemplos de dízimas periódicas, e como dada a dízima encontrar a fração que a representa.
+
+  \begin{enumerate}[a)]
+   \item Considere o número $0,333 \ldots$, neste caso o período é $3$, assim,
+\begin{equation*}
+0,3333 \ldots= 0,\overline{3}= \frac{3}{9}= \frac{1}{3}
+\end{equation*}
+   Tomando $x = 0,3333$ e multiplicando por $10$ obtemos $10x = 3,3333$. Subtraindo, temos:
+   \begin{eqnarray*}
+   10x &=& 3,3333 \ldots \\
+    x &=& 0,3333 \ldots\\
+    \cline{1-3}
+    9x &=& 3
+   \end{eqnarray*}
+   
+   Logo $x=\dfrac{1}{3}$. Usando a mesma ideia conseguimos mostrar os exemplos abaixo.
+
+   \item Considere o número $0,121212 \ldots$, neste caso o período é $12$, assim,
+\begin{equation*}
+0,121212 \ldots= 0,\overline{12}= \frac{12}{99}= \frac{4}{33}
+\end{equation*}
+
+   \item Considere o número $0,225225225 \ldots$, neste caso o período é $225$, assim,
+\begin{equation*}
+0,225225225 \ldots= 0,\overline{225}= \frac{225}{999}= \frac{75}{333}=\frac{25}{111}
+\end{equation*}
+
+   \item Considere o número $7,464646 \ldots$, neste caso o número tem uma parte inteira que é $7$ e uma parte decimal $0,464646 \ldots$ na qual o período é $46$. Portanto,
+   \begin{eqnarray*}
+    7,464646 \ldots &=& 7+0,464646 \ldots = 7 + \frac{46}{99} = \frac{7\cdot 99 + 46}{99} =  \frac{739}{99}
+   \end{eqnarray*}
+
+   \item Considere o número $0,2\bar{5}= 0,2555 \ldots$, neste caso o período é $5$. Assim para obter a fração equivalente a esta dízima, considere $x=  0,2555 \ldots$ e procedemos da seguinte forma:
+   \begin{eqnarray*}
+    100x &=& 25,555 \ldots \\
+    10x &=& 2,555 \ldots \\\cline{1-3}
+    100x - 10x &=& 25,\bar{5} - 2, \bar{5} \\
+    90x &=& 23 \\
+    x&=& \frac{23}{90}
+   \end{eqnarray*}
+
+   \item Considere o número $1,317\bar{6}$, neste caso o período é $6$. Assim para obter a fração equivalente a esta dízima, tome $x=1,317\bar{6}$ e procedemos da seguinte forma:
+   \begin{eqnarray*}
+    10000 x &=& 13176, \bar{6} \\
+    1000 x &=& 1317,\bar{6}\\\cline{1-3}
+    10000 x - 1000 x &=& 13176, \bar{6} - 1317,\bar{6}\\
+    9000 x &=& 11859 \\
+    x &=& \frac{11859}{9000} = \frac{3953}{3000}
+   \end{eqnarray*}
+
+  \end{enumerate}
+
+ \end{exem}
+
+Com estes exemplos confirmamos que toda dízima periódica é um número racional, assim como os números inteiros, já que, se $a \in \Z$ então $a=\frac{a}{1}$, portanto $a \in \Q$, e os números com um número finito de casas decimais, por exemplo, $0,15= \frac{15}{100}$.
+
+\begin{obs}
+    Se o denominador de uma fração é da forma $2^a\cdot 5^b$, com $a$ e $b$ números naturais, então temos um decimal finito. Se no denominador da fração irredutível há um fator diferente de $2$ ou $5$, temos uma dízima periódica.
+\end{obs}
+
+\section{Conjunto dos Números Irracionais}
+
+Com o aprimoramento do cálculo de áreas, vem também a necessidade de sabendo a área, por exemplo do quadrado, descobrir quais as medidas de seus lados, dando então origem ao cálculo das raízes quadradas, surge portanto um novo problema, com os números criados até então nem todo número tem uma raiz quadrada. Para resolver este impasse, criou-se o conjunto dos números irracionais $\I$,\index{Números!irracionais} números estes que não podem ser representados por uma fração como por exemplo: $\sqrt{2}$, $\sqrt{3}$, $\sqrt{5}$, $\sqrt{7}$, $\pi$, número de Euler $e$, e muitos outros. Observe que $\Q \cap \I = \varnothing$.
+
+\begin{obs}
+Números irracionais são os números cuja representação decimal infinita e não periódica.
+\end{obs}
+
+\section{Conjunto dos Números Reais}
+
+O conjunto dos números reais\index{Números!reais} nada mais é do que a união dos números racionais com os números irracionais, $\R= \Q \cup \I$, no qual as operações soma, subtração, multiplicação e divisão estão bem definidas.
+
+Existe uma relação biunívoca entre os pontos de uma reta e os números reais. A representação geométrica dos números reais chamamos de reta real.
+
+\begin{center}
+    \realline{-5}{5}[1.42][$\sqrt{2}$][-10/3][$-\frac{10}{3}$]
+\end{center}
+
+Destacamos os seguintes subconjuntos de $\R$:
+\begin{itemize}
+    \item Não nulos: $\R^* = \{x\in \R \colon x\neq 0\}$
+    \item Não negativos: $\R_{+} = \{x\in \R \colon x\geqslant 0\}$
+    \item Positivos: $\R_{+}^* = \{x\in \R \colon x>0\}$
+    \item Não positivos: $\R_{-} = \{x\in \R \colon x\leqslant 0\}$
+    \item Negativos: $\R_{-}^* = \{x\in \R \colon x< 0\}$
+\end{itemize}
+
+\subsection{Relação de Ordem e a Reta Real}
+
+%Do nosso dia-a-dia sabemos que como a matemática Wang Zhenyi nasceu em 1768 e a matemática Hertha Ayrton nasceu em 1854, então Wang é mais velha que Hertha, pois 1768 é anterior a 1854, ou podemos pensar também que 1768 é  menor que 1854, aqui estamos usando a relação de ordem\index{Ordem}\index{Desigualdades|see{Ordem}} dos números naturais para poder determinar quem nasceu primeiro e portanto é a mais velha, com esta relação de ordem das datas podemos construir uma cronologia dos acontecimentos históricos, que pode ser representada em uma reta cronológica.
+
+%Além dessa situação de datas podemos também pensar na questão das temperaturas, por exemplo temos que a maior temperatura registrada oficialmente no Brasil foi 44,7 °C em Bom Jesus, Piauí, em 21 de novembro de 2005, superando o recorde também oficial de Orleans, Santa Catarina, de 44,6 °C, de 6 de janeiro de 1963. E a menor temperatura registrada foi de –17,8 °C no Morro da Igreja, em Urubici, Santa Catarina, em 29 de junho de 1996 (registro extraoficial). A menor temperatura registrada oficialmente no país foi de –14,0 °C, no município de Caçador, no mesmo estado, em 11 de junho de 1952. Estas afirmações são possíveis pois sabemos que 44,7 é maior que 44,6 e -17,8 é menor que -14,0, para fazer estas comparações e decidir quando está mais frio e/ou mais quente estamos usando a relação de ordem dos números racionais.
+
+%Esta relação de ordem que usamos nos dois exemplos acima é apenas uma aplicação da relação de ordem que existe no conjunto dos números reais, que formalizamos da seguinte forma:
+
+\begin{obs}
+Dados os números $a, b \in \R$, dizemos que:
+
+\begin{itemize}
+\item $a$ é maior que $b$, ou $a > b$, se $(a - b)$ é um número positivo.
+\item $a$ é maior ou igual a $b$, ou $a \geq b$, se $(a - b)$ é um número positivo ou zero.
+\item $a$ é menor que $b$, ou $a < b$, se $(a - b)$ é um número negativo.
+\item $a$ é menor ou igual a $b$, ou $a \leq b$, se $(a - b)$ é um número negativo ou zero.
+\end{itemize}
+\end{obs}
+
+Note que dizer que $a$ é menor que $b$ ($a < b$) é equivalente a dizer que $b$ é maior que $a$ ($b > a$), o que também usamos no nosso dia-a-dia sem maiores problemas.
+
+%O conjunto dos números reais é um exemplo de um conjunto totalmente ordenado, com a ordenação dada por ($\leq$) pois, quaisquer $x$, $y$, e $z \in \R$, satisfazem as seguintes condições:
+%\begin{itemize}
+%\item se $x \leq y$ e $y \leq x$ então $x= y$;
+%\item se $x \leq y$ e $y \leq z$ então $x \leq z$;
+%\item \textit{Tricotomia:} $x<y$ ou $x=y$ ou $x>y$.
+%\end{itemize}
+
+%Esta relação de ordem em $\R$ possui as seguintes propriedades.
+
+%\begin{prop}[Propriedades da relação de ordem]
+%\index{Ordem!propriedades da relação de}\index{Propriedades!da relação de ordem}
+%\label{prop.ordem} Dados $x, y, z \text{ e } w \in \R$ temos que:
+%\begin{enumerate}
+%\item Se $x \leq y$ e $z \leq w$ então $x+z \leq y+w$.
+%De fato,
+%\begin{equation*}
+%x+z \leq y+z \ \ \  \text{ e } \ \ \ y+z \leq y+w \Rightarrow x+z \leq y+w \ .
+%\end{equation*}
+%\item Se $0 \leq x \leq y$ e $0 \leq z \leq w$ então $0 \leq xz \leq yw$.
+%De fato,
+%\begin{equation*}
+%xz \leq yz \ \ \  \text{ e } \ \ \  zy \leq wy \Rightarrow xz \leq wy \ .
+%\end{equation*}
+%\item $x < y \Leftrightarrow x+z < y+z$;
+%\item $z>0 \Leftrightarrow z^{-1}>0$;
+%\item $z>0 \Leftrightarrow -z> 0$;
+%\item $z>0 \text{ e } x<y \Leftrightarrow xz<yz$;
+%\item $z<0 \text{ e } x<y \Leftrightarrow xz>yz$;
+%\item $0<x<y \Rightarrow 0< \dfrac{1}{y} < \dfrac{1}{x}$.
+%\end{enumerate}
+%\end{prop}
+
+Este conceito de ordem dos números reais nos permite representá-los como pontos sobre uma reta orientada, chamada \textbf{reta real}\index{Reta real}, assim como representamos os anos em uma reta cronológica.
+ % \begin{figure}[H]
+ % \centering
+ % \includegraphics[width=\textwidth]{./cap_conjnum/figs/RetaCronologica}
+ % \caption{Linha do tempo história geral}
+ % \end{figure}
+
+ % \begin{figure}[H]
+ % \centering
+ % \includegraphics[width=6cm]{./cap_conjnum/figs/Termometro}
+ % \caption{Termômetros apresentando a temperatura em graus Celsius}
+ % \end{figure}
+
+ Na reta real, o número $0$ (zero) serve como referência, sendo denominado origem. Os números positivos são representados à direita da origem e os números negativos à esquerda. Uma vez escolhida uma unidade de medida, exemplo centímetro, o número positivo $x$ é representado a exatamente $x$ unidade à direita do zero e o número $-x$ é representado a exatamente $x$ unidades à esquerda no zero.
+
+\begin{center}
+    \realline{-5}{5}[3][$x$][-3][$-x$]
+\end{center}
+
+ %  \begin{figure}[H]
+ % \centering
+ % \includegraphics[width=\textwidth]{./cap_conjnum/figs/RetaReal}
+ % \caption{Reta Real}
+ % \end{figure}
+
+%  Na reta real da figura acima intuitivamente observarmos que a distância dos pontos $-x$ e $x$ até a origem (zero) é de exatamente três unidades, esta distância de um ponto $x$ da reta real à origem é denominada \textbf{valor absoluto}\index{Valor absoluto|see{Módulo}}\index{Módulo}, ou \textbf{módulo}, do número $x$, e é representada por $\abs{x}$. Assim, dizemos que:
+% \begin{itemize}
+% \item O valor absoluto de $-3$ é $3$, ou seja, $\abs{-3}= 3$;
+% \item O valor absoluto de $3$ é $3$, ou seja, $\abs{3}= 3$;
+% \end{itemize}
+% \begin{obs}
+% Generalizando esta ideia temos pela definição que:
+% \begin{equation*}
+% \abs{x}= \begin{cases}
+%       -x \ \ \text{se} \ \ x<0 \\
+%       x \ \ \text{se} \ \ x \geq 0.
+%      \end{cases}
+% \end{equation*}
+% \end{obs}
+
+% O valor absoluto ou módulo de um número real conta com as seguintes propridades.
+
+% \begin{prop}[Propriedades do módulo]
+%  Para quaisquer $x, y \in \R$, são válidas as seguintes propriedades: \label{prop.modulo}
+% \begin{enumerate}
+%  \item $\abs{x} \geq 0$;
+%  \item $\abs{x}= 0 \Leftrightarrow x= 0$;
+%  \item $x \leq \abs{x}$;
+%  \item $-x \leq \abs{x}$;
+%  \item $\abs{-x}= \abs{x}$;
+%  \item $\abs{x}^2= x^2$;
+%  %, de fato,\\
+%  %se $x \geq 0$, pela definição do módulo temos que $\abs{x}= x$ e daí $\abs{x}^2= x^2$, \\
+%  %se $x < 0$, pela definição do módulo temos que $\abs{x}= -x$ e daí $\abs{x}^2=(-x)^2= x^2$.\\
+%  %Portanto, para todo $x \in \R$, $\abs{x}^2= x^2$.
+
+%  \item $\abs{x^n}= \abs{x}^n$, se $n$ é par;%, de fato, \\
+%  %se $x \geq 0$, pela definição do módulo temos que $\abs{x}= x$ e daí $\abs{x}^n= x^n$, \\
+%  %se $x < 0$, pela definição do módulo temos que $\abs{x}= -x$ e daí $\abs{x}^n= (-x)^n= x^n$.\\
+%  %Portanto, para todo $x \in \R$, $\abs{x}^n= x^n$.
+
+%  \item $\abs{x \cdot y}= \abs{x} \cdot \abs{y}$;%, de fato,
+% %\begin{equation*}
+% %\abs{x \cdot y}^2= (x \cdot y)^2= x^2 \cdot y^2= \abs{x}^2 \cdot \abs{y}^2= (\abs{x} \cdot \abs{y})^2 \ .
+% %\end{equation*}
+%  %Como $\abs{x \cdot y} \geqslant 0$ e $\abs{x} \cdot \abs{y} \geqslant 0$ resulta
+% %\begin{equation*}
+% %\abs{x \cdot y}= \abs{x} \cdot \abs{y} \ . 
+% %\end{equation*}
+
+%  \item $\abs{\dfrac{x}{y}}= \dfrac{\abs{x}}{\abs{y}}$, para $y \neq 0$;%, de fato,
+% %\begin{equation*}
+% %\abs{\dfrac{x}{y}}^2= \left(\dfrac{x}{y} \right)^2= \dfrac{x^2}{y^2}= \dfrac{\abs{x}^2}{\abs{y}^2}= \left( \dfrac{\abs{x}}{\abs{y}} \right)^2 \ . 
+% %\end{equation*}
+% % Como $\abs{\dfrac{x}{y}} \geq 0$ e $\dfrac{\abs{x}}{\abs{y}} \geq 0$ resulta que
+% %\begin{equation*}
+% %\abs{\dfrac{x}{y}}= \dfrac{\abs{x}}{\abs{y}} \ .
+% %\end{equation*}
+
+%  \item \emph{Desigualdade triangular:} $\abs{x+y}\leq \abs{x}+\abs{y}$;%, de fato, \\
+%  %se $x + y \geqslant 0$, pela definição de módulo, $\abs{x+y}= x+y \leq \abs{x} + \abs{y}$; \\
+%  %se $x + y < 0$, pela definição de módulo, $\abs{x+y}= -(x+y)= -x-y \leq \abs{x} + \abs{y}$. \\
+%  %Logo, para quaisquer $x, y \in \R$ temos que
+% %\begin{equation*}
+% %\abs{x+y} \leq \abs{x}+\abs{y} \ .
+% %\end{equation*}
+
+%  \item $\abs{x-y} \leq \abs{x} + \abs{y}$;%, de fato \\
+%  %Note que $x-y= x+ (-y)$, logo $\abs{x-y}= \abs{x+ (-y)}$ aplicando a desigualdade trinagular temos,
+% %\begin{equation*}
+% %\abs{x-y}= \abs{x+ (-y)} \leq \abs{x} + \abs{-y}= \abs{x} + \abs{y} \ .
+% %\end{equation*}
+
+%  \item $\abs{\abs{x} - \abs{y}} \leq \abs{x - y}$%, para mostrar esta desigualdade vamos fazer por partes.
+%  %\begin{itemize}
+%  %\item $\abs{x} - \abs{y} \leq \abs{x - y}$, \\
+%  %de fato, pela desigualdade triangular temos que
+% %\begin{equation*}
+% %\abs{z+y} \leq \abs{z} + \abs{y}
+% %\end{equation*}
+% % subtraíndo $\abs{y}$ a ambos os termos temos,
+% %\begin{equation*}
+% %\abs{z+y} - \abs{y} \leq \abs{z}
+% %\end{equation*}
+% % fazendo $x= z+y$ temos que $z=x-y$ substituindo estes valores na equação acima obtemos
+% %\begin{equation*}
+% %\abs{x} - \abs{y} \leq \abs{x-y} \ . 
+% %\end{equation*}
+%  \item $\abs{y} - \abs{x} \leq \abs{x - y}$.%, \\
+%  %de fato, pela desigualdade triangular temos que
+% %\begin{equation*}
+% %\abs{x+z} \leq \abs{x} + \abs{z}
+% %\end{equation*}
+% % subtraíndo $\abs{x}$ a ambos os termos temos,
+% %\begin{equation*}
+% %\abs{x+z} - \abs{x} \leq \abs{z}
+% %\end{equation*}
+%  %fazendo $y= x+z$ temos que $z=y-x$ substituindo estes valores na equação acima obtemos
+% %\begin{equation*}
+% %\abs{y} - \abs{x} \leq \abs{y-x}= \abs{x-y} \ . 
+% %\end{equation*}
+% %\end{itemize}
+
+% % Portanto,
+% %\begin{equation*}
+% % \abs{\abs{x} - \abs{y}} = \pm (\abs{x} - \abs{y}) \leq \abs{x-y} \ .
+% %\end{equation*}
+
+% \end{enumerate}
+% \end{prop}
+
+% \subsection{Operações nos reais}
+% Dados quaisquer $x, y, z \in \R$, destacamos que em $\R$ as operações de soma (adição) $(+)$ e multiplicação $(\cdot)$ possuem as seguintes propriedades:
+
+% \begin{obs}
+%  Adição $(+)$:
+%  \begin{enumerate}[1)]
+%  \item Fechamento: $x+y \in \R$;
+%  \item Associativo: $(x+y)+z= x+(y+z)$;
+%  \item Elemento neutro: existe um elemento $0 \in \R$ tal que $x+0=0+x=x$;
+%  \item Elemento inverso: existe um elemento $-x \in \R$ tal que $x+(-x)=0$;
+%  \item Comutatividade: $x+y= y+x$.
+%  \end{enumerate}
+% \end{obs}
+
+% \begin{obs}
+%   Multiplicação $(\cdot)$:
+%  \begin{enumerate}[1)]
+%  \item Fechamento: $x \cdot y \in \R$;
+%  \item Associativo: $(x \cdot y) \cdot z= x \cdot (y \cdot z)$;
+%  \item Elemento neutro: existe um elemento $1 \in \R$ tal que $x \cdot 1= 1 \cdot x= x$;
+%  \item Elemento inverso: existe um elemento $x^{-1} \in \R$ tal que $x \cdot x^{-1}= 1$;
+%  \item Comutatividade: $x \cdot y= y \cdot x$.
+%  \end{enumerate}
+% \end{obs}
+
+% \begin{obs}
+%   Leis distributivas: 
+%  \begin{enumerate}[1)]
+%  \item $x \cdot (y + z)= x \cdot y + x \cdot z$;
+%  \item $(x + y) \cdot z= x \cdot z + y \cdot z$.
+%  \end{enumerate}
+% \end{obs}
+
+%    As operações de soma e produto no conjunto dos números reais satisfazem também a:
+%    \begin{itemize}
+%    \item \textit{Lei do cancelamento:} Para todos $x, y, z \in \R$  temos que
+% \begin{equation*}
+% x+z=y+z \ \ \ \Rightarrow \ \ \ x=y  . 
+% \end{equation*}
+%    \item \textit{Anulamento do produto:} Para todos $x, y \in \R$  temos que
+% \begin{equation*}
+% x \cdot y= 0 \Leftrightarrow x=0 \ \ \ \text{ ou } \ \ \ y=0 \ .
+% \end{equation*}
+%    \end{itemize}
+
+\section{Conjunto dos números Complexos}
+
+Apesar de nossos estudos neste curso ser focado no conjunto dos números reais, neste conjunto numérico não conseguimos resolver todos os problemas matemáticos, em virtude disso, temos por exemplo o conjunto do números complexos, quatérnios, entre outros, desses mais avançados vamos falar um pouquinho dos números complexos pois neste conjunto é possível calcular raiz quadrada de qualquer número, o que não ocorre nos reais.
+
+Para resolver o problema da raiz quadrada de um número negativo, criou-se o número imaginário puro $i$, definido por $\iu= \sqrt{-1}$, portanto $\iu^2= -1$, criou-se assim um número $\iu$ que elevado ao quadrado desse $-1$. Temos agora como calcular a raiz quadrada de qualquer número real. Definimos a partir deste número imaginário o conjunto dos números complexos por:
+\begin{equation*}
+\C= \{a + b\iu \mid a, b \in \R \} ,
+\end{equation*}
+cujas operações apresentam algumas particularidades e portanto trataremos delas mais adiante.
+
+Note que, se tivermos $b=0$, estamos com o conjunto dos números reais, portanto $\R \subset \C$. Para fixar a ordem de continência destes conjuntos numéricos, observemos o diagrama de Venn abaixo.
+
+ \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=0.7]
+    \draw[fill=blue!30] (2,0) ellipse (5cm and 2.5cm);
+    \draw[fill=green!30] (1.5,0) ellipse (4cm and 2cm);
+    \draw[fill=yellow!30] (1,0) ellipse (3cm and 1.5cm);
+    \draw[fill=orange!30] (0.5,0) ellipse (2cm and 1cm);
+    \draw[fill=red!30] (0,0) ellipse (1cm and 0.5cm);   
+    \draw (-0.05,0) node{$\mathbb{N}$};
+    \draw (1.5,0.2) node{$\mathbb{Z}$};
+    \draw (3.0,0.4) node{$\mathbb{Q}$};
+    \draw (4.5,0.6) node{$\mathbb{R}$};
+    \draw (6,0.8) node{$\mathbb{C}$};
+    \end{tikzpicture}
+    \caption{Representação conjuntos numéricos}
+  \end{figure}
+
+\section{Subconjuntos numéricos e suas representações}
+
+Um tipo importante de subconjuntos de $\R$ são os \emph{intervalos}, que são determinados por desigualdades.
+
+%\textbf{Intervalos numéricos limitados}\index{Intervalos numéricos!limitados}
+\begin{itemize}
+ \item Intervalo aberto: $(a, b)= \{x \in \R \mid a < x < b\}$:
+ \begin{center}
+     \intervalo{11}{$a$}{$b$}
+ \end{center}
+
+ A bolinha aberta $\circ$ indica que os extremos não pertencem ao intervalo.
+
+ \item Intervalo fechado: $[a, b]= \{x \in \R \mid a \leq x \leq b\}$:
+ \begin{center}
+     \intervalo{22}{$a$}{$b$}
+ \end{center}
+
+  A bolinha fechada $\bullet$ indica que os extremos pertencem ao intervalo.
+ \item Intervalo aberto à direita e fechado à esquerda: $[a, b)= \{x \in \R \mid a \leq x < b\}$:
+ \begin{center}
+     \intervalo{21}{$a$}{$b$}
+ \end{center}
+ \item Intervalo aberto à esquerda e fechado à direita: $(a, b]= \{x \in \R \mid a < x \leq b\}$:
+ \begin{center}
+     \intervalo{12}{$a$}{$b$}
+ \end{center}
+%\end{itemize}
+
+%\textbf{Intervalos numéricos ilimitados}\index{Intervalos numéricos!ilimitados}
+%\begin{itemize}
+\item Conjunto dos números reais maiores que $a$: $(a, +\infty) = \{ x \in \R \mid a < x \}$:
+  \begin{center}
+     \intervalo{10}{$a$}{$b$}
+ \end{center}
+
+\item Conjunto dos números reais maiores ou iguais à $a$: $[a, +\infty) = \{ x \in \R \mid a \leq x \}$:
+ \begin{center}
+     \intervalo{20}{$a$}{$b$}
+ \end{center}
+
+\item Conjunto dos números reais menores que $b$: $(-\infty, b) = \{ x \in \R \mid x < b \}$:
+ \begin{center}
+     \intervalo{01}{$b$}{$b$}
+ \end{center}
+
+\item Conjunto dos números reais menores ou iguais à $b$: $(-\infty, b] = \{ x \in \R \mid x \leq b \}$:
+ \begin{center}
+     \intervalo{02}{$b$}{$b$}
+ \end{center}
+% \item Conjunto dos números reais: $(-\infty, +\infty) = \R$
+%  \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=7.5cm]{./cap_conjnum/figs/reta}
+%  \end{figure}
+\end{itemize}
+
+O conjunto dos números reais pode ser denotado como $(-\infty, +\infty) = \R$.
+
+
+% \textbf{Outros subconjuntos dos números reais}
+% \begin{itemize}
+%  \item Conjunto dos números reais não-nulos: $\R^{*}=\{x \in \R \mid x \neq 0\}$;
+%  \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=7.5cm]{./cap_conjnum/figs/n-nulos}
+%  \end{figure}
+%  \item Conjunto dos números reais não-negativos: $\R_{+}=\{x \in \R \mid x \geq 0\}$;
+%  \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=7.5cm]{./cap_conjnum/figs/n-negativos}
+%  \end{figure}
+%  \item Conjunto dos números reais positivos: $\R^{*}_{+}=\{x \in \R \mid x > 0\}$;
+%  \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=7.5cm]{./cap_conjnum/figs/positivos}
+%  \end{figure}
+%  \item Conjunto dos números reais não-positivos: $\R_{-}=\{x \in \R \mid x \leq 0\}$;
+%  \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=7.5cm]{./cap_conjnum/figs/n-positivos}
+%  \end{figure}
+%  \item Conjunto dos números reais negativos: $\R^{*}_{-}=\{x \in \R \mid x < 0\}$.
+%  \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=7.5cm]{./cap_conjnum/figs/negativos}
+%  \end{figure}
+% \end{itemize}
+
+\begin{obs}
+    No Ensino Médio, costumamos denotar um intervalo aberto por $]a,b[$. No Cálculo, os autores frequentemente utilizam a notação $(a,b)$ introduzida neste texto. Nesta notação, é importante ficar atento ao contexto, pois ela coincide com a notação de par ordenado.
+\end{obs}
+
+\section{Operações com conjuntos numéricos}
+
+ Podemos realizar as operações de união, interseção, diferença e produto cartesiano entre conjuntos no contexto de subconjuntos dos números reais. A atenção especial a este tipo de conjunto se deve a extensa utilização destas operações para determinar o conjunto solução de equação e inequações, bem como para determinar o domínio de algumas funções, temas centrais deste curso.
+
+\begin{exem}
+    Sejam $A=(-2,6)$ e $B=[\frac{3}{2},8)$. A interseção entre os intervalos pode ser representada pelo ``varal'' de interseção:
+    \begin{intervaloper}[3]{-3}{9}
+        \linelabel{1}{$A$}
+        \linelabel{2}{$B$}
+        \linelabel{3}{$A\cap B$}
+        \dashes{6}{1}{3}
+        \dashes{3/2}{1}{3}
+        \interval{1}{11}{-2,6}
+        \interval{2}{21}{3/2,8}
+        \intervalcolor{blue}
+        \interval{3}{21}{3/2,6}
+    \end{intervaloper}
+
+    Logo, $A\cap B=[\frac{3}{2},6)$.
+\end{exem}
+
+\begin{exem}
+    Sejam $A=(-\infty,1]$ e $B=(-2,4)$. A diferença $A-B$  pode ser representada por:
+    \begin{intervaloper}[3]{-3}{5}
+        \linelabel{1}{$A$}
+        \linelabel{2}{$B$}
+        \linelabel{3}{$A-B$}
+        \dashes{-1}{1}{3}
+        %\dashes{3/2}{1}{3}
+        \interval{1}{01}{1}
+        \interval{2}{11}{-1,4}
+        \intervalcolor{blue}
+        \interval{3}{02}{-1}
+    \end{intervaloper}
+
+    Logo, $A-B=(-\infty, -1]$.
+\end{exem}
+
+\begin{exem}
+    Dado $A=[3,6)$, o seu complementar $A^C$ é igual à diferença $\R-A$. 
+    \begin{intervaloper}[2]{1.5}{7.5}
+        \linelabel{1}{$A$}
+        \linelabel{2}{$A^C$}
+        \dashes{3}{1}{2}
+        \dashes{6}{1}{2}
+        \interval{1}{21}{3,6}
+        \intervalcolor{blue}
+        \interval{2}{01}{3}
+        \interval{2}{20}{6}
+    \end{intervaloper}
+
+    Logo, $A^C=(-\infty,3)\cup [6,\infty)$.
+\end{exem}
+
+Para entender melhor como as operações de união, interseção e diferença entre intervalos de maneira interativa, veja o seguinte material do Geogebra:
+
+\geogebra{https://www.geogebra.org/m/kjf4tycp}{Operações com intervalos reais}
+
+% Vamos agora apresentar alguns exemplos de como aplicar as operações de união, interseção, diferença e produto cartesiano entre conjuntos no contexto de subconjuntos dos números reais. A atenção especial a este tipo de conjunto se deve a extensa utilização destas operações para determinar o conjunto solução de equação e inequações, bem como para determinar o domínio de algumas funções, temas centrais deste curso.
+
+% \begin{itemize}
+%  \item Caso $a< b< c< d$ temos que $[a, b] \cup [c, d]$ pode ser representado por:
+%   \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=8cm]{./cap_conjnum/figs/uniaoabcd}
+%  \end{figure}
+
+%  \item Caso $a< c< b< d$ temos que $[a, b] \cup [c, d]= [a, d]$ pode ser representado por:
+%   \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=8cm]{./cap_conjnum/figs/uniaoacbd}
+%  \end{figure}
+
+%   \item Caso $a< c< d< b$ temos que $[a, b] \cup [c, d]= [a, b]$ pode ser representado por:
+%   \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=8cm]{./cap_conjnum/figs/uniaoacdb}
+%  \end{figure}
+
+%  %%%%%%%%%%%%%%%%%%%%
+%  \item Caso $a< b< c< d$ temos que $[a, b] \cap [c, d]= \varnothing$ pode ser representado por:
+%   \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=8cm]{./cap_conjnum/figs/intersecaoabcd}
+%  \end{figure}
+
+%  \item Caso $a< c< b< d$ temos que $[a, b] \cap [c, d]= [c, b]$ pode ser representado por:
+%   \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=8cm]{./cap_conjnum/figs/intersecaoacbd}
+%  \end{figure}
+
+%   \item Caso $a< c< d< b$ temos que $[a, b] \cap [c, d]= [c, d]$ pode ser representado por:
+%   \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=8cm]{./cap_conjnum/figs/intersecaoacdb}
+%  \end{figure}
+
+% \end{itemize}
+
+% \begin{obs}
+% Os exemplos acima foram apresentados apenas utilizando intervalos fechados. No entanto, é possível combinar com intervalos aberto em algum dos lados ou ambos.
+% \end{obs}
+
+% \begin{itemize}
+%  \item Considere agora o conjunto $A= [1, \infty) \times [2, 4)$, que é também representado da seguinte forma:
+% \begin{equation*}
+% A= \{(x, y) \in \R^2 \mid 1 \leq x \text{ e } 2 \leq y < 4 \}
+% \end{equation*}
+%    \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=8cm]{./cap_conjnum/figs/cartesiano1infty24}
+%  \end{figure}
+
+%  \item Considere agora o conjunto $B= [1, 4) \times [3, 5)$, que é também representado da seguinte forma:
+% \begin{equation*}
+% B= \{(x, y) \in \R^2 \mid 1 \leq x \leq 4 \text{ e } 3 \leq y < 5 \}
+% \end{equation*}
+%    \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=8cm]{./cap_conjnum/figs/cartesiano1435}
+%  \end{figure}
+
+%  \item Considerando agora os seguintes conjuntos $A$ e $B$:
+% \begin{gather*}
+% A= \{(x, y) \in \R^2 \mid 1 \leq x \text{ e } 2 \leq y < 4 \}\\
+% B= \{(x, y) \in \R^2 \mid 1 \leq x \leq 4 \text{ e } 3 \leq y < 5 \}
+% \end{gather*}
+%  temos que:
+
+%  \begin{itemize}
+%  \item $A \cap B$ é representado graficamente por:
+%     \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=8cm]{./cap_conjnum/figs/cartesianointersecao}
+%  \end{figure}
+%  \item $A \cup B$ é representado graficamente por:
+%     \begin{figure}[H]
+%  \centering
+%  \includegraphics[width=8cm]{./cap_conjnum/figs/cartesianouniao}
+%  \end{figure}
+
+%  \end{itemize}
+
+% \end{itemize}
+
+\video{https://www.youtube.com/watch?v=etpDR-8mn9s}{Outras coisas interessantes sobre os conjuntos númericos.}
+
+\newpage
+
+\begin{secExercicios}
+
+\begin{exer}
+    Efetue as operações entre os intervalos:
+    \begin{multicols}{2}
+    \begin{enumerate}[a)]
+        \item $(1,2]\cup [2,3)$
+        \item $(1,5)\cup (4,10)$
+        \item $[10,15]\cup[5,8]$
+        \item $(1,2]\cap [2,3)$
+        \item $[0,1)\cap (1,2]$
+        \item $[10,15]\cap[5,8]$
+        \item $(-\infty,2)\cup [2,3)$
+        \item $(1,3)\cap (2,\infty)$
+    \end{enumerate}
+    \end{multicols}
+\end{exer}
+
+\begin{exer}
+    Represente os conjuntos sob a forma de intervalo
+    \begin{enumerate}[a)]
+        \item $\{x\in\R\colon 1<x<2\}$
+        \item $\{x\in\R\colon -3<x\leqslant 4\}$
+        \item $\{x\in\R\colon x>-5\}$
+        \item $\{x\in\R\colon x\leqslant 9\}$
+        \item $\{x\in\R\colon x<2 \mbox{ ou } x\geqslant 3\}$
+    \end{enumerate}
+\end{exer}
+
+\begin{exer}
+    Dados $A=\{x\in\R \colon -4 < x \leqslant 3\}$, $B=[-3,5]$ e $C=(-\infty, 1)$, determine e represente na reta real:
+    \begin{enumerate}[a)]
+    \begin{multicols}{2}
+        \item $A\cap B$;
+        \item $A\cup C$;
+        \item $A^c$;
+        \item $A\cap C^c$;
+        \item $(A\cup B)\cap C$;
+        \item $(A\cap C)-C$.
+    \end{multicols}
+    \end{enumerate}
+\end{exer}
+
+\begin{exer}
+    Usando notação de conjuntos, escreva os intervalos:
+    \begin{multicols}{2}
+        \begin{enumerate}[a)]
+            \item $[3,5)$
+            \item $(-\infty,4)$
+            \item $(-5,2]$
+            \item $[0,\infty)$
+        \end{enumerate}
+    \end{multicols}
+\end{exer}
+
+\begin{exer}
+    Represente os intervalos do exercício anterior na reta real.
+\end{exer}
+
+\begin{exer}
+    Dê um exemplo de um intervalo aberto e um intervalo fechado cuja união é igual ao intervalo $(1,4)$.
+\end{exer}
+
+\begin{exer}
+    Dê um exemplo de um intervalo aberto e um intervalo fechado cuja interseção é igual ao intervalo $[-3,5]$.
+\end{exer}
+
+\begin{exer}
+    Sendo o conjunto $A = \{x\in \Z \colon -5 < x < -2\}$ e $B = \{x\in \Z \colon - 3 < x < 0\}$, represente os intervalos de $A$ e $B$ e faça a união dos dois conjuntos.
+\end{exer}
+
+\begin{exer}
+    Determine se as sentenças são verdadeiras ou falsas.
+    \begin{enumerate}[a)]
+        \item O conjunto dos números naturais é finito.
+        \item A soma de dois números irracionais pode ser um número irracional.
+        \item A soma de dois números irracionais é sempre um número irracional.
+        \item o produto de dois números irracionais pode ser um número racional.
+        \item o produto de dois números irracionais é sempre um número racional.
+    \end{enumerate}
+\end{exer}
+\begin{resp}
+    a) F; b) V; c) F; d) V; e) F
+\end{resp}
+
+\begin{exer}
+    Determine o número racional $\frac{p}{q}$, com $p,q$ inteiros, que gera as dízimas periódicas a seguir:
+    \begin{multicols}{2}
+    \begin{enumerate}[a)]
+        \item $0,141414\dots$
+        \item $4,3333\dots$
+        \item $2,181818\dots$
+        \item $7,38282\dots$
+    \end{enumerate}
+    \end{multicols}
+\end{exer}
+
+\begin{exer}
+    Qual o valor da soma $1,3333\dots + 0,16666\dots$?
+\end{exer}
+
+\begin{exer}
+    Escreva o número $x =\sqrt{13,4444\dots}$ como uma fraçãao de números inteiros.
+\end{exer}
+% \begin{resp}
+%     \par\noindent\rule{\columnwidth}{0.4pt}
+% \end{resp}
+
+%\subsection*{Respostas:}
+%\noindent{\footnotesize \textit{*Em elaboração}}
+
+%\shipoutAnswer
+
+\end{secExercicios}

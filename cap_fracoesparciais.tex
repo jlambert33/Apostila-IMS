@@ -1,0 +1,407 @@
+\chapter{Frações parciais}
+
+Considere o seguinte problema:  como expressar uma fração da forma $\dfrac{P(x)}{Q(x)}$, onde $P(x)$ e $Q(x)$ são polinômios (com gr(P) < gr(Q)), como soma de frações mais simples? \\
+
+Estas frações mais simples são, matematicamente, chamadas de \textit{frações parciais} e o processo que resolve o problema acima é chamado de \textbf{Método das frações parciais}. Este método é útil para resolver problemas de cálculo, para resolver integrais, e para resolver equações diferenciais utilizando Transformadas de Laplace. 
+
+Para entender melhor o problema, vejamos o seguinte exemplo. Considere a expressão
+\begin{equation*}
+    \frac{2}{x-1}+\frac{3}{x+2}.
+\end{equation*}
+Já vimos (Capítulo 2) como reescrever esta expressão como um única razão, tomando o denominador comum
+\begin{equation*}
+    \frac{2}{x-1}+\frac{3}{x+2} = \frac{2(x+2)+3(x-1)}{(x-1)(x+2)} = 
+    \frac{5x-1}{x^2 - 2x - 3}.
+\end{equation*}
+
+O que desejamos agora é, dada a fração $\dfrac{5x-1}{x^2 - 2x - 3}$, saber como escrevê-la na forma $ \dfrac{2}{x-1}+\dfrac{3}{x+2}$, que é uma soma de frações ``mais simples''. A decomposição de uma fração em frações parciais pode ser considerada como um processo ``inverso'' ao de adição ou subtração de duas, ou mais frações.
+
+\section{Descrição do método}
+
+O sucesso ao escrever uma expressão racional da forma $\dfrac{P(x)}{Q(x)}$ como a soma de frações parciais depende de duas coisas:
+\begin{enumerate}
+\item \textit{O grau de $P(x)$ deve ser menor que o grau de $Q(x)$}. Caso não seja este o caso, primeiro divida $P(x)$ por $Q(x)$ e então trabalhe com o resto dessa divisão, se necessário.
+
+\item \textit{Devemos conhecer os fatores de $Q(x)$}. Na teoria, qualquer polinômio com coeficientes reais pode ser escrito como um produto de fatores reais lineares e fatores reais quadráticos irredutíveis. Na prática, pode ser difícil encontrar esses fatores.
+
+\end{enumerate}
+
+A forma na qual a fatoração de $Q(x)$ se apresenta é que determina como as frações parciais devem ser construídas. Para entender este processo dividimos o método em quatro casos.
+
+
+\subsection{Caso 1: Na fatoração de $Q(x)$ aparecem fatores lineares que não se repetem}
+
+Aos fatores lineares da forma $a_i x + b_i$ que aparecem sem repetição na fatoração de $Q(x)$ associa-se uma fração parcial da forma $$\dfrac{A_i}{a_i x+b_i},$$
+onde $A_i$ são constantes a serem determinadas.
+
+Vejamos os exemplos a seguir.
+
+\begin{exem}
+    Escreva a expressão $\dfrac{2x}{3x^2 + 10x +3}$ como soma de frações parciais. \\[10pt]
+
+    Como o grau do numerador é menor que o grau do denominador, usaremos o método das frações parciais.
+
+    Fatorando o denominador $Q(x) = 3x^2 + 10x +3$ temos $$Q(x) = (x+3)(3x+1).$$
+
+    Observe que $Q(x)$ foi fatorado como um produto de dois termos lineares distintos. Desse modo, as frações parciais se escrevem como 
+    \begin{equation}
+    \label{eq:fracparciais1}
+    \dfrac{2x}{3x^2 + 10x +3} = \dfrac{A}{x+3} + \dfrac{B}{3x+1}.
+    \end{equation}
+
+    Para determinar os valores $A$ e $B$, multiplicamos ambos os lados da Equação (\ref{eq:fracparciais1}) por $(x+3)(3x+1)$, obtendo
+
+    \begin{eqnarray*}
+    [(x+3)(3x+1)]\dfrac{2x}{3x^2 + 10x +3} & = & [(x+3)(3x+1)] \left[\dfrac{A}{x+3} + \dfrac{B}{3x+1}\right]\\[5pt]
+    2x & =& A(3x+1) + B(x+3)\\[5pt]
+    2x & =& (3A + B)x + (A + 3B)
+    \end{eqnarray*}
+
+    Como os polinômios são iguais, os coeficientes de cada termo devem ser iguais e, portanto, temos:
+
+    \begin{equation*}
+    \left\{ \begin{array}{ccccc} 3A & + & B &=& 2 \\[5pt]
+    A & + & 3B & =& 0
+    \end{array}
+    \right.    
+    \end{equation*}
+
+    De onde concluímos, resolvendo o sistema, que $A = \dfrac{3}{4}$ e $B = -\dfrac{1}{4}$. Assim, $$\dfrac{2x}{3x^2 + 10x +3} = \dfrac{\frac{3}{4}}{x+3} + \dfrac{-\frac{1}{4}}{3x+1}  = \dfrac{3}{4(x+3)} -\dfrac{1}{4(3x+1)}.$$
+\end{exem}
+
+\begin{exem}
+    Escreva a expressão $\dfrac{x^2 + 2x - 1}{2x^3 + 3x^2 - 2x}$ como soma de frações parciais. \\[10pt]
+
+    Como o grau do numerador é menor que o grau do denominador, usaremos o método das frações parciais.
+
+    Fatorando o denominador $Q(x) = 2x^3 + 3x^2 - 2x$ temos $$Q(x) = 2x^3 + 3x^2 - 2x = x(2x^2 + 3x - 2) = x(2x-1)(x+2).$$
+
+    Observe que $Q(x)$ foi fatorado como um produto de três termos lineares distitos. Desse modo, as frações parciais se escrevem como 
+    \begin{equation}
+    \label{eq:fracparciais2}
+    \dfrac{x^2 + 2x - 1}{2x^3 + 3x^2 - 2x} = \dfrac{A}{x} + \dfrac{B}{2x-1} + \dfrac{C}{x+2}.
+    \end{equation}
+
+    Para determinar os valores $A, B$ e $C$, multiplicamos ambos os lados da Equação (\ref{eq:fracparciais2}) por $x(2x-1)(x+2)$, obtendo
+
+    \begin{eqnarray*}
+    [x(2x-1)(x+2)]\dfrac{x^2 + 2x - 1}{2x^3 + 3x^2 - 2x} & = & [x(2x-1)(x+2)] \left[\dfrac{A}{x} + \dfrac{B}{2x-1}+\dfrac{C}{x+2}\right]\\[5pt]
+    x^2 + 2x - 1 & =& A(2x-1)(x+2) + Bx(x+2) + Cx(2x-1) \\[5pt]
+    x^2 + 2x - 1 & =& (2A + B + 2C)x^2 + (3A + 2B - C)x -2A
+    \end{eqnarray*}
+
+    Como os polinômios são iguais, os coeficientes de cada termo devem ser iguais e, portanto, temos:
+
+    \begin{equation*}
+    \left\{ \begin{array}{ccccccc} 2A & + & B & + & 2C &=& 1 \\[5pt]
+    3A & + & 2B & - & C &=& 2\\[5pt]
+    -2A &  &  & &  &=& -1
+    \end{array}
+    \right.    
+    \end{equation*}
+
+    De onde concluímos, resolvendo o sistema, que $A = \dfrac{1}{2}, \, B = \dfrac{1}{5}$ e $C = -\dfrac{1}{10}$. Assim, $$\dfrac{x^2 + 2x - 1}{2x^3 + 3x^2 - 2x} = \dfrac{\frac{1}{2}}{x} + \dfrac{\frac{1}{5}}{2x-1}+\dfrac{-\frac{1}{10}}{x+2} = \dfrac{1}{2x} + \dfrac{1}{5(2x-1)} - \dfrac{1}{10(x+2)}.$$
+ 
+\end{exem}
+
+\begin{exem}
+    Escreva a expressão $\dfrac{1}{x^2 - a^2}, \; \; a \neq 0,$ como soma de frações parciais. \\[10pt]
+
+    Como o grau do numerador é menor que o grau do denominador, usaremos o método das frações parciais.
+
+    Fatorando o denominador $Q(x) = x^2 - a^2$ temos $$Q(x) = (x-a)(x + a).$$
+
+    Observe que $Q(x)$ foi fatorado como um produto de dois termos lineares distintos. Desse modo, as frações parciais se escrevem como 
+    \begin{equation}
+    \label{eq:fracparciais3}
+    \dfrac{1}{x^2 - a^2} = \dfrac{A}{x+a} + \dfrac{B}{x-a}.
+    \end{equation}
+
+    Para determinar os valores $A$ e $B$, multiplicamos ambos os lados da Equação (\ref{eq:fracparciais3}) por $(x+a)(x-a)$, obtendo
+
+    \begin{eqnarray*}
+    [(x+a)(x-a)]\dfrac{1}{x^2 -a^2} & = & [(x+a)(x-a)] \left[\dfrac{A}{x+a} + \dfrac{B}{x-a}\right]\\[5pt]
+    1 & =& A(x-a) + B(x+a)\\[5pt]
+    1 & =& (A + B)x + (-aA + aB)
+    \end{eqnarray*}
+
+    Como os polinômios são iguais, os coeficientes de cada termo devem ser iguais e, portanto, temos:
+
+    \begin{equation*}
+    \left\{ \begin{array}{ccccc} A & + & B &=& 0 \\[5pt]
+    -aA & + & aB & =& 1
+    \end{array}
+    \right.    
+    \end{equation*}
+
+    De onde concluímos, resolvendo o sistema, que $A = -\dfrac{1}{2a}$ e $B = \dfrac{1}{2a}$. Assim, $$\dfrac{1}{x^2 - a} = \dfrac{-\frac{1}{2a}}{x+a} + \dfrac{\frac{1}{2a}}{x-a}  = -\dfrac{1}{2a(x+a)} +\dfrac{1}{2a(x-a)}.$$
+\end{exem}
+
+\subsection{Caso 2: Na fatoração de $Q(x)$ aparecem fatores lineares que se repetem}
+
+Suponha que o fator linear da forma $a_i x + b_i$ apareça repetido $r$ vezes na fatoração de $Q(x)$, ou seja, o termo $(a_i + b_i x)^r$ aparece na fatoração de $Q(x)$. Neste caso, ao termo $a_i + b_i x$ associa-se a soma de $r$ frações parciais da forma
+$$\dfrac{A_1}{a_i x+b_i} + \dfrac{A_2}{(a_i x+b_i)^2} + \cdots + \dfrac{A_r}{(a_i x+b_i)^r},$$
+onde $A_i$ são constantes a serem determinadas.
+
+Vejamos os exemplos a seguir.
+
+\begin{exem}
+    Escreva a expressão $\dfrac{x^2 + 2x}{x^3 + 3x^2 + 3x + 1}$ como soma de frações parciais. \\[10pt]
+
+    Como o grau do numerador é menor que o grau do denominador, usaremos o método das frações parciais.
+
+    Fatorando o denominador $Q(x) = x^3 + 3x^2 + 3x + 1$ temos $$Q(x) = 2x^3 + 3x^2 - 2x = (x+1)(x^2 + 2x +1) = (x+1)^3.$$
+
+    Observe que $Q(x)$ foi fatorado como um produto de três termos lineares que se repetem. Desse modo, as frações parciais se escrevem como 
+    \begin{equation}
+    \label{eq:fracparciais4}
+    \dfrac{x^2 + 2x}{x^3 + 3x^2 + 3x + 1} = \dfrac{A}{x+1} + \dfrac{B}{(x+1)^2} + \dfrac{C}{(x+1)^3}.
+    \end{equation}
+
+    Para determinar os valores $A, B$ e $C$, multiplicamos ambos os lados da Equação (\ref{eq:fracparciais4}) por $(x+1)^3$, obtendo
+
+    \begin{eqnarray*}
+    [(x+1)^3]\dfrac{x^2 + 2x}{x^3 + 3x^2 +3x +1} & = & [(x+1)^3] \left[\dfrac{A}{x+1} + \dfrac{B}{(x+1)^2}+\dfrac{C}{(x+1)^3}\right]\\[5pt]
+    x^2 + 2x & =& A(x+1)^2 + B(x+1) + C \\[5pt]
+    x^2 + 2x & =& Ax^2 + 2Ax + A + Bx + B + C\\[5pt]
+    x^2 + 2x & = & Ax^2 + (2A + B)x + (A + B + C)
+    \end{eqnarray*}
+
+    Como os polinômios são iguais, os coeficientes de cada termo devem ser iguais e, portanto, temos:
+
+    \begin{equation*}
+    \left\{ \begin{array}{ccccccc} 
+    A &  &  &  &  &=& 1 \\[5pt]
+    2A & + & B &  & &=& 2\\[5pt]
+    A & + & B & + & C &=& 0
+    \end{array}
+    \right.    
+    \end{equation*}
+
+    De onde concluímos, resolvendo o sistema, que $A = 1, \, B = 0$ e $C = -1$. Assim, $$\dfrac{x^2 + 2x}{x^3 + 3x^2 +3x + 1} = \dfrac{1}{x+1} - \dfrac{1}{(x+3)^3}.$$
+ \end{exem}
+
+\begin{exem}
+    Reescreva a expressão $\dfrac{x^4 - 2x^2 + 4x + 1}{x^3 - x^2 - x + 1}$ como somas de termos mais simples. \\[10pt]
+
+    Como o grau do numerador é maior do que o grau do denominador, não podemos usar o método das frações parciais. Primeiramente, vamos fazer a divisão do polinômio $x^4 - 2x^2 + 4x + 1$ pelo polinômio $x^3 - x^2 - x + 1$. Obtemos então (verifique!) que 
+
+    $$\dfrac{x^4 - 2x^2 + 4x + 1}{x^3 - x^2 - x + 1} = x + 1 + \dfrac{4x}{x^3 - x^2 - x + 1}.$$
+
+    Agora sim, para o termo $\dfrac{4x}{x^3 - x^2 - x + 1}$ podemos aplicar o método das frações parciais (o grau do polinômio $P(x) = 4x$ é menor do que o grau do polinômio $Q(x) = x^3 - x^2 - x + 1$). Fatorando o denominador $Q(x) = x^3 - x^2 - x + 1$ temos $$Q(x) = x^3 - x^2 - x + 1 = (x+1)(x^2 - 2x +1) = (x+1)(x - 1)^2$$
+
+    Observe que $Q(x)$ foi fatorado como um produto de três termos lineares, onde um deles não se repete e um deles se repete duas vezes. Desse modo, as frações parciais se escrevem como 
+    \begin{equation}
+    \label{eq:fracparciais5}
+    \dfrac{4x}{x^3 - x^2 - x + 1} = \dfrac{A}{x+1} + \dfrac{B}{(x-1)} + \dfrac{C}{(x-1)^2}.
+    \end{equation}
+
+    Para determinar os valores $A, B$ e $C$, multiplicamos ambos os lados da Equação (\ref{eq:fracparciais5}) por $(x+1)(x-1)^2$, obtendo
+
+    \begin{eqnarray*}
+    [(x+1)(x-1)^2]\dfrac{4x}{x^3 - x^2 - x + 1} & = & [(x+1)(x-1)^2] \left[\dfrac{A}{x+1} + \dfrac{B}{(x-1)} + \dfrac{C}{(x-1)^2}\right]\\[5pt]
+    4x & =& A(x-1)^2 + B(x+1)(x-1) + C(x+1) \\[5pt]
+    4x & =& Ax^2 - 2Ax + A + Bx^2 - B + Cx + C\\[5pt]
+    4x & = & (A+B)x^2 + (-2A + C)x + (A - B + C)
+    \end{eqnarray*}
+
+    Como os polinômios são iguais, os coeficientes de cada termo devem ser iguais e, portanto, temos:
+
+    \begin{equation*}
+    \left\{ \begin{array}{ccccccc} 
+    A & + & B &  &  &=& 0 \\[5pt]
+    -2A &  &  &  + & C &=& 4\\[5pt]
+    A & - & B & + & C &=& 0
+    \end{array}
+    \right.    
+    \end{equation*}
+
+    De onde concluímos, resolvendo o sistema, que $A = -1, \, B = 1$ e $C = 2$. Assim, $$\dfrac{4x}{x^3 - x^2 - x + 1} = -\dfrac{1}{x+1} + \dfrac{1}{x-1} + \dfrac{2}{(x-1)^2}.$$
+
+    Portanto, a expressão original pode ser reescrita como
+    $$\dfrac{x^4 - 2x^2 + 4x + 1}{x^3 - x^2 - x + 1} = x + 1 -\dfrac{1}{x+1} + \dfrac{1}{x-1} + \dfrac{2}{(x-1)^2}.$$
+ \end{exem}
+
+\subsection{Caso 3: Na fatoração de $Q(x)$ aparecem fatores quadráticos irredutíveis que não se repetem}
+
+Se na fatoração de $Q(x)$ aparece um fator quadrático irredutível da forma $ax^2 + bx + c$, onde $b^2 - 4ac < 0$ (não há raízes reais), e esse fator não se repete, a ele se associa uma fração parcial da forma
+$$\dfrac{Ax + B}{ax^2 + bx + c}.$$
+onde $A$ e $B$ são constantes a serem determinadas.
+
+Vejamos os exemplos a seguir.
+
+\begin{exem}
+    Escreva a expressão $\dfrac{2x^2 - x + 4}{x^3 + 4x}$ como soma de frações parciais. \\[10pt]
+
+    Como o grau do numerador é menor que o grau do denominador, usaremos o método das frações parciais.
+
+    Fatorando o denominador $Q(x) = x^3 + 4x$ temos $$Q(x) = x^3 + 4x = x(x^2 + 4).$$
+    
+    Observe que a fatoração de $Q(x)$ combina dois termos que não se repetem: um termo linear e um termo quadrático irredutível. Desse modo, as frações parciais se escrevem como 
+    \begin{equation}
+    \label{eq:fracparciais6}
+    \dfrac{2x^2 - x + 4}{x^3 + 4x} = \dfrac{A}{x} + \dfrac{Bx + C}{x^2+4}.
+    \end{equation}
+
+    Para determinar os valores $A, B$ e $C$, multiplicamos ambos os lados da Equação (\ref{eq:fracparciais6}) por $x(x^2 + 4)$ e obtemos
+
+     \begin{eqnarray*}
+    [x(x^2 + 4)]\dfrac{2x^2 - x + 4}{x^3 + 4x} & = & [x(x^2 + 4)] \left[\dfrac{A}{x} + \dfrac{Bx + C}{x^2+4}\right]\\[5pt]
+    2x^2 - x + 4 & =& A(x^2 + 4) + (Bx + C)x \\[5pt]
+    2x^2 - x + 4 & =& Ax^2 + 4A + Bx^2  + Cx\\[5pt]
+    2x^2 - x + 4 & = & (A+B)x^2 + Cx + 4A
+    \end{eqnarray*}
+
+    Como os polinômios são iguais, os coeficientes de cada termo devem ser iguais e, portanto, temos:
+
+    \begin{equation*}
+    \left\{ \begin{array}{ccccccc} 
+    A & + & B &  &  &=& 2 \\[5pt]
+     &  &  &  & C&=& -1\\[5pt]
+    4A &  &  &  &  &=& 4
+    \end{array}
+    \right.    
+    \end{equation*}
+
+    De onde concluímos, resolvendo o sistema, que $A = 1, \, B = 1$ e $C = -1$. Assim, $$\dfrac{2x^2 - x + 4}{x^3 + 4x} = \dfrac{1}{x} + \dfrac{x -1}{x^2 + 4}.$$
+ \end{exem}
+
+
+\subsection{Caso 4: Na fatoração de $Q(x)$ aparecem fatores quadráticos irredutíveis que se repetem}
+
+Se na fatoração de $Q(x)$ aparece um fator quadrático irredutível da forma $(ax^2 + bx + c)^r$, onde $b^2 - 4ac < 0$ (não há raízes reais para o termo $ax^2 + bx + c$), é porque esse fator se repete $r$ vezes. Neste caso, ao termo $ax^2 + bx + c$ associamos a soma de $r$ frações parcial da forma
+$$\dfrac{A_1x + B_1}{ax^2 + bx + c} + \dfrac{A_2x + B_2}{(ax^2 + bx + c)^2} + \cdots  + \dfrac{A_rx + B_r}{(ax^2 + bx + c)^r},$$
+onde $A_i$ e $B_j$ são constantes a serem determinadas.
+
+Vejamos os exemplos a seguir.
+
+\begin{exem}
+    Escreva a expressão $\dfrac{1 - x + 2x^2 - x^3}{x(x^2 + 1)^2}$ como soma de frações parciais. \\[10pt]
+
+   A expressão dada já apresenta o denominador $Q(x)$ em sua forma fatorada, que consiste num produto de um termo linear que não se repete e um termo quadrático irredutível que se repete duas vezes. Desse modo, as frações parciais se escrevem como 
+    \begin{equation}
+    \label{eq:fracparciais7}
+    \dfrac{1 - x + 2x^2 - x^3}{x(x^2 + 1)^2} = \dfrac{A}{x} + \dfrac{Bx + C}{x^2+1} + \dfrac{Dx + E}{(x^2+1)^2}.
+    \end{equation}
+
+    Para determinar os valores $A, B,C, D$ e $E$, multiplicamos ambos os lados da Equação (\ref{eq:fracparciais7}) por $x(x^2 + 1)^2$ e obtemos
+
+    \begin{eqnarray*}
+    x(x^2 + 1)^2]\dfrac{1 - x + 2x^2 - x^3}{x(x^2 + 1)^2} & = & [x(x^2 + 1)^2] \left[\dfrac{A}{x} + \dfrac{Bx + C}{x^2+1} + \dfrac{Dx + E}{(x^2+1)^2}\right]\\[5pt]
+    1 - x + 2x^2 - x^3 & =& A(x^2 + 1)^2 + (Bx + C)x(x^2+1) + (Dx + E)x \\[5pt]
+    1 - x + 2x^2 - x^3 & =& Ax^4 + 2Ax^2 + A + Bx^4 + Bx^2 + Cx^3 + Cx  + Dx^2 + Ex\\[5pt]
+    1 - x + 2x^2 - x^3 & = & (A + B)Ax^4 + Cx^3 + (2A+B + D)x^2 + (C + E)x + A
+    \end{eqnarray*}
+
+    Como os polinômios são iguais, os coeficientes de cada termo devem ser iguais e, portanto, temos:
+
+    \begin{equation*}
+    \left\{ \begin{array}{ccccccccccc} 
+    A & + & B &  &  & & & &=& 0 \\[5pt]
+     &  &  & & C & &  & &=& -1\\[5pt]
+    2A & + & B &  &  &+& D& &=& 2\\[5pt]
+     &  &  & & C& &  &+ & E=& -1\\[5pt]
+     A &  &  & & & &  & &=& 1\\[5pt]
+    \end{array}
+    \right.    
+    \end{equation*}
+
+    De onde concluímos, resolvendo o sistema, que $A = 1, \, B = -1$, $C = -1$, $D = 1$ e $E = 0$. Assim, $$\dfrac{1 - x + 2x^2 - x^3}{x(x^2 + 1)^2} = \dfrac{1}{x} - \dfrac{x + 1}{x^2+1} + \dfrac{x}{(x^2+1)^2}.$$
+ \end{exem}
+
+\begin{exem}
+    Escreva a forma da decomposição em frações parciais da expressão $$\dfrac{x^3 + x^2 + 1}{x(x-1)(x^2 + x + 1)(x^2 + 1)^3}.$$ \\[10pt]
+
+   A expressão dada já apresenta o denominador $Q(x)$ em sua forma fatorada, que consiste num produto de dois termos lineares que não se repetem e dois termos quadráticos irredutíveis: um que não se repete e um que se repete três vezes. Desse modo, as frações parciais se escrevem como 
+    \begin{equation*}
+    \dfrac{x^3 + x^2 + 1}{x(x-1)(x^2 + x + 1)(x^2 + 1)^3} = \dfrac{A}{x} + \dfrac{B}{x-1} + \dfrac{Cx + D}{x^2+x + 1} + \dfrac{Ex + F}{x^2+1} + \dfrac{Gx + H}{(x^2+1)^2} + \dfrac{Ix + J}{(x^2+1)^3}.
+    \end{equation*}
+
+    Observe que nesse caso teríamos dez constantes a determinar, o que com certeza não é trabalho fácil de se executar manualmente.
+
+    \end{exem}
+
+\begin{secExercicios}
+
+    \begin{exer}
+    \item Decomponha os quocientes abaixo em frações parciais:
+    \begin{enumerate}[a)]
+    \begin{multicols}{2}
+         \item $\dfrac{5x-13}{(x-3)(x-2)}$
+         \item $\dfrac{z + 1}{z^2(z-1)}$
+         \item $\dfrac{t^2 + 8}{t^2 - 5t + 6}$
+         \item $\dfrac{x}{x^3 - x^2 - 6x}$
+    \end{multicols}
+    \end{enumerate}
+    \end{exer}
+    
+    \begin{exer}
+        \textbf{Fatores lineares não repetidos:} Decomponha as frações dadas como soma de frações parciais.
+        \begin{enumerate}[a)]
+        \begin{multicols}{2}
+            \item $\dfrac{1}{1-x^2}$
+            \item $\dfrac{x+4}{x^2 + 5x - 6}$
+            \item $\dfrac{2x + 1}{x^2 - 7x + 12}$
+            \item $\dfrac{y}{y^2 - 2y - 3}$
+            \item $\dfrac{y + 4}{y^2 + y}$
+            \item $\dfrac{1}{t^3 + t^2 - 2t}$
+        \end{multicols}
+        \end{enumerate}
+    \end{exer}
+
+    \begin{exer}
+        \textbf{Fatores lineares repetidos:} Decomponha as frações dadas como soma de frações parciais.
+        \begin{enumerate}[a)]
+        \begin{multicols}{2}
+            \item $\dfrac{x^3}{x^2 + 2x + 1}$
+            \item $\dfrac{1}{(x^2 - 1)^2}$
+            \item $\dfrac{x^3}{x^2 - 2x + 1}$
+            \item $\dfrac{x^2}{(x-1)(x^2 + 2x + 1)}$
+            \item $\dfrac{6x+7 }{x^2 + 4x + 4}$
+            \item $\dfrac{1}{(x + 5)^2(x-1)}$
+        \end{multicols}
+        \end{enumerate}
+    \end{exer}
+    
+\begin{exer}
+        \textbf{Fatores quadráticos irredutíveis:} Decomponha as frações dadas como soma de frações parciais.
+        \begin{enumerate}[a)]
+        \begin{multicols}{2}
+            \item $\dfrac{1}{(x+1)(x^2 + 1)}$
+            \item $\dfrac{3t^2 + t + 4}{t^3 + t}$
+            \item $\dfrac{s^4 + 81}{s(s^2 + 9)^2}$
+            \item $\dfrac{2s + 2}{(s^2 + 1)(s-1)^3}$
+            \item $\dfrac{x^2 + x}{x^4 - 3x^2 - 4}$
+            \item $\dfrac{2 \theta^3 + 5 \theta^2 + 8\theta + 4}{(\theta^2 + 2\theta + 2)^2}$
+        \end{multicols}
+        \end{enumerate}
+    \end{exer}
+
+\begin{exer}
+        \textbf{Frações impróprias:} As frações abaixo são impróprias, ou seja, o grau do numerador é maior que o grau do denominador. Realize uma divisão entre os polinômios dados e escreva a fração própria como soma de frações parciais.
+        \begin{enumerate}[a)]
+        \begin{multicols}{2}
+            \item $\dfrac{2x^3 - 2x^2 + 1}{x^2 - x}$
+            \item $\dfrac{x^4}{x^2 -1}$
+            \item $\dfrac{9x^3 - 3x + 1}{x^3 - x^2}$
+            \item $\dfrac{16x^3}{4x^2 - 4x + 1}$
+            \item $\dfrac{x^4 + x^2 - 1}{x^3 + x}$
+            \item $\dfrac{2x^4}{(x^3 - x^2 + x - 1}$
+        \end{multicols}
+        \end{enumerate}
+    \end{exer}
+
+
+
+   
+%\subsection*{Respostas:}
+
+%\shipoutAnswer
+
+
+\end{secExercicios}
+
+
+%\subsection*{Respostas:}
+
+%\shipoutAnswer

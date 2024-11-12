@@ -1,0 +1,748 @@
+ \chapter{Módulo}
+
+ \section{Expressões algébricas modulares}
+
+ Dois números reais podem ser associados por um número real chamado de ``distância''. Podemos observar (de modo intuitivo) que a distância dos pontos $-x$ e $x$ até a origem (zero) é a mesma e, matematicamente, chamada de \textbf{valor absoluto}\index{Valor absoluto|see{Módulo}}\index{Módulo}, ou \textbf{módulo}, do número $x$, e é representada por $\abs{x}$. Assim, dizemos que:
+\begin{itemize}
+\item O valor absoluto de $-3$ é $3$, ou seja, $\abs{-3}= 3$ (a distância do -3 até a origem é 3);
+\item O valor absoluto de $3$ é $3$, ou seja, $\abs{3}= 3$ (a distância do 3 até a origem é 3);
+\end{itemize}
+\begin{obs}
+Generalizando esta ideia definimos que:
+\begin{equation}
+\label{eq:modulo}
+\abs{x}= \left\{\begin{array}{rl}
+      -x , & \text{se} \ \ x<0 \\
+      x , & \text{se} \ \ x \geq 0
+     \end{array}\right. .
+     \end{equation}
+\end{obs}
+
+Em termos práticos, quando analisamos $|x|$ pelo lado direito da Equação \ref{eq:modulo}, dizemos que ``abrimos o módulo''.
+
+Se precisamos trabalhar com o valor absoluto ou módulo de um número real, levamos em conta as seguintes propriedades:
+
+\begin{prop}[Propriedades do módulo]
+ Para quaisquer $x, y \in \R$, são válidas as seguintes propriedades: \label{prop.modulo}
+\begin{enumerate} \begin{multicols}{2}
+ \item $\abs{x} \geq 0$;
+ \item $\abs{x}= 0 \Leftrightarrow x= 0$;
+ \item $x \leq \abs{x}$;
+ \item $-x \leq \abs{x}$;
+ \item $\abs{-x}= \abs{x}$;
+ \item $\abs{x}^2= x^2$;
+ %, de fato,\\
+ %se $x \geq 0$, pela definição do módulo temos que $\abs{x}= x$ e daí $\abs{x}^2= x^2$, \\
+ %se $x < 0$, pela definição do módulo temos que $\abs{x}= -x$ e daí $\abs{x}^2=(-x)^2= x^2$.\\
+ %Portanto, para todo $x \in \R$, $\abs{x}^2= x^2$.
+
+ \item $\abs{x^n}= \abs{x}^n$, se $n$ é par;%, de fato, \\
+ %se $x \geq 0$, pela definição do módulo temos que $\abs{x}= x$ e daí $\abs{x}^n= x^n$, \\
+ %se $x < 0$, pela definição do módulo temos que $\abs{x}= -x$ e daí $\abs{x}^n= (-x)^n= x^n$.\\
+ %Portanto, para todo $x \in \R$, $\abs{x}^n= x^n$.
+
+ \item $\abs{x \cdot y}= \abs{x} \cdot \abs{y}$;%, de fato,
+%\begin{equation*}
+%\abs{x \cdot y}^2= (x \cdot y)^2= x^2 \cdot y^2= \abs{x}^2 \cdot \abs{y}^2= (\abs{x} \cdot \abs{y})^2 \ .
+%\end{equation*}
+ %Como $\abs{x \cdot y} \geqslant 0$ e $\abs{x} \cdot \abs{y} \geqslant 0$ resulta
+%\begin{equation*}
+%\abs{x \cdot y}= \abs{x} \cdot \abs{y} \ . 
+%\end{equation*}
+
+ \item $\abs{\dfrac{x}{y}}= \dfrac{\abs{x}}{\abs{y}}$, para $y \neq 0$;%, de fato,
+%\begin{equation*}
+%\abs{\dfrac{x}{y}}^2= \left(\dfrac{x}{y} \right)^2= \dfrac{x^2}{y^2}= \dfrac{\abs{x}^2}{\abs{y}^2}= \left( \dfrac{\abs{x}}{\abs{y}} \right)^2 \ . 
+%\end{equation*}
+% Como $\abs{\dfrac{x}{y}} \geq 0$ e $\dfrac{\abs{x}}{\abs{y}} \geq 0$ resulta que
+%\begin{equation*}
+%\abs{\dfrac{x}{y}}= \dfrac{\abs{x}}{\abs{y}} \ .
+%\end{equation*}
+
+ \item \emph{Desigualdade triangular}:\\ $\abs{x+y}\leq \abs{x}+\abs{y}$; %, de fato, \\
+ %se $x + y \geqslant 0$, pela definição de módulo, $\abs{x+y}= x+y \leq \abs{x} + \abs{y}$; \\
+ %se $x + y < 0$, pela definição de módulo, $\abs{x+y}= -(x+y)= -x-y \leq \abs{x} + \abs{y}$. \\
+ %Logo, para quaisquer $x, y \in \R$ temos que
+%\begin{equation*}
+%\abs{x+y} \leq \abs{x}+\abs{y} \ .
+%\end{equation*}
+
+ \item $\abs{x-y} \leq \abs{x} + \abs{y}$;%, de fato \\
+ %Note que $x-y= x+ (-y)$, logo $\abs{x-y}= \abs{x+ (-y)}$ aplicando a desigualdade trinagular temos,
+%\begin{equation*}
+%\abs{x-y}= \abs{x+ (-y)} \leq \abs{x} + \abs{-y}= \abs{x} + \abs{y} \ .
+%\end{equation*}
+
+ \item $\abs{\abs{x} - \abs{y}} \leq \abs{x - y}$%, para mostrar esta desigualdade vamos fazer por partes.
+ %\begin{itemize}
+ %\item $\abs{x} - \abs{y} \leq \abs{x - y}$, \\
+ %de fato, pela desigualdade triangular temos que
+%\begin{equation*}
+%\abs{z+y} \leq \abs{z} + \abs{y}
+%\end{equation*}
+% subtraíndo $\abs{y}$ a ambos os termos temos,
+%\begin{equation*}
+%\abs{z+y} - \abs{y} \leq \abs{z}
+%\end{equation*}
+% fazendo $x= z+y$ temos que $z=x-y$ substituindo estes valores na equação acima obtemos
+%\begin{equation*}
+%\abs{x} - \abs{y} \leq \abs{x-y} \ . 
+%\end{equation*}
+ \item $\abs{y} - \abs{x} \leq \abs{x - y}$.%, \\
+ %de fato, pela desigualdade triangular temos que
+%\begin{equation*}
+%\abs{x+z} \leq \abs{x} + \abs{z}
+%\end{equation*}
+% subtraíndo $\abs{x}$ a ambos os termos temos,
+%\begin{equation*}
+%\abs{x+z} - \abs{x} \leq \abs{z}
+%\end{equation*}
+ %fazendo $y= x+z$ temos que $z=y-x$ substituindo estes valores na equação acima obtemos
+%\begin{equation*}
+%\abs{y} - \abs{x} \leq \abs{y-x}= \abs{x-y} \ . 
+%\end{equation*}
+%\end{itemize}
+
+% Portanto,
+%\begin{equation*}
+% \abs{\abs{x} - \abs{y}} = \pm (\abs{x} - \abs{y}) \leq \abs{x-y} \ .
+%\end{equation*}
+\end{multicols}
+\end{enumerate}
+\end{prop}
+
+ Você pode se deparar, em alguns momentos, com expressões matemáticas que envolvem módulo. Elas são chamadas de expressões matemáticas modulares. É preciso entender que operar com módulo pode ser algo bastante complicado e, para fugir disso, o que se faz, na prática, é ``abrir o módulo'' usando a definição dada pela Equação \ref{eq:modulo}. Vejamos os exemplos a seguir.
+
+ \begin{exem}
+  Reescreva a expressão $\dfrac{\abs{x}}{x}$ eliminando o módulo.
+
+  Primeiramente, observe que devemos considerar $x \neq 0$, pois a expressão apresenta uma divisão por $x$ (e não podemos dividir por 0). Relembrando a definição de $|x|$ dada na Equação \ref{eq:modulo}, concluímos que os casos a serem analisados são: $x<0$ e $x>0$.
+
+  \begin{itemize}
+   \item Caso $x> 0$. Para este caso temos $\abs{x}= x$ e a expressão pode ser reescrita como
+\begin{equation*}
+\dfrac{\abs{x}}{x}=\dfrac{x}{x}= 1.
+\end{equation*}
+   \item Caso $x< 0$. Para este caso, temos $\abs{x}= -x$ e a expressão pode ser reescrita como
+\begin{equation*}
+\dfrac{\abs{x}}{x}=\dfrac{-x}{x}= -1.
+\end{equation*}
+  \end{itemize}
+
+ Portanto, podemos reescrever a expressão $\dfrac{\abs{x}}{x}$ da seguinte maneira:
+
+ \begin{equation*}
+   \frac{\abs{x}}{x} = \left\{ \begin{array}{rl}
+        -1, & \text{se} \ \ x< 0 \\
+         1, & \text{se } \ \ x> 0
+     \end{array}\right..
+ \end{equation*}
+\end{exem}
+ 
+ \begin{exem}
+Reescreva a expressão modular $\abs{-5x^5}$ eliminando o módulo.
+
+Usando as propriedades e a definição de módulo podemos escrever
+\begin{equation*}
+\abs{-5x^5}= \abs{-5}\cdot \abs{x^5}= 5 \cdot \abs{x^5} = \left\{ \begin{array}{rl}
+        5 x^5, & \text{se} \ \ x^5\geq 0 \\
+         5 (-x^5), & \text{se } \ \ x^5< 0
+     \end{array}\right.
+     = \left\{ \begin{array}{rl}
+        5 x^5, & \text{se} \ \ x\geq 0 \\
+         -5x^5, & \text{se } \ \ x< 0
+     \end{array}\right..
+\end{equation*}
+ Observe que, como o expoente é ímpar, devemos considerar a possibilidade de $x^5$ ser um número positivo ou negativo (e isso está diretamente ligado ao fato de $x$ ser positivo ou negativo).
+ \end{exem}
+ 
+ \begin{exem}
+  $\abs{-5x^4}$
+\begin{equation*}
+\abs{-5x^4}= \abs{-5}\cdot \abs{x^4}= \abs{-5}\cdot \abs{x}^4 = 5 \cdot x^4.
+\end{equation*}
+
+Observe que foram usadas as propriedades 5 ($\abs{-5} = 5$) e 7 ($\abs{x^4} = \abs{x}^4$). E como o expoente é par, o valor de $x^4$ é positivo, independente do sinal de $x$. Neste caso, $\abs{x^4} = x^4$. 
+ \end{exem}
+ 
+ \begin{exem}
+  Simplifique a expressão $\abs{\dfrac{2x^2y}{4xy^3}}$ usando propriedades de módulo:
+\begin{equation*}
+\abs{\dfrac{2x^2y}{4xy^3}} = \abs{\dfrac{x}{2y^2}}= \dfrac{\abs{x}}{\abs{2y^2}}= \dfrac{\abs{x}}{\abs{2} \cdot \abs{y^2}}= \frac{\abs{x}}{2 \cdot y^2}.
+\end{equation*}
+ \end{exem}
+ 
+ \begin{exem}
+ Simplifique a expressão  $\dfrac{\abs{-6x}}{5} - \abs{\dfrac{-3x}{2}}$ usando propriedades de módulo:
+
+ \begin{eqnarray*}
+  \dfrac{\abs{-6x}}{5} - \abs{\dfrac{-3x}{2}} &=&
+ \dfrac{\abs{-6}\cdot \abs{x}}{5} - \dfrac{\abs{-3} \cdot \abs{x}}{\abs{2}} \\
+ &=& \dfrac{6 \cdot \abs{x}}{5} - \dfrac{ 3 \cdot \abs{x}}{2} \\
+ &=& \dfrac{12 \cdot \abs{x}}{10} - \dfrac{15 \cdot \abs{x}}{10} \\
+ &=& \dfrac{12\abs{x} - 15\abs{x}}{10} \\
+ &=& \dfrac{-3\abs{x}}{10}.
+ \end{eqnarray*}
+
+\end{exem}
+
+ \begin{exem}
+  Simplifique a expressão $\abs{x-2} + \abs{x+4}$ \label{eqmodulo}
+
+ Para simplificar esta expressão, primeiro precisamos usar a definição de módulo para cada um dos termos que estão sendo somados:
+ \begin{align*}
+    \abs{x-2} = \left\{\begin{array}{rl}
+      -(x-2), & \text{se} \ \ x-2< 0 \\
+      x-2, & \text{se } \ \ x-2 \geq 0
+     \end{array} \right.
+     &\Rightarrow
+     \abs{x-2} =  \left\{\begin{array}{rl}
+      -x + 2, & \text{se} \ \ x < 2 \\
+      x-2, & \text{se } \ \ x \geq 2
+     \end{array}\right.\\
+      \abs{x+4} =  \left\{\begin{array}{rl}
+      -(x+4), &\text{se} \ \ x+4< 0 \\
+      x+4, & \text{se } \ \ x+4 \geq 0
+     \end{array}\right.
+     &\Rightarrow
+     \abs{x+4} =  \left\{\begin{array}{rl}
+      -x - 4, & \text{se} \ \ x < -4 \\
+      x + 4, & \text{se } \ \ x \geq -4
+     \end{array}\right.
+  \end{align*}
+
+  Observe que $(x-2)$ muda de sinal quando $x=2$, e que $(x+4)$ muda de sinal quando $x=-4$, logo esta soma de módulos tem uma definição particular para cada um dos intervalos $(-\infty, -4)$, $[-4, 2)$ e $[2, \infty)$. Para facilitar a compreensão organizamos na tabela seguinte a soma, em cada caso.
+
+   \begin{table}[H]
+ \centering
+ \begin{tabular}{|c|c|c|c|} \hline
+ \rowcolor{gray}
+  Expressão & $(-\infty, -4)$ & $[-4, 2)$ & $[2, \infty)$  \\\hline
+  $\abs{x-2}$ & $-x+2$ &  $-x+2$ & $x-2$ \\\hline
+  $\abs{x+4}$ & $-x-4$ &  $x+4$ & $x+4$ \\\hline
+  $\abs{x-2} + \abs{x+4}$ & $-x+2-x-4$ & $-x+2+x+4$ & $x-2+x+4$ \\\hline
+ \end{tabular}
+\end{table}
+
+ Portanto, temos que
+ \begin{equation*}
+ \abs{x-2} + \abs{x+4} =  \left\{ \begin{array}{rl}
+      -2x-2, & \text{se} \ \ x < -4 \\
+      6, &\text{se } \ \ -4 \leq x < 2 \\
+      2x + 2, & \text{se} \ \ x \geq 2 
+     \end{array}\right..
+ \end{equation*} 
+ \end{exem}
+
+
+ \section{Equações modulares}
+
+\begin{obs}
+  As equações modulares são equações que apresentam expressões dentro de um módulo. Em particular, vamos analisar casos em que esta expressão matemática é um polinômio. Por exemplo, temos
+  \[\abs{p(x)}= 0.\]
+
+  Assim como nas equações de 1º e 2º grau vistas no Capítulo 5, resolver uma equação modular significa encontrar todos os valores de $x$ que tornam a equação verdadeira (satisfazem a equação), considerando um conjunto universo específico (por exemplo, os reais).
+ \end{obs}
+
+ Antes de começarmos a ver exemplos destas equações lembremos que para um número real $x$ qualquer:
+
+ \[
+\abs{x}= \left\{\begin{array}{rl}
+      -x , & \text{se} \ \ x<0 \\
+      x , & \text{se} \ \ x \geq 0
+     \end{array}\right. .
+\]
+
+Além disso, lembre-se que todas as propriedades listadas em \ref{prop.modulo} são válidas e podem ser usadas durante a resolução de uma equação modular.
+
+Os exemplos a seguir resolvem equações modulares para um melhor entendimento.
+
+\begin{exem} 
+  Suponha que $a> 0$. Resolva a equação $\abs{x}= a$.
+
+Vamos analisar a equação considerando os casos $x\geq 0$ e $x < 0$.
+
+Para $x\geq 0$, temos $\abs{x} = x = a$.
+
+Para $x<0$, temos $\abs{x} = -x = a$, ou seja, $x = -a$.
+
+Portanto o conjunto solução desta equação é $S= \left\{-a, a \right\}$.
+\end{exem}
+
+\begin{exem}
+  Resolva $\abs{x}= 10$ (observe que este é um caso particular do exemplo anterior).
+
+ Novamente, vamos analisar a equação considerando os casos $x\geq 0$ e $x < 0$.
+
+Para $x\geq 0$, temos $\abs{x} = x = 10$.
+
+Para $x<0$, temos $\abs{x} = -x = 10$, ou seja, $x = -10$.
+
+Portanto o conjunto solução desta equação é $S= \left\{-10, 10 \right\}$.
+\end{exem}
+
+\begin{exem}
+ Resolva a equação $\abs{2x-2}= 10$.
+
+Vamos analisar a equação considerando os casos $2x - 2 \geq 0$ e $2x - 2 < 0$, ou seja, $x \geq 1$ e $x < 1$.
+
+Para $x\geq 1$ temos $\abs{2x-2} = 2x-2$. Assim, $$\abs{2x-2} = 10 \Leftrightarrow 2x - 2 = 10 \Leftrightarrow 2x = 12 \Leftrightarrow x = 6.$$
+
+Para $x < 1$ temos $\abs{2x-2} = -(2x-2)= -2x+2$. Assim, $$\abs{2x-2} = 10 \Leftrightarrow -2x + 2 = 10 \Leftrightarrow -2x = 8 \Leftrightarrow x = -4.$$
+
+Portanto, o conjunto solução desta equação é $S= \left\{-4, 6 \right\}$.
+ \end{exem}
+ 
+ \begin{exem}
+ Resolva $\abs{2x^2 - 72}= 26$.
+
+Observe que, aplicando a definição de módulo, podemos reescrever o lado esquerdo da equação como:
+
+\begin{equation}
+\label{ex:mod_quadratico}
+\abs{2x^2 - 72} = \left\{\begin{array}{rl}
+2x^2 - 72, & \mbox{se} \; \;  2x^2 - 72 \geq 0\\
+-(2x^2 - 72), & \mbox{se} \; \; 2x^2 - 72 < 0
+\end{array}\right. \end{equation}
+
+Desse modo, devemos fazer um estudo de sinal e decidir os intervalos em que $2x^2 - 72$ é positivo, negativo ou nulo (se ainda tem dúvida em como fazer isso, consulte o Capítulo 6). Para este estudo, reescrevemos $2x^2 - 72$ em sua forma fatorada, ou seja, $$2x^2 - 72 = 2(x+6)(x-6) = (2x+ 12)(x-6)$$.
+
+\begin{signtbl}{3}{2}
+        \linelabel{1}{$2x+12$}
+        %\numbernode{6}{1}{2}
+        \numbernode{-6}{1}{1}
+        \numbernode{6}{3}{2}
+        \signs{1}{-1,1,1}
+        \linelabel{2}{$x-6$}
+        %\numbernode{-6}{2}{1}
+        \numbernode{6}{2}{2}
+        \numbernode{-6}{3}{1}
+        \signs{2}{-1,-1,+1}
+        \intervalcolor{violet}
+        \signs{3}{1,-1,+1}
+        \linelabel{3}{$(2x+12)(x-6)$}
+        \intervalsign{3}{02}{1}
+        \intervalsign{3}{20}{2}
+\end{signtbl}
+
+Resumindo, a análise de sinal nos permite avaliar que:
+
+     \[
+     \begin{cases}
+      2x^2- 72 \geq 0, \ \ \text{se} \ \ x \leq -6 \; \; \mbox{ou} \; \; x \geq 6\\
+      2x^2- 72 < 0, \ \ \text{se} \ \ -6 < x < 6
+      \end{cases}
+     \]
+Podemos então reescrever a Expressão \ref{ex:mod_quadratico} como:
+
+\begin{equation}
+\abs{2x^2 - 72} = \left\{\begin{array}{rl}
+2x^2 - 72, & \mbox{se} \; \;  2x^2 - 72 \geq 0\\
+-(2x^2 - 72), & \mbox{se} \; \; 2x^2 - 72 < 0
+\end{array}\right. = \left\{\begin{array}{rl}
+2x^2 - 72, & \mbox{se} \; \;  x \leq -6 \; \; \mbox{ou} \; \; x \geq 6\\
+-2x^2 + 72, & \mbox{se} \; \; -6 < x < 6
+\end{array}\right. \end{equation}
+
+Temos, portanto, duas equações para resolver separadamente. São elas:\\
+
+Para $x\leq 6$ ou $x \geq 6$,
+\begin{equation*}
+2x^2- 72= 26 \Leftrightarrow 2x^2= 98 \Leftrightarrow x^2= 49 \Leftrightarrow x= - 7\; \mbox{ou} \; \; x = 7.
+\end{equation*}
+     Note que as duas soluções pertencem ao intervalo que estamos considerando a análise ($x = 7$ está no intervalo $x \geq 6$ e $x = -7$ está no intervalo $x\leq -6$) e, portanto, elas são de fato soluções da equação.\\
+
+Para $-6 < x < 6$,
+      \begin{eqnarray*}
+      -(2x^2-72)= 26 \Leftrightarrow -2x^2 + 72= 26 \Leftrightarrow -2x^2= -46 \\
+     \Leftrightarrow x^2= 23 \Leftrightarrow x= -\sqrt{23} \; \; \mbox{ou} \; \;  x = \sqrt{23}.
+      \end{eqnarray*}
+
+Note que $\sqrt{23} \approx 4,78$ e que, portanto, temos $-6 < -\sqrt{23} < \sqrt{23} < 6$, ou seja, ambas as soluções encontradas pertencem ao intervalo de análise e podem ser consideradas. Juntando as análises intervalares realizadas podemos concluir que o conjunto solução da equação modular $\abs{2x^2 - 72|}$ é 
+\begin{equation*}
+S= \{-7, -\sqrt{23}, \sqrt{23}, 7\}.
+\end{equation*}
+\end{exem}
+
+\begin{exem}
+ \colorbox{yellow}{Atenção! O cojunto solução de uma equação modular pode ser vazio.} Resolva $\abs{x-4}=-2$.
+
+Perceba que, pela Propriedade 1 podemos afirmar que o módulo de qualquer número é sempre maior ou igual a zero. Desse modo, não há valor de $x$ que torne $\abs{x-4} = -2$. Só com essa análise podemos concluir que o conjunto solução é $S = \{  \}$. Ou podemos apenas dizer que não há solução para esta equação.
+
+Alguém mais curioso poderia se questionar se não há como encontrar o conjunto vazio como solução de maneira algébrica. Se este for o caso, faríamos a seguinte resolução:
+
+Pela definição de módulo temos que
+     \[
+    \abs{x-4} = \left\{\begin{array}{rl}
+    -(x-4), & \text{se} \ \ x-4 < 0 \\
+    x-4, & \text{se } \ \ x-4 \geq 0
+     \end{array}\right.
+     =
+    \left\{\begin{array}{rl}
+    -x+4, & \text{se} \ \ x < 4 \\
+    x-4, & \text{se } \ \ x \geq 4
+     \end{array}\right..
+     \]
+     Então, 
+     \[
+     \abs{x-4} = -2 \Leftrightarrow \left\{\begin{array}{rl}
+    -x+4=-2, & \text{se} \ \ x < 4 \\
+    x-4 = -2, & \text{se } \ \ x \geq 4
+     \end{array}\right.
+     \Leftrightarrow \left\{\begin{array}{rl}
+     x = 6, & \text{se} \ \ x < 4 \\
+    x = 2, & \text{se } \ \ x \geq 4
+     \end{array}\right.
+     \]
+ Observe que, na condição $x<4$ encontramos $x = 6$, ou seja, não há solução neste intervalo. De modo análgo, encontramos a solução $x = 2$ para o intervalo $x \geq 4$, o que não faz sentido. Concluímos, portanto, que a equação não tem solução (ou que o conjunto solução é vazio).
+\end{exem}
+
+ Vamos agora colocar, de forma mais geral, o que acabamos de ver nos exemplos. A vantagem de entender este processo de forma geral é que você poderá usá-lo na resolução de qualquer equação modular. 
+ 
+ Consideremos uma equação modular na forma geral
+\begin{equation*}
+\abs{A}= B,
+\end{equation*}
+ em que $A$ e $B$ são expressões algébricas quaisquer. Pela definição de módulo temos que
+ \[ \abs{A}= \begin{cases}
+          -A, \ \text{se} \ \ A < 0 \\
+           A, \ \text{se} \ \ A \geq 0
+         \end{cases}.
+ \]
+ Logo, as soluções da equação modular devem satisfazer
+\begin{equation*}
+A= B \ \ \ \text{ou} \ \ \ -A= B \ .
+\end{equation*}
+ Além disso, lembremos que, por propriedade de módulo, $\abs{A}\geq 0$, independente da expressão $A$.
+ 
+ Como nossa equação é da forma  $\abs{A}= B$, logo garantir $\abs{A}\geq 0$ é equivalente a garantir $B \geq 0$, donde obtemos que as equações com $B < 0$ não possuem solução.
+
+ Resumindo, temos que uma variável $x$ é solução da equação modular $\abs{A}= B$ se ela satisfizer:
+\begin{equation*}
+(A= B \ \ \ \text{ou} \ \ \ -A= B) \ \ \ \text{e} \ \ \ (B \geq 0) \ . 
+\end{equation*}
+
+ Vejamos mais um exemplo resolvido de equação modular.
+
+ \begin{exem}
+   Resolva $\abs{x-2} + \abs{x+4}= 10$.
+
+   Observe que temos $A = \abs{x-2} + \abs{x+4}$ e $B = 10$. Como $B > 0$, basta analisar os casos $A= B$ e $-A= B$.
+
+   $A$ é composto pela soma de duas expressões modulares vistas no Exemplo \ref{eqmodulo}. Ao abrirmos o módulo, obtivemos a expressão 
+   \[ \abs{x-2} + \abs{x+4} = \left\{\begin{array}{rl}
+      -2x-2, & \text{se} \ \ x < -4 \\
+      6, & \text{se } \ \ -4 \leq x < 2 \\
+      2x + 2, & \text{se} \ \ x \geq 2 \ .
+     \end{array}\right..
+  \]
+ Para resolver a equação modular  dada faremos a análise para cada intervalo:
+
+ \textbf{Intervalo 1:} $x < -4$
+
+ Neste caso, $\abs{x-2} + \abs{x+4}= -2x-2$, ou seja, 
+\begin{equation*}
+-2x-2= 10 \Leftrightarrow -2x= 12 \Leftrightarrow x= -6.
+\end{equation*}
+ Como $x= -6$ pertence ao intervalo $x< -4$, ela é uma solução a ser considerada.\\
+
+ \textbf{Intervalo 2:} $-4 \leq x < 2$
+
+ Neste caso, $\abs{x-2} + \abs{x+4}= 6$, e nossa equação se torna $6= 10$. Isto é impossível, donde concluímos que neste intervalo a equação não tem solução (parece estranho? Isto significa que não há nenhum número real entre -4 e 2 que torna a expressão $\abs{x-2} + \abs{x+4}$ igual a 6).\\
+
+ \textbf{Intervalo 3:} $x \geq 2 $
+
+ Neste caso, $\abs{x-2} + \abs{x+4}= 2x + 2$ e, então,
+\begin{equation*}
+2x + 2= 10 \Rightarrow 2x= 8 \Rightarrow x= 4.
+\end{equation*}
+
+Como $x= 4$ pertence ao intervalo $x \geq 2$, ela será uma solução a ser considerada.\\
+
+ Portanto, após a análise das soluções nos três intervalos concluímos $S=\{-6, 4\}$ como  o conjunto solução da equação modular
+$\abs{x-2} + \abs{x+4}= 10.$
+ \end{exem}
+
+
+ \section{Inequações modulares}
+
+ Nesta seção usaremos as propriedades da ordem do conjunto dos números reais e também as propriedades de módulo de um número real. Neste momento já supomos que o leitor está bem familiarizado com as tais propriedades.%, mas na dúvida você pode consultar as propriedades que estão listadas nas %\ref{prop.ordem} e \ref{prop.modulo}.
+
+Vejamos a seguir alguns exemplos de inequações modulares.
+
+ \begin{exem} 
+  Suponha que $a> 0$. Resolva a inequação $\abs{x} < a$.
+
+Faremos esta resolução de modo semelhante ao que fizemos para a resolução das equações modulares, levando em conta, agora, o sinal da desigualdade.
+
+Mais uma vez, lembre-se que 
+ \[
+\abs{x}= \left\{\begin{array}{rl}
+      -x , & \text{se} \ \ x<0 \\
+      x , & \text{se} \ \ x \geq 0
+     \end{array}\right. .
+\]
+
+Para resolver a inequação, vamos analisar os dois intervalos que aparece ao abrirmos o módulo.\\
+
+\textbf{Intervalo 1:} $x < 0$
+
+Neste caso temos a desigualdade $-x < a$ e, portanto, $x > -a$. Como estamos procurando soluções na região onde $x$ é estritamente negativo, nos limitaremos aos valores que satisfaçam as duas condições: $x < 0$ e $x > -a$. Ou seja, neste intervalo temos como solução o conjunto $S_1 = \{x \in \R | \ -a < x < 0\}$.\\
+
+\textbf{Intervalo 2:} $x\geq 0$
+
+Neste caso temos a desigualdade $x<a$, que já se resolve de forma direta. Perceba que, como nossa região de análise são os números estritamente positivos, a solução deve considerar ambas as desigualdades ($x \geq 0$ e $x < a$). Ou seja, neste intervalo temos como solução o conjunto $S_2 = \{x \in \R | \ 0 \leq x < a\}$.\\
+
+
+
+Assim, o conjunto solução da inequação dada é o conjunto constituído pelas soluções encontradas no Intervalo 1 unido com as soluções encontradas no Intervalo 2. Faremos então uma união de conjuntos e, portanto, $S = S_1 \cup S_2 = \{x \in \R| -a < x < a\} = (-a,a)$.
+
+\begin{comment}
+\begin{equation*}
+\abs{x} < a \Leftrightarrow \abs{x}^2 < a^2 \Leftrightarrow x^2 < a^2
+\end{equation*}
+   mas,
+\begin{equation*}
+x^2 < a^2 \Leftrightarrow x^2 - a^2 < 0 \Leftrightarrow (x-a)(x+a) < 0 \ .
+\end{equation*}
+   Vamos então analisar quando $(x-a)(x+a) < 0$. Lembremos que produto de dois números é negativo quando um deles for negativo e o outro positivo, com isso a inequação $(x-a)(x+a) < 0$ é satisfeita em duas situações:\\
+   Caso 1: $x-a<0$ e $x+a>0$
+\begin{equation*}
+x-a<0 \Rightarrow x< a
+\end{equation*}
+   e
+\begin{equation*}
+x+a>0 \Rightarrow x>-a \Rightarrow -a< x
+\end{equation*}
+  Fazendo a interseção dos conjuntos $A_1= \left\{ x \in \R \mid x<a \right\}$ e $B_1= \left\{ x \in \R \mid -a<x \right\}$, obtemos $A_1 \cap B_1= \left\{ x \in \R \mid -a< x <a \right\}$. O conjunto $A_1 \cap B_1$ é o conjunto solução da inequação neste caso.
+
+
+   Caso 2: $x-a>0$ e $x+a<0$
+\begin{equation*}
+x-a> 0 \Rightarrow x> a
+\end{equation*}
+   e
+\begin{equation*}
+x+a< 0 \Rightarrow x<-a
+\end{equation*}
+   Fazendo a interseção dos conjuntos $A_2= \left\{ x \in \R \mid x> a \right\}$ e $B_2= \left\{ x \in \R \mid x<-a \right\}$, obtemos $A_2 \cap B_2= \emptyset$. Portanto neste caso a inequação não possui solução.
+
+  Portanto $\abs{x} < a \Leftrightarrow -a< x <a$.
+\end{comment}
+  \end{exem}
+  
+\begin{exem}
+   Caso particular: Resolva $\abs{x} \leq 5$.
+\begin{equation*}
+\abs{x} \leq 5 \Leftrightarrow -5 \leq x \leq 5.
+\end{equation*}
+  Logo, o conjunto solução desta inequação é
+\begin{equation*}
+S=\{x \in \R| -5 \leq x \leq 5\} = [-5, 5]. 
+\end{equation*}
+\end{exem}
+
+\begin{exem}
+   Suponha que $a> 0$. Resolva a inequação $\abs{x} > a$.
+
+Faremos esta resolução de modo semelhante ao que fizemos para a resolução das equações modulares, levando em conta, agora, o sinal da desigualdade.
+
+Mais uma vez, lembre-se que 
+ \[
+\abs{x}= \left\{\begin{array}{rl}
+      -x , & \text{se} \ \ x<0 \\
+      x , & \text{se} \ \ x \geq 0
+     \end{array}\right. .
+\]
+
+Para resolver a inequação, vamos analisar os dois intervalos que aparece ao abrirmos o módulo.\\
+
+\textbf{Intervalo 1:} $x < 0$
+
+Neste caso temos a desigualdade $-x > a$ e, portanto, $x < -a$. Como estamos procurando soluções na região onde $x$ é estritamente negativo, nos limitaremos aos valores que satisfaçam as duas condições: $x < 0$ e $x < -a$. Ou seja, neste intervalo temos como solução o conjunto $S_1 = \{x \in \R | x < -a\} = (-\infty, -a)$.\\
+
+\textbf{Intervalo 2:} $x\geq 0$
+
+Neste caso temos a desigualdade $x>a$, que já se resolve de forma direta. Perceba que, como nossa região de análise são os números estritamente positivos, a solução deve considerar ambas as desigualdades ($x \geq 0$ e $x > a$). Ou seja, neste intervalo temos como solução o conjunto $S_2 = \{x \in \R | x > a\} = (a, +\infty)$.\\
+
+
+
+Assim, o conjunto solução da inequação dada é o conjunto constituído pelas soluções encontradas no Intervalo 1 unido com as soluções encontradas no Intervalo 2. Faremos então uma união de conjuntos e, portanto, $S = S_1 \cup S_2 = \{x \in \R| x < -a \ \ \mbox{ou} \ \ x > a\} = (-\infty,a) \cup (a, + \infty)$.
+
+\begin{comment}
+\begin{equation*}
+\abs{x} > a \Leftrightarrow \abs{x}^2 > a^2 \Leftrightarrow x^2 > a^2
+\end{equation*}
+   mas,
+\begin{equation*}
+x^2 > a^2 \Leftrightarrow x^2 - a^2 > 0 \Leftrightarrow (x-a)(x+a) > 0 \ .
+\end{equation*}
+   Vamos então analisar quando $(x-a)(x+a) > 0$. Lembremos que produto de dois números é positivo quando eles tem o mesmo sinal, com isso a inequação $(x-a)(x+a) > 0$ é satisfeita em duas situações:\\
+   Caso 1: $x-a< 0$ e $x+a< 0$
+\begin{equation*}
+x-a< 0 \Rightarrow x< a
+\end{equation*}
+   e
+\begin{equation*}
+x+a< 0 \Rightarrow x< -a \ .
+\end{equation*}
+  Fazendo a interseção dos conjuntos $A_1= \left\{ x \in \R \mid x<a \right\}$ e $B_1= \left\{ x \in \R \mid x< -a \right\}$, obtemos $A_1 \cap B_1= \left\{ x \in \R \mid x< -a \right\}$. O conjunto $A_1 \cap B_1$ é o conjunto solução da inequação neste caso.
+
+
+   Caso 2: $x-a> 0$ e $x+a> 0$
+\begin{equation*}
+x-a> 0 \Rightarrow x> a
+\end{equation*}
+   e
+\begin{equation*}
+x+a> 0 \Rightarrow x> -a 
+\end{equation*}
+   Fazendo a interseção dos conjuntos $A_2= \left\{ x \in \R \mid x> a \right\}$ e $B_2= \left\{ x \in \R \mid x> -a \right\}$, obtemos $A_2 \cap B_2= \left\{ x \in \R \mid x> a \right\}$. O conjunto $A_2 \cap B_2$ é o conjunto solução da inequação neste caso.
+
+   Agora fazendo $S= (A_1 \cap B_1) \cup (A_2 \cap B_2)$ obtemos que $S= \left\{ x \in \R \mid x<-a \text{ ou } x> a \right\}$ é o conjunto solução da inequação $\abs{x} > a$.
+
+  Portanto $\abs{x} > a \Leftrightarrow x<-a \text{ ou } x> a$.
+\end{comment}
+\end{exem}
+
+\begin{exem}
+   Caso particular: Resolva $\abs{x} \geq 5$.
+
+Pelo caso estudado anteriormente podemos afirmar que \begin{equation*}
+\abs{x} \geq 5 \Leftrightarrow x \leq -5 \ \ \text{ ou } \ \ x \geq 5.
+\end{equation*}
+   
+Logo, o conjunto solução desta inequação é:
+\begin{equation*}
+S= \{x \in \R| x \leq -5 \ \ \mbox{ou} \ \ x > 5\}= (-\infty, -5] \cup [5, \infty) \ . 
+\end{equation*}
+ \end{exem}
+ 
+%  \section{Equações radicais ou irracionais}
+%  \colorbox{blue}{
+%  \begin{minipage}{0.9\linewidth}
+%  \begin{center}
+%   As equações radicais são equações nas quais temos polinômios dentro de raízes. Como por exemplo:
+%   \[\sqrt[n]{p(x)}= 0\]
+%   onde $n \in \N$ e $p(x)$ é um polinômio na variável $x$. Caso $n \in \N$ seja par precisamos ainda ter $p(x) \geqslant 0$.
+%  \end{center}
+%  \end{minipage}}
+% 
+%%  Lembre-se que não existe raíz de ordem par de número negativo, logo a equação radical
+%  \[\sqrt[n]{p(x)}= 0\]
+%  caso $n \in \N$ seja par, está definida apenas no conjunto $D= \{x \in \R \mid p(x) \geqslant 0\}$.
+% 
+%%  Este subconjunto dos números reais no qual a equação está bem definida é chamado de domínio da equação. A solução de uma equação radical é necessariamente um subconjunto do domínio da mesma.
+% 
+%%  \begin{exem}
+%  $\dfrac{1}{\sqrt{x}}= 4$
+% 
+%%  Para resolver esta equação começamos determinando seu domínio. Note que aqui precisamos ter duas condições sendo satisfeitas:
+%  \begin{enumerate}[i)]
+%  \item $\sqrt{x} \neq 0 \Rightarrow x \neq 0$;
+%  \item $x \geqslant 0$ pois temos uma raíz de ordem $2$.
+%  \end{enumerate}
+%  O domínio será portanto a interseção dos dois conjuntos acima que é dado por:
+%  \[D= \{ x \in \R \mid x > 0 \} \ . \]
+% 
+%%  Vamos agora resolver a equação, 
+%  \[\dfrac{1}{\sqrt{x}}= 4 \Rightarrow \left(\dfrac{1}{\sqrt{x}}\right)^2= 4^2 \Rightarrow \dfrac{1}{x}= 16 \Rightarrow \dfrac{1}{16}= x\]
+% 
+%%  Como $\dfrac{1}{16} \in D$ esta é de fato a solução da equação.
+%  \end{exem}
+% 
+%  \section{Inequações radicais ou irracionais}
+% 
+%   \vskip0.3cm
+%  \colorbox{blue}{
+%  \begin{minipage}{0.9\linewidth}
+%  \begin{center}
+%   As inequações radicais são inequações nas quais temos polinômios dentro de raízes. Estas inequações possuem domínios com as mesmas restrições das equações radicais.
+%  \end{center}
+%  \end{minipage}}
+%  \vskip0.3cm
+ 
+\begin{secExercicios}
+
+ \begin{exer}
+    Simplifique as expressões, eliminando o módulo:
+    \begin{enumerate}[a)] \begin{multicols}{2}
+        \item $\dfrac{|x-1|}{x-1}$
+        \item $\dfrac{|x+3|}{x+3}$
+        \item $\dfrac{|x|}{x}+\dfrac{|x-4|}{x-4}$
+        \item $\dfrac{\abs{x-3}}{x-3}$
+        \item $1 + \dfrac{\abs{x-2}}{x-2}$
+        \item $\dfrac{\abs{x}}{x}, \; 0 < x < 4$
+       \end{multicols} \end{enumerate}
+\end{exer}
+
+ \begin{exer}
+    Resolva as desigualdades, em cada caso:
+    \begin{enumerate}[a)]
+        \item $\abs{x} < 1$
+        \item $\abs{1-5x} <4$
+        \item $\abs{7x-4} <10$
+        \columnbreak
+        \item $\abs{x-2} < -2.\abs{-x}$
+        \item $\abs{3+9x} <1$
+        \item $\abs{3x+4}\leq 2$
+        \item $\abs{4x-4} \geq 2$
+        \item $\abs{x+5} >2$
+        \item $\abs{2-4x} \geq 3$
+        \item $\abs{x-3} > -1$
+    \end{enumerate}
+\end{exer}
+
+
+\begin{exer}
+    Resolva a equação dada:
+    \begin{enumerate}[a)]
+        \item $\abs{x} = 1248$
+        \item $\abs{x} = -2$
+        \item $\abs{x-5} = 4$
+        \item $\abs{x}= 2.\abs{-x}$
+        \item $\abs{2x-4} = 6$
+        \item $\abs{3x+1}=\abs{x-2}$
+        \item $\abs{6-3x} = 10$
+        \item $\abs{(x-1)(x+2)} = 0$
+    \end{enumerate}
+\end{exer}
+
+
+\begin{exer}
+    Determine o conjunto solução das seguintes equações:
+    \begin{enumerate}[a)]
+        \item $\abs{\dfrac{x-2}{3}} =5$
+        \item $\abs{\dfrac{1-x}{4}}=6$
+        \item $\abs{2x-3} = \abs{4x+5}$
+        \item $\abs{5x-4} = \abs{3x+6}$
+        \item $\abs{2x+5} = \abs{x-11}$
+        \item $\abs{x-3} + \abs{x+4} = 7$
+        \item $\abs{x-3} + \abs{x-4}=1$
+        \item $\abs{\abs{x-5} -8} = 6$
+    \end{enumerate}
+\end{exer}
+
+
+
+
+
+\begin{exer}
+    As afirmações abaixo são verdadeiras ou falsas? Justifique sua resposta.
+    \begin{enumerate}[a)]
+        \item $\abs{a}$ é sempre um número positivo.
+        \item $\abs{a}$ pode ser um número negativo.
+        \item $\abs{a} = a$, para todo número $a$ real.
+        \item $\abs{x}$ pode ser zero.
+        \item $\abs{a.b.c} = \abs{a}.\abs{b}.\abs{c}$
+        \item $\abs{a.b} < \abs{a}\abs{b}$, para quaisquer $a,b$ reais.
+        \item $\abs{a + b} = \abs{a} + \abs{b}$, para quaisquer $a, b$ reais.
+        \item $\abs{-2 + c} = 2 + \abs{c}$, para todo $c \leq 0$.
+     \end{enumerate}
+\end{exer}
+
+\end{secExercicios}
+
+%\subsection*{Respostas:}
+
+%\shipoutAnswer
