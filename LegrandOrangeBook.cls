@@ -75,6 +75,8 @@
 
 \usepackage{mathptmx} % Use the Adobe Times Roman as the default text font together with math symbols from the Symbol, Chancery and Computer Modern fonts
 
+%\usepackage{lmodern}
+
 \usepackage{microtype} % Improve typography
 
 %----------------------------------------------------------------------------------------

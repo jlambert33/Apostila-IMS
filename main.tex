@@ -217,18 +217,19 @@
 
 %------------------------------------------------
 
- \part{Aritmética básica}
-\include{cap_operprop/cap_operprop} \include{respostas}
+\part{Aritmética básica}
+\include{cap_operprop/cap_operprop} % \include{respostas}
 %\setcounter{chapter}{1} 
-\include{cap_expralg/cap_expralg} \include{respostas}
+\include{cap_expralg/cap_expralg} %\include{respostas}
 %\setcounter{chapter}{2} 
 \include{cap_conjuntos}
 % \setcounter{chapter}{3} 
 \include{cap_conjnum/cap_conjnum}
 %\include{respostas}
+%
 
 % \setcounter{part}{1}
- \part{Equações e Inequações}
+\part{Equações e Inequações}
 %\setcounter{chapter}{4} 
 \include{cap_equacoes/cap_equacoes}
 %\setcounter{chapter}{5} 
@@ -243,7 +244,8 @@
 \include{cap_polinomios}
 % \setcounter{chapter}{8} 
 \include{cap_fracoesparciais}
-\include{respostas}
+
+%\include{respostas}
 
 % \setcounter{part}{3}
 \part{Funções reais I}
@@ -253,17 +255,15 @@
 \include{cap_funcao/cap_funcao2grau}
 %\setcounter{chapter}{11} 
 \include{cap_funcao/cap_funcaopartes}
-\include{respostas}
-
-%\setcounter{part}{4}
-\part{Funções reais II}
+%\include{respostas}
 %\setcounter{chapter}{12} 
 \include{cap_funcao/cap_funcaopotencia}
 %\setcounter{chapter}{13} 
 \include{cap_funcao/cap_funcaotransformacao}
-\include{respostas}
+% \include{respostas}
 
-% \part{Funções reais II}
+%\setcounter{part}{4}
+\part{Funções reais II}
 %\setcounter{chapter}{14}
 \include{cap_explog/cap_injetora}
 % \setcounter{chapter}{15} 
@@ -273,14 +273,15 @@
 % %\part{Funções reais III}
 % \setcounter{chapter}{17} 
 \include{cap_trigon/cap_trigon}
-\include{respostas}
 
 %----------------------------------------------------------------------------------------
 
-%\stopcontents[part] % Manually stop the 'part' table of contents here so the previous Part page table of contents doesn't list the following chapters
+\stopcontents[part] % Manually stop the 'part' table of contents here so the previous Part page table of contents doesn't list the following chapters
 
 
-%\include{paginas_finais}
+\part*{}
+\include{respostas}
+\include{paginas_finais}
 
 
 %----------------------------------------------------------------------------------------
