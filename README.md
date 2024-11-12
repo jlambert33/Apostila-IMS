@@ -1,0 +1,2 @@
+Este texto tem como objetivo apresentar todo o conteúdo da disciplina de Introdução à Matemática Superior oferecido aos cursos de Matemática e Física do Instituto de Ciências Exatas de Volta Redonda da Universidade Federal Fluminense (ICEx-UFF). Esta disciplina foi criada
+em 2010, juntamente com os cursos do ICEx para fornecer a base matemática necessária aos alunos para posteriormente cursarem a disciplina de Cálculo I.
